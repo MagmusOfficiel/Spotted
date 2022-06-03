@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes commandes - Spotted{% endblock %}
+
+{% block body %}
+    <h1>Mes commandes</h1>
+    C'est dans cet espace que vous allez pouvoir gérer toutes vos commandes.<br/>
+    <a href="{{ path('compte') }}">Retour</a>
+    {% if commande|length == 0 %}
+        <hr>
+        <p class="text-center">
+            Vous n'avez pas encore passé de commande sur Spotted.
+        </p>
+    {% else %}
+        <table class="table mt-4 table-perso">
+            <thead>
+            <tr>
+                <th scope="col">Référence</th>
+                <th scope="col">Statut</th>
+                <th scope="col">Passée le</th>
+                <th scope="col">Produit(s)</th>
+                <th scope="col">Total</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for commande in commande %}
+                <tr>
+                    <td><span class="badge badge-secondary">{{ commande.reference }}</span></td>
+                    <td class="text-success">
+                        {% if commande.paye == 1 %}
+                            Paiement accepté
+                        {% elseif commande.paye == 2 %}
+                            Préparation en cours
+                        {% elseif commande.paye == 3 %}
+                            Livraison en cours
+                        {% endif %}
+                    </td>
+                    <td>{{ commande.createdAt|date('d/m/Y') }}</td>
+                    <td>{{ commande.commandeDetails|length }}</td>
+                    <td>{{ ((commande.transporteurPrix + commande.getTotal) )|number_format(2, ',', '.') }} €</td>
+                    <td class="text-right"><a href="{{ path('compte_commande_show', { 'reference' : commande.reference }) }}">Voir ma commande</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    {% endif %}
+{% endblock %}

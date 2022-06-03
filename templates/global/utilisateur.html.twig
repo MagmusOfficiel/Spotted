@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification du client
+{% endblock %}
+
+{% block monTitre %}Clients
+
+{% endblock %}
+{% block body %}
+
+{% if app.user is not null and app.user.id == app.request.uri|last  %}
+
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success alert-dismissible fade show fixed-bottom text-center">
+			{{message}}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endfor %}
+	<div class="container">
+		<div class="col-10">
+			<h1> Modifier votre compte personnelle </h1>
+			{{form_start(form)}}
+
+			{{form_label(form.userPrenom,"Prénom")}}
+			{{form_widget(form.userPrenom)}}
+
+			{{form_label(form.username,"Nom")}}
+			{{form_widget(form.username)}}
+
+			{{form_label(form.userSexe,"Sexe")}}
+			{{form_widget(form.userSexe)}}
+
+			{{form_label(form.userMail,"Adresse e-mail")}}
+			{{form_widget(form.userMail)}}
+
+			{{form_label(form.userNationalite,"Nationalité")}}
+			{{form_widget(form.userNationalite)}}
+
+			{{form_label(form.userNaissance,"Date de naissance")}}
+			{{form_widget(form.userNaissance,{ 'attr': {'class': 'mb-3'}})}}
+			<h1> Modifier votre mot de passe </h1>
+			{{form_label(form.old_password,"Mon mot de passe actuel")}}
+			{{form_widget(form.old_password,{ 'attr': {'class': 'mb-3'}})}}
+ 
+			{{form_widget(form.new_password,{ 'attr': {'class': 'mb-3'}})}}
+
+			{% if not is_granted('ROLE_USER', app.user) %}
+			{{form_label(form.roles,"Roles")}}
+			{{form_widget(form.roles)}}
+			{% endif %}
+ {{ form_row(form._token) }}
+			<a href="{{path('accueil')}}" class="btn btn-primary">Retour</a>
+			<input type="submit" value="Valider" class="btn btn-success">
+			</form>
+		</div>
+	</div>
+</div>
+{% else %}
+{% endif %}{% endblock %}

@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Carrousel;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Vich\UploaderBundle\Form\Type\VichImageType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class CarrouselType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('carrouselTitre')
+            ->add('carrouselDescription')
+            ->add('carrouselNom')
+            ->add('imageFile',VichImageType::class, [
+                'required' => false,
+                'download_uri' => true,
+                'image_uri' => true
+            ])
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => Carrousel::class,
+        ]);
+    }
+}

@@ -1,0 +1,14 @@
+Symfony : 
+
+- Faire un tableau pour les envoies de fichier ( images )
+- Faire un systeme de filtre
+- Faire la barre de recherche
+- Faire un mot de passe oublié
+- Faire une interface pour changer toute la page d'accueil
+- Ajouter des pays
+- Ajouter des genres
+
+Normal : 
+
+- Ajouter le design du site internet
+- Mettre inscription/connexion en popup

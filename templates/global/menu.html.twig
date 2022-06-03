@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+	{% for produit in produit %}
+		<meta name="description" content="{{produit.produitDescription}}">
+		<meta name="keywords" content="{{produit.marques.marqueNom}},{{produit.categorie.CatNom}},{{produit.produitLibelle}},{{produit.typehm.TypeHmNom}},{{produit.produitPrix}}€">
+	{% endfor %}
+{% endblock %}
+{% block title %}
+	{% for produit in produit %}
+		{{produit.marques.marqueNom}}
+		-
+		{{produit.categorie.CatNom}}
+		-
+		{{produit.produitLibelle}}
+		-
+		{{produit.typehm.TypeHmNom}}
+		-
+		{{produit.produitPrix}}€
+	{% endfor %}
+{% endblock %}
+
+{% block body %}
+	{% set currentPath = path(app.request.attributes.get('_route'),
+                       app.request.attributes.get('_route_params')) %}
+
+	<p style="background-color: #ffd700;padding:5px;color:black;">Accueil
+		{{currentPath|title|replace({'/': " -> "})}}</p>
+	{% for menu in menu %}
+
+		<h1 class="text-center">
+			Page pour
+			{{menu.menuHook.TypehmNom}}
+		</h1>
+	{% endfor %}
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				{% include "global/filtre.html.twig" %}
+			</div>
+			<div class="col-10">
+				{% for produit in produit %}
+					{# Si le produit est bloquer ou non nous l'affichons en fonction de son boolean #}
+					{% if produit.produitBloque == '0' %}
+						{% for menu in menu %}
+							{% if produit.typehm.id == menu.menuHook.id %}
+
+
+								<div class="col-lg-3 col-md-4 col-4">
+									<h2 class="card-title f-10">{{produit.marques.MarqueNom}}
+										-
+										{{produit.produitLibelle}}
+										-
+										{{produit.typehm.TypehmNom}}</h2>
+
+
+									<a href="{{path('produitId',{'id' : produit.id})}}">
+										<div class="card" id="photo2">
+											{% if produit.produitCreation < produit.produitNouveaute %}
+												<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="z-index:9;">
+													Nouveau !
+												</span>
+											{% endif %}
+
+											<img src="{{asset('build/images/theme/produit/'~ produit.produitImages[0].imageName[0:4])}}/{{produit.produitImages[0].imageName}}" class="card-img-top" width="300px" height="300px" alt="Photo d'illustration">
+											<div class="hover">
+												<img src="{{asset('build/images/theme/produit/'~ produit.produitImages[1].imageName[0:4])}}/{{produit.produitImages[1].imageName}}" class="card-img-top" width="300px" height="300px" alt="Photo d'illustration">
+											</div>
+										</div>
+									</a><br>
+									<div class="text-center">
+										<input type="checkbox" class="btn-check rounded-circle" name="options" id="option{{produit.id}}">
+										<label class="btn" style="background-color:{{produit.couleur.couleurValeur}}" for="option{{produit.id}}"></label>
+									</div>
+									<br>
+									<div class="text-center">{{produit.ProduitPrix}}€
+									</div>
+								</div>
+
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

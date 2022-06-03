@@ -1,0 +1,36 @@
+#at-custom-sidebar{
+     display: none;
+}
+
+body {
+    margin-top: 0px!important;
+}
+
+nav{
+    display: none;
+}
+.navbar {
+    display: none;
+}
+
+#impression{
+    display: none;
+}
+
+.p-5 {
+    padding: 1rem !important;
+}
+
+.print-off {
+    display: none;
+}
+
+.col-10 {
+    width: 100% !important; 
+    line-height :15pt;
+
+}
+
+.swiper-container {
+    display: none;
+}

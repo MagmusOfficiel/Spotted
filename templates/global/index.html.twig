@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Spotted - Chope tes chaussures édition limité
+{% endblock %}
+
+{% block monTitre %}Bienvenue sur mon site de chaussures éditions limité
+{% endblock %}
+{% block body %}
+	{% include "global/api_stylecss.html.twig" %}
+	{% include "flash.html.twig" %}
+		{% include "global/slider.html.twig" %}
+		{{render(controller('App\\Controller\\ComponentController:fetchCarrousel'))}}
+		<div class="container">
+			<div class="row">
+				{% include 'global/produit.html.twig' %}
+				<!-- Catégorie Grid-->
+				{% include 'global/components/categories.html.twig' %}
+				<!-- Services-->
+				{% include 'global/components/services.html.twig' %}
+				<!-- A propos-->
+				{% include 'global/components/apropos.html.twig' %}
+				<!-- Team-->
+				{% include 'global/components/team.html.twig' %}
+				<!-- Clients-->
+				{% include 'global/components/clients.html.twig' %}
+				<!-- Widgjet Couleur-->
+				{% include 'global/components/widgjetcouleur.html.twig' %}
+			</div>
+			<!-- Categories Modals-->
+			{% include 'global/components/catmodal.html.twig' %} 
+		<button id="button-scroll"></button>
+	</div>
+
+{% endblock %}
+

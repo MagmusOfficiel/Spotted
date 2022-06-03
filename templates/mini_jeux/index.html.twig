@@ -1,0 +1,49 @@
+{% extends 'layout_jeux.html.twig' %}
+
+{% block title %}Hello MiniJeuxController!
+{% endblock %}
+
+{% block body %}
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success alert-dismissible fade show fixed-bottom text-center">
+			{{message}}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endfor %}
+	{% for danger in app.flashes('danger') %}
+		<div class="alert alert-danger alert-dismissible fade show fixed-bottom text-center">
+			{{danger}}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endfor %}
+	{% if not is_granted('ROLE_ADMIN', app.user) %}
+		{% if app.user %}
+
+			<p class="pixel">{{points.NbrPoints}}
+				Coins</p>
+			{% if "now"|date("Y-m-d H:i:s") >= points.dateexpiration|date("Y-m-d H:i:s") %}
+				<a href="{{path('jeuxPoints')}}" id="coffre" class="col btn-widjet btn btn-warning">
+					<img src="{{asset('build/images/coffre/coffre-fermer.png')}}" class="img-fluid" width="40" alt="coffre">
+				</a>
+			{% else %}
+
+				<a href="{{path('jeuxPoints')}}" id="coffre" class="col btn-widjet btn btn-warning">
+					{% for message in app.flashes('wtf') %}
+						<div id="coins" class="fade show text-center ">
+							{{message}}
+						</div>
+					{% endfor %}
+					{% for message in app.flashes('coins') %}
+						<div id="coin" class="fade show text-center">
+							{{message}}
+						</div>
+					{% endfor %}
+					<img src="{{asset('build/images/coffre/coffre-ouvert.png')}}" class="img-fluid" width="40" alt="coffre">
+					<div id="count-down-timer">{{date_timer(points.dateexpiration|date('H:i:s'))}}</div>
+				</a>
+			{% endif %}
+		{% endif %}
+	{% endif %}
+	<script src="{{asset('js/coffre.js')}}"></script>
+{% endblock %}
+{% block script %}{% endblock %}

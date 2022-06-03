@@ -1,0 +1,14 @@
+{% if form is defined and form is not null %}
+	{{form_start(form)}}
+	<div class="row">
+		<div class="col-8">
+			{{form_widget(form.newsletterMail)}}
+		</div>
+		<div class="col-4">
+			<label>
+				<input class="btn-sm btn btn-warning" type="submit" name="submitPub">
+			</label>
+		</div>
+	</div>
+</div>
+{{form_end(form)}}{% endif %}

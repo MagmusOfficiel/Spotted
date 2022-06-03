@@ -1,0 +1,46 @@
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable ">
+		<div class="modal-content btn-perso text-white rounded-3">
+			<button type="button" class="btn-close btn-close-white position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-body">
+				<div class="container text-center">
+					{% for themeimage in themeimages %}
+						{% if themeimage.imageDestination == 'logo' %}
+							<img src="{{asset('build/images/theme/logo/'~ themeimage.imageEntier)}}" class="img-fluid  pb-3" alt="{{themeimage.imageNom}}">
+						{% endif %}
+					{% endfor %}
+
+					<a class="navbar-brand" href="{{path('accueil')}}"></a>
+					<h4>VOTRE IDENTIFIANT POUR REJOINDRE SPOTTED</h4>
+					<p class="inscriptP">Spotted à votre service : accédez aux meilleurs équipements,bénéficiez de conseils d'experts, vivez d'incroyables expériences et restez toujours motivé</p>
+					{% if error %}
+						<div class="alert alert-danger alert-dismissible fade show fixed-bottom text-center">Le login et le mot de passe ne corresponde pas.<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+						</div>
+					{% endif %}
+					<div class="container">
+						<form action="{{path('connexion')}}" method="post">
+							<div class="form-group mb-3">
+								<input type="text" placeholder="Adresse e-mail" required name="_usermail" class="form-control" value="{{lastUsername}}"></div>
+							<div class="form-group mb-3">
+								<input type="password" placeholder="Mot de passe" required name="_password" class="form-control">
+							</div>
+							<a href="{{path('resetPasswordapp_forgot_password_request')}}" class="nav-link pb-3 f-12 text-end">Mot de passe oublié ?</a>
+							<div class="text-center mb-3">
+								<p class="f-12">En vous connectant, vous acceptez de vous conformer à la
+									<a href="#">Politique de confidentialité</a>
+									et aux
+									<a href="#">Conditions générales</a>
+									de Spotted.</p>
+								<input type="submit" class="btn btn-danger" value="SE CONNECTER"></form>
+							<p class="mt-3 f-12" >
+								Vous n'êtes pas encore membre ?
+								<a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Rejoignez-nous maintenant</a>
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

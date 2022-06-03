@@ -1,0 +1,60 @@
+{% extends 'layout_admin.html.twig' %}
+
+
+{% block title %}Liste des images du thèmes
+{% endblock %}
+
+{% block monTitre %}Liste des images du thème
+{% endblock %}
+{% block body %}
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<symbol id="check-circle-fill" fill="currentColor" viewbox="0 0 16 16">
+			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+		</symbol>
+	</svg>
+	<div class="col-10">
+		{% for message in app.flashes('success') %}
+			<div class="alert alert-success alert-dismissible fade show fixed-bottom text-center" role="alert">
+				<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+				{{message}}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}
+		<div>
+			Catalogue / Thème & Logo
+
+			<h2>Thème & Logo</h2>
+		</div>
+		<ul class="nav justify-content-end">
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-secondary text-white" href="#">Module recommandé</a>
+			</li>
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-secondary text-white" href="#">Aide</a>
+			</li>
+		</ul>
+		<table class="table table-perso">
+
+				{% for themeimage in themeimages %}
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">{% if themeimage.imageDestination == 'favico' %}Favico{% else %} Logo {% endif %}</th>
+					<th scope="col">Nom</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<th>{{themeimage.id}}</th>
+						<td><img src="{{asset('build/images/theme/'~ themeimage.imageDestination)}}/{{themeimage.imageEntier}}" class="img-fluid"></td>
+						<th>{{themeimage.imageNom}}</th>
+						<td>
+							<a href="{{path('modifImage',{'id' : themeimage.id})}}" class="col btn btn-warning">Modifier</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div></div>{% endblock %}

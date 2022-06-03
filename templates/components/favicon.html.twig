@@ -1,0 +1,5 @@
+{% for themeimage in themeimages %}
+    {% if themeimage.imageDestination == 'favico' %}
+        <link rel="icon" type="image/png" href="{{asset('build/images/theme/favico/'~ themeimage.imageEntier)}}">
+    {% endif %}
+{% endfor %}

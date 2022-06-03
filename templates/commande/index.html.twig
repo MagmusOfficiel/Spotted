@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Valider ma commande
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h2>Je passe ma commande
+		</h2>
+		<p>Choisissez vos préférences avant de passer votre commande</p>
+		<hr>
+		<div class="row">
+			<div class="col-md-6"></br>
+			{% set formHtml %}
+			{{form_start(form, {action:path('commande_recap')})}}
+			{{form_label(form.adresses,'Choisissez votre adresse de livraison')}}
+			<a href="{{path('compte_adresse_add')}}">Ajouter une nouvelle adresse</a>
+			{{ form_end(form)}}
+			{% endset %}
+
+			{{formHtml|replace({'[br]' : '</br>'})|raw}}
+		</div>
+		<div class="col-md-6">
+			<div class="text-center">
+				<b>Récap de ma commande</b>
+				<p>Retrouver le récapitulatif de vos produits.</p>
+			</div>
+			<div class="order-summary">
+				{% for key,produits in panier %}
+					<div class="row {% if key > 0 %}mt-2 {% endif %}">
+						<div class="col-2">
+							<img src="{{asset('build/images/theme/produit/'~ produits.produit.produitImages[0].imageName[0:4])}}/{{produits.produit.produitImages[0].imageName}}" alt="{{ produits.produit.produitLibelle }}" height="75px"><br/>
+						</div>
+						<div class="col-8 my-auto">
+							{{produits.produit.produitLibelle}}<br/>
+							<small>{{produits.produit.produitDescription}}</small>
+						</div>
+						<div class="col-2 my-auto">
+							x
+							{{ produits.quantite}}
+						</div>
+						<small>
+							Prix :
+							{% if promo is not null %}
+							<strike>{{produits.produit.produitPrix}}€</strike>   {{produits.produit.produitPrix - promo.codeMontant}}€
+							{% else %}
+							{{produits.produit.produitPrix}}
+							{% endif %}
+						</small>
+					</div>
+				{% endfor %}
+
+				{% if promo is not null %}
+					<tr>
+						<td colspan="6" class="text-center">
+							<p class="text-danger">CODE PROMOTIONNELLE :
+							{{promo.codeCode}}
+							-
+							{{promo.codeMontant}}€</p>
+						</td>
+					</tr>
+				{% endif %}
+				<h3>Ajouter un code promotionnelle</h3>
+				<form method="post" class="col-2" action="{{path('commande')}}">
+					<input type="text" name="codepromo">
+					<input type="submit" class="btn btn-danger btn-sm">
+				</form>
+			</div>
+		</div>
+	{% endblock %}

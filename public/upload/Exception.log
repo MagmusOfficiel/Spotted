@@ -1,0 +1,196 @@
+
+[36m|==============================================|
+|                                              |
+| GESTION DES LOGS REMONTES PAR LES EXCEPTIONS |
+|                                              |
+|==============================================|
+[0m
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:53:20
+[31mInformation[0m : erreur à la ligne 10 du fichier /home/eddy/Bureau/Spotted-master/templates/global/index.html.twig
+[31mMessage[0m : Unexpected "}".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:53:56
+[31mInformation[0m : erreur à la ligne 268 du fichier /home/eddy/Bureau/Spotted-master/vendor/twig/twig/src/Loader/FilesystemLoader.php
+[31mMessage[0m : Looks like you try to load a template outside configured directories (../flash.html.twig) in
+"global/index.html.twig" at line 10.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:58:00
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:58:08
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:58:09
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:59:04
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:59:04
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:59:05
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/16 à 16:59:05
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:45:06
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:50:14
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:51:35
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:51:37
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:51:52
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:51:54
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:52:14
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:53:39
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:53:41
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:53:47
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:53:55
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:54:30
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:54:48
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:54:50
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:55:03
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:55:29
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:1025": stream_socket_client(): Unable to connect to
+localhost:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:55:41
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:25": stream_socket_client(): Unable to connect to
+localhost:25 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 09:56:26
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:25": stream_socket_client(): Unable to connect to
+localhost:25 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 10:29:38
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:25": stream_socket_client(): Unable to connect to
+localhost:25 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 10:32:06
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:25": stream_socket_client(): Unable to connect to
+localhost:25 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 10:32:14
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:25": stream_socket_client(): Unable to connect to
+localhost:25 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 10:32:17
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "localhost:25": stream_socket_client(): Unable to connect to
+localhost:25 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 10:32:22
+[31mInformation[0m : erreur à la ligne 172 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/dependency-injection/EnvVarProcessor.php
+[31mMessage[0m : Environment variable not found: "MAILER_DSN".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/05/20 à 10:32:32
+[31mInformation[0m : erreur à la ligne 154 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php
+[31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
+127.0.0.1:1025 (Connection refused)
+-------------------------------------------------------------------------------------------------------------------

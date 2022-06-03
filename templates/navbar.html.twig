@@ -1,0 +1,79 @@
+{# LA NAVBAR CLIENT #}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-perso fixed-top">
+	<div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			<a class="navbar-brand" href="{{path('accueil')}}">
+				{% for themeimage in themeimages %}
+					{% if themeimage.imageDestination == 'logo' %}
+						<img src="{{asset('build/images/theme/logo/'~ themeimage.imageEntier)}}" class="img-fluid" alt="Spotted"></a>
+				{% endif %}
+			{% endfor %}
+			<form class="d-flex">
+				<input class="form-control me-2" type="search" placeholder="🔎  Rechercher..." aria-label="Search">
+			</form>
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				{% if not is_granted('ROLE_ADMIN', app.user) %}
+					{% for menu in menu %}
+						<li class="nav-item ms-5">
+							<a class="nav-link text-white link-perso" href="{{path('menuNom',{'menuNom' : menu.menuNom|lower })}}">{{menu.menuNom}}</a>
+						</li>
+					{% endfor %}
+					<li class="nav-item ms-5">
+						<a class="nav-link text-white link-perso" href="{{path('contact')}}">Contact</a>
+					</li>
+					<li class="nav-item ms-5">
+						<a class="nav-link text-white link-perso" href="{{path('cartecadeau')}}">Carte Cadeaux</a>
+					</li>
+				</ul>
+			{% endif %}
+		</div>
+		{% if not is_granted('ROLE_ADMIN', app.user) %}
+			<a class="nav-link text-white panier" href="{{path('panier') }}">
+				<i class="fas fa-shopping-bag p-2"></i>Panier
+				{% if quantitetotal != 0 %}
+					({{ quantitetotal }})
+					{{ total }}€
+				{% endif %}
+			{% endif %}
+		</a>
+		{# Si l'utilisateur n'est pas connecter alors nous nous affichons le menu pour s'inscrire #}
+		{% if not app.user %}
+			<div class="d-flex">
+				<button type="button" class="btn btn-perso link-perso" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					S'inscrire
+				</button>
+				<p class="text-white mt-3">/</p>
+				<button type="button" class="btn btn-perso link-perso" data-bs-toggle="modal" data-bs-target="#exampleModal1">Se connecter</button>
+			{% else %}
+				{% if is_granted('ROLE_USER') %}
+					<div>
+						<a href="{{path('compte')}}" alt="compte">
+							<svg xmlns="http://www.w3.org/2000/svg" class="m-3" x="0px" y="0px" width="35" height="35" viewbox="0 0 172 172" style=" fill:#000000;">
+								<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+									<path d="M0,172v-172h172v172z" fill="none"></path>
+									<g fill="#ffffff">
+										<path d="M86,6.90688c-43.65602,0 -79.12,35.46398 -79.12,79.12c0,41.63931 32.27171,75.80172 73.1336,78.87141c0.08056,0.00655 0.16115,0.01386 0.24187,0.02015c1.9,0.13691 3.80998,0.22844 5.74453,0.22844c1.93455,0 3.84453,-0.09153 5.74453,-0.22844c0.08072,-0.0063 0.16131,-0.01361 0.24187,-0.02015c40.86189,-3.06969 73.1336,-37.2321 73.1336,-78.87141c0,-43.65602 -35.46398,-79.12 -79.12,-79.12zM86,13.78688c39.93779,0 72.24,32.3022 72.24,72.24c0,19.71706 -7.89544,37.55193 -20.6736,50.57875c-5.46671,-3.98083 -12.22246,-6.35558 -18.275,-8.47906c-7.16896,-2.5112 -13.95113,-4.89168 -15.82937,-9.03c-0.29584,-3.53288 -0.2694,-6.29176 -0.24188,-9.46l0.00672,-1.34375c3.05472,-2.9068 6.89623,-9.04167 8.21031,-14.70735c2.2704,-1.21088 5.04643,-4.11354 5.87891,-11.06578c0.41624,-3.45032 -0.56572,-6.12245 -1.94172,-7.91469c1.8576,-6.3812 5.55361,-22.53555 -0.92047,-32.96219c-2.73824,-4.40664 -6.87027,-7.18686 -12.30203,-8.28422c-3.05128,-3.77712 -8.80925,-5.83859 -16.50797,-5.83859c-11.69944,0.21672 -20.27622,3.80018 -25.4775,10.64922c-6.13352,8.084 -7.29248,20.29804 -3.45344,36.32156c-1.42072,1.79224 -2.44546,4.50307 -2.02234,8.02219c0.83592,6.95224 3.60179,9.8549 5.87219,11.06578c1.31408,5.67256 5.15215,11.80726 8.21031,14.71406l0.00672,1.31015c0.02752,3.182 0.05396,5.94696 -0.24188,9.4936c-1.88512,4.14864 -8.69992,6.55503 -15.90328,9.09719c-6.0162,2.12442 -12.73196,4.50283 -18.18765,8.43203c-12.78804,-13.02829 -20.68703,-30.87322 -20.68703,-50.59891c0,-39.93779 32.30221,-72.24 72.24,-72.24z"></path>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</div>
+				{% endif %}
+				<a href="{{path('logout')}}" alt="deconnexion">
+					<svg xmlns="http://www.w3.org/2000/svg" class="m-3" x="0px" y="0px" width="35" height="35" viewbox="0 0 226 226" style=" fill:#000000;">
+						<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+							<path d="M0,226v-226h226v226z" fill="none"></path>
+							<g id="original-icon" fill="#ffffff">
+								<path d="M112.86758,8.91641c-2.78318,0.04248 -5.39165,1.36462 -7.07133,3.58422l-30.82781,30.82781c-2.3616,2.26739 -3.31291,5.63433 -2.48704,8.80232c0.82587,3.16799 3.29986,5.64198 6.46785,6.46785c3.16799,0.82587 6.53493,-0.12544 8.80232,-2.48704l16.20844,-16.20844v82.13688c-0.04611,3.26015 1.66675,6.29258 4.48269,7.93611c2.81594,1.64353 6.29868,1.64353 9.11462,0c2.81594,-1.64353 4.5288,-4.67596 4.48269,-7.93611v-82.13687l16.20844,16.20844c2.26739,2.3616 5.63433,3.31291 8.80232,2.48704c3.16799,-0.82587 5.64198,-3.29986 6.46785,-6.46785c0.82587,-3.16799 -0.12544,-6.53493 -2.48704,-8.80232l-30.86312,-30.86312c-1.73588,-2.27045 -4.4431,-3.58641 -7.30086,-3.54891zM50.04664,32.93773c-2.34915,-0.05888 -4.62893,0.7992 -6.35625,2.39242c-21.22736,19.01164 -34.65039,46.6737 -34.65039,77.38734c0,57.30852 46.65148,103.96 103.96,103.96c57.30852,0 103.96,-46.65148 103.96,-103.96c0,-30.71774 -13.42203,-58.37975 -34.65039,-77.38734c-2.40025,-2.19682 -5.79584,-2.9344 -8.89116,-1.93132c-3.09533,1.00309 -5.41288,3.5921 -6.06839,6.77919c-0.65551,3.18709 0.45214,6.48059 2.90034,8.62385c17.57131,15.73313 28.62961,38.44976 28.62961,63.91562c0,47.5374 -38.3426,85.88 -85.88,85.88c-47.5374,0 -85.88,-38.3426 -85.88,-85.88c0,-25.46092 11.05729,-48.18634 28.62961,-63.92445c2.81064,-2.44808 3.83084,-6.37012 2.5693,-9.87745c-1.26154,-3.50732 -4.54622,-5.88096 -8.27226,-5.97787z"></path>
+							</g>
+						</g>
+					</svg>
+				</a>
+			{% endif %}
+		</div>
+	</div>
+</nav>

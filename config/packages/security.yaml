@@ -1,0 +1,39 @@
+security: 
+    encoders:
+        App\Entity\Utilisateur:
+            algorithm: auto
+    providers:
+        users_in_memory: { memory: null }
+        in_database:
+            entity:
+                class: App\Entity\Utilisateur
+                property: userMail
+    firewalls:
+        dev:
+            pattern: ^/(_(profil|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+        
+            lazy: true 
+            provider: in_database
+
+            form_login: 
+                login_path: connexion
+                check_path: connexion
+
+                username_parameter: "_usermail"
+                password_parameter: "_password"
+            logout:
+                path: logout
+                target: accueil
+    access_control:
+        - { path: ^/compte, roles: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_ADMIN } 
+        - { path: ^/client, roles: [ROLE_USER,ROLE_ADMIN] }
+    
+    role_hierarchy:
+        ROLE_VISITEUR: ROLE_VISITEUR
+        ROLE_USER: ROLE_USER
+        ROLE_ADMIN: ROLE_ADMIN
+        ROLE_SUPER_ADMIN: ROLE_SUPER_ADMIN

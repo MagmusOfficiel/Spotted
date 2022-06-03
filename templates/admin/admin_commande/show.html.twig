@@ -1,0 +1,187 @@
+{% extends 'layout_admin.html.twig' %}
+
+
+{% block title %}Liste des Commandes
+{% endblock %}
+
+{% block monTitre %}Liste des Commandes
+{% endblock %}
+{% block body %}
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<symbol id="check-circle-fill" fill="currentColor" viewbox="0 0 16 16">
+			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+		</symbol>
+	</svg>
+	<div class="col-10">
+		{% for message in app.flashes('success') %}
+			<div class="alert alert-success alert-dismissible fade show fixed-bottom text-center" role="alert">
+				<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+				{{message}}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}
+		<button id="impression" name="impression" type="button" class="btn-widjet btn btn-danger" onclick="imprimer_page()">
+			<img src="{{asset('build/images/google-icon/print.png')}}" class="img-fluid" alt="print">
+		</button>
+		<div class="print-off">
+			Catalogue / Facture de la commande
+			<h2>Facture</h2>
+		</div> 
+		{% for commandedetails in commandedetails %}
+			<div class="container mt-5 mb-5">
+				<div class="row d-flex justify-content-center">
+					<div class="col-md-8">
+						<div class="text-left logo p-2 px-5">
+							<img src="{{asset('build/images/theme/logo/spotted.png')}}" width="90">
+						</div>
+						<div class="invoice p-5"> 
+							<h5>Votre facture de votre commande n°{{commandedetails.id}} !</h5>
+							<span class="font-weight-bold d-block mt-4">Bonjour, {{commandedetails.maCommande.utilisateur.username|title}}</span>
+							<span>Votre commande a été confirmée et sera expédiée dans les deux prochains jours !</span>
+							<div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+								<table class="table table-perso">
+									<tbody>
+										<tr>
+											<td>
+												<div class="py-2">
+													<span class="d-block text-muted">Date de commande</span>
+													<span id="commandDate">{{commandedetails.maCommande.createdAt|format_datetime('full', 'none', locale='fr')|title}}</span>
+												</div>
+											</td>
+											<td>
+												<div class="py-2">
+													<span class="d-block text-muted">N° de commande</span>
+													<span>{{commandedetails.maCommande.reference}}</span>
+												</div>
+											</td>
+											<td>
+												<div class="py-2">
+													<span class="d-block text-muted">Payement</span>
+													<span><img src="https://img.icons8.com/color/48/000000/mastercard.png" width="20"/></span>
+												</div>
+											</td>
+											<td>
+												<div class="py-2">
+													<span class="d-block text-muted">Adresse de livraison</span>
+													<span>{{commandedetails.maCommande.livraison|raw}}</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="product border-bottom table-responsive">
+								<table class="table table-perso">
+									<tbody>
+										<tr>
+											<td width="20%">
+												<img src="{{asset('build/images/theme/produit/af11/af11-61811e2d6e740552895346-61dc3e607a6ce716079533.jpg')}}" height="75px">
+											</td>
+											<td width="60%">
+												<span class="font-weight-bold">{{commandedetails.produits}}</span>
+												<div class="product-qty">
+													<span class="d-block">Quantite:{{commandedetails.quantite}}</span>
+												</div>
+											</td>
+											<td width="20%">
+												<div class="text-right">
+													<span class="font-weight-bold">{{commandedetails.total}} €</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="row d-flex justify-content-end">
+								<div class="col-md-5">
+									<table class="table table-borderless table-perso">
+										<tbody class="totals">
+											<tr>
+												<td>
+													<div class="text-left">
+														<span class="text-muted">Total</span>
+													</div>
+												</td>
+												<td>
+													<div class="text-right">
+														<span>{{commandedetails.total}} €</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="text-left">
+														<span class="text-muted">Frais d'expédition</span>
+													</div>
+												</td>
+												<td>
+													<div class="text-right">
+														<span>{{commandedetails.maCommande.transporteurPrix}} €</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="text-left">
+														<span class="text-muted">Taxe</span>
+													</div>
+												</td>
+												<td>
+													<div class="text-right">
+														<span>7.65 €</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="text-left">
+														<span class="text-muted">Réduction</span>
+													</div>
+												</td>
+												<td>
+													<div class="text-right">
+														<span class="text-success">168.50 €</span>
+													</div>
+												</td>
+											</tr>
+											<tr class="border-top border-bottom">
+												<td>
+													<div class="text-left">
+														<span class="font-weight-bold">Total</span>
+													</div>
+												</td>
+												<td>
+													<div class="text-right">
+														<span class="font-weight-bold">{{commandedetails.total + commandedetails.maCommande.transporteurPrix}} €</span>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<p>Nous enverrons un e-mail de confirmation d'expédition lorsque l'article sera expédié avec succès !</p>
+							<p class="font-weight-bold mb-0">Merci d'avoir acheté chez nous!</p>
+							<span>Spotted Team</span>
+						</div>
+						<div class="d-flex justify-content-between footer p-3">
+							<span>Besoin d'aide? visiter notre
+								<a href="#">
+									centre d'aide!</a>
+							</span> 
+							<span>{{ "now"|format_datetime('full', 'none', locale='fr')|title}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+            {% endfor %}
+		</div>
+	</div>
+</div>{% endblock %}
+{% block script %}
+	<script type="text/javascript">
+    function imprimer_page() {
+      window.print();
+    }
+  </script>
+  {% endblock %}

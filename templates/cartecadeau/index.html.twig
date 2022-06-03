@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carte Cadeaux
+{% endblock %}
+
+{% block monTitre %}Carte Cadeaux
+{% endblock %}
+{% block body %}
+
+	<div class="container">
+		{{ form_start(form) }}
+		<div class="row">
+			<div class="text-center">
+				<h1>ENVOYER UNE CARTE CADEAU PAR E-MAIL</h1>
+				<h5>Commandez jusqu'à 5 cartes-cadeaux à la fois pour vos amis, votre famille et vos collègues.</h5>
+			</div>
+			<div class="col-lg-8 col-sm-6">
+				<div>
+					<h2>
+						<font>
+							<font>Choisissez un design</font>
+						</font>
+					</h2>
+					<div class="row">
+						<div class="col-sm-6 col-lg-5">
+							<img src="{{asset('build/images/theme/divers/zoom_icon.png')}}" onclick="$(this).next().click()" style="position:absolute;cursor:pointer;">
+							<a href="{{asset('build/images/theme/carte-cadeau/carte-cadeau-basique.jpg')}}" id="lnkImgMain" data-lightbox="1"><img id="imgMain" class="img-responsive" width="300" src="{{asset('build/images/theme/carte-cadeau/carte-cadeau-basique.jpg')}}"></a>
+						</div>
+						<div class="col-sm-6 col-lg-7">
+							<div class="row">
+
+
+								{% for cartecadeau in cartecadeau %}
+									{% if cartecadeau.cartecadeauBloque == '0' %}
+										{% if cartecadeau.cartecadeauCreation < cartecadeau.cartecadeauNouveaute %}
+											<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="z-index:500;">
+												Nouveau !
+											</span>
+										{% endif %}
+										<div class="col-4 bg-transparent">
+											<input id="CarteDesign_{{cartecadeau.id}}" class="btn-check" autocomplete="off" type="radio" name="carteTheme" value="{{cartecadeau.id}}" checked="checked" onclick="$('#imgMain').prop('src','{{asset('build/images/theme/carte-cadeau/'~ cartecadeau.cartecadeauImage)}}'); $('#lnkImgMain').prop('href','{{asset('build/images/theme/carte-cadeau/'~ cartecadeau.cartecadeauImage)}}');"><label class="btn" for="CarteDesign_{{cartecadeau.id}}">
+												<img id="imgFrameShape51" src="{{asset('build/images/theme/carte-cadeau/'~ cartecadeau.cartecadeauImage)}}" width="120" alt="{{cartecadeau.cartecadeauLibelle}}" title="{{cartecadeau.cartecadeauLibelle}}"></label>
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+
+				{{form_row(form.carteMontant,{ 'attr': {'class': 'mb-2'}})}}
+
+				{{form_row(form.cartePrenom,{ 'attr': {'class': 'mb-2'}})}}
+
+				{{form_row(form.carteNom,{ 'attr': {'class': 'mb-2'}})}}
+
+				{{form_row(form.carteEmail,{ 'attr': {'class': 'mb-2'}})}}
+
+				{{form_row(form.carteEmailVerif,{ 'attr': {'class': 'mb-2'}})}}
+
+				{{form_row(form.carteDate,{ 'attr': {'class': 'mb-2'}})}}
+
+				{{form_row(form.carteMessage,{'attr': {'class': 'mb-2'}})}}
+
+				<input type="submit" value="valider" class="btn btn-success">
+
+				{{ form_end(form) }}
+
+				<p>* Champs obligatoire</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

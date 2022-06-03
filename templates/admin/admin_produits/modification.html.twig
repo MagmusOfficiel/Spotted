@@ -1,0 +1,79 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}Modification du produit
+{% endblock %}
+
+{% block monTitre %}Produit
+	{{produit.libelle}}
+{% endblock %}
+{% block body %}
+
+	<div class="col-10">
+		{{form_start(form)}}
+
+		{{form_label(form.produitLibelle,"Libelle")}}
+		{{form_widget(form.produitLibelle)}}
+
+		{{form_label(form.produitRef,"Référence")}}
+		{{form_widget(form.produitRef)}}
+
+		{{form_label(form.couleur,"Couleur")}}
+		{{form_widget(form.couleur)}}
+
+		{{form_label(form.produitRef,"Description")}}
+		{{form_widget(form.produitDescription)}}
+
+		{{form_label(form.produitRef,"Prix")}}
+		{{form_widget(form.produitPrix)}}
+
+		{{form_label(form.produitBloque,"Bloque")}}
+		{{form_widget(form.produitBloque)}}
+
+		{{form_label(form.categorie,"Catégorie")}}
+		{{form_widget(form.categorie)}}
+
+		{{form_label(form.typehm,"Genre")}}
+		{{form_widget(form.typehm)}}
+
+		{{form_label(form.marques,"Marque")}}
+		{{form_widget(form.marques)}}
+
+		{{form_label(form.produitStock,"Stock")}}
+		{{form_widget(form.produitStock)}}
+
+		{{form_label(form.produitNouveaute,"Nouveaute")}}
+		{{form_widget(form.produitNouveaute)}}
+		<ul id="produit-images-fields-list" data-prototype="{{ form_widget(form.produit_images.vars.prototype)|e }}" data-widget-tags="{{ '<li></li>'|e }}">
+			{% for key, produitImageForm in form.produit_images %}
+				{{ form_label(produitImageForm,key)}}
+				{{ form_widget(produitImageForm) }}
+			{% endfor %}
+		</ul>
+		<button type="button" class="btn btn-info add-another-collection-widget" data-list-selector="#produit-images-fields-list">Ajouter une nouvelle image</button>
+		<a href="{{path('admin_produits')}}" class="btn btn-lg btn-primary">Retour</a>
+		<input type="submit" value="Valider" class="btn btn-lg btn-success">
+		{{form_end(form)}}
+	</div>
+	<script>
+		$('.add-another-collection-widget').click(function (e) {
+var list = $($(this).attr('data-list-selector'));
+// Try to find the counter of the list or use the length of the list
+var counter = list.data('widget-counter') | list.children().length;
+
+// grab the prototype template
+var newWidget = list.attr('data-prototype');
+// replace the "__name__" used in the id and name of the prototype
+// with a number that's unique to your emails
+// end name attribute looks like name="contact[emails][2]"
+newWidget = newWidget.replace(/__name__/g, counter);
+// Increase the counter
+counter++;
+// And store it, the length cannot be used if deleting widgets is allowed
+list.data('widget-counter', counter);
+
+// create a new list element and add it to the list
+var newElem = $(list.attr('data-widget-tags')).html(newWidget);
+newElem.appendTo(list);
+});
+	</script>
+{% endblock %}

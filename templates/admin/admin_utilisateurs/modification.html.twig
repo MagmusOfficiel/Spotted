@@ -1,0 +1,44 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}Modification du client
+{% endblock %}
+
+{% block monTitre %}Clients
+
+{% endblock %}
+{% block body %}
+
+	<div class="col-10">
+		{{form_start(form)}}
+		
+		{{form_label(form.userPrenom,"Prénom")}}
+		{{form_widget(form.userPrenom)}}
+
+		{{form_label(form.username,"Nom")}}
+		{{form_widget(form.username)}}
+
+		{{form_label(form.userSexe,"Sexe")}}
+		{{form_widget(form.userSexe)}}
+
+		{{form_label(form.userMail,"Adresse e-mail")}}
+		{{form_widget(form.userMail)}}
+
+		{{form_label(form.userNationalite,"Pays")}}
+		{{form_widget(form.userNationalite)}}
+
+		{{form_label(form.userNaissance,"Date de naissance")}}
+		{{form_widget(form.userNaissance)}}
+
+		{{form_label(form.password,"Mot de passe")}}
+		{{form_widget(form.password)}}
+
+		{{form_label(form.roles,"Roles")}}
+		{{form_widget(form.roles)}}
+
+		{{form_widget(form)}}
+
+		<a href="{{path('admin_utilisateurs')}}" class="btn btn-primary">Retour</a>
+		<input type="submit" value="valider" class="btn btn-success">
+		{{form_end(form)}}
+	</div>
+</div>{% endblock %}

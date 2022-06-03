@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------------------------------------------
+    Template Name: Deadfire
+    Description: Gaming and eSports HTML5 Template
+    Author: Codezion 
+    Author URI: https://www.templatemonster.com/authors/codezion/
+    Version: 1.0
+-----------------------------------------------------------------------------------*/
+@media (min-width: 1200px) {
+    .col-xl-auto {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    /*Header*/
+    .header .navigation .main-menu>.menu-item.menu-item-logo>a {
+        padding: 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header .navigation .menu-item-has-children .sub-menu {
+        display: block !important;
+    }
+}
+
+@media (max-width: 991px) {
+
+    /*Section Headre*/
+    .section-header .right_block {
+        max-width: 320px;
+    }
+
+    .section-header .left_block {
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+
+
+    /*Header*/
+    .header .header_actions ul li:last-child {
+        margin-right: 15px;
+    }
+
+    .single_banner .elements,
+    .header .navigation .main-menu>.menu-item.menu-item-logo {
+        display: none;
+    }
+
+    .header .navigation {
+        position: absolute;
+        top: 77px;
+        left: 0;
+        right: 0;
+        background-color: var(--thm-color-one);
+        height: 0vh;
+        transition: 0.5s all;
+    }
+
+    .header .navigation.open {
+        height: 100vh;
+    }
+
+    .header .navigation .main-menu {
+        display: block;
+        height: calc(100% - 77px);
+        overflow-y: auto;
+    }
+
+    .header .navigation .menu-item-has-children .sub-menu .menu-item>a:hover,
+    .header .navigation .main-menu>.menu-item>a:hover,
+    .header .navigation .main-menu>.menu-item>a.active {
+        background-color: var(--thm-white);
+        color: var(--thm-color-one);
+    }
+
+    .header .navigation .main-menu>.menu-item>a {
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    .header .navigation .menu-item-has-children .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        width: 100%;
+        display: none;
+        position: relative;
+    }
+
+    .header .navigation .menu-item-has-children .sub-menu .menu-item-has-children>.sub-menu {
+        left: 0;
+    }
+
+    .header .navigation .menu-item-has-children .sub-menu .menu-item-has-children>a:after {
+        transform: none;
+    }
+
+    /*Footer*/
+    .footer .footer_inner>.row>*:nth-child(2) {
+        order: 3;
+    }
+
+    .footer .footer_inner>.row>*:nth-child(3) {
+        order: 2;
+    }
+
+    .footer .footer_inner>.row>*:nth-child(2) .footer_widgets {
+        padding-left: 0;
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .footer .footer_inner>.row>*:nth-child(2) .footer_widgets .widgets_inner {
+        padding-bottom: 0;
+    }
+
+    .res-section {
+        padding: 80px 0;
+    }
+
+    /*newsletter*/
+    .newsletter_inner .section-header.style_two .left_block {
+        border-bottom: 1px solid var(--thm-white);
+        margin-right: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /*Section Headre*/
+    .section-header .right_block {
+        display: none;
+    }
+
+    .section-header .left_block {
+        padding-right: 0px;
+        margin-right: 0px;
+        border-right: none;
+    }
+
+    /*Player details*/
+    .player_details_user_info {
+        flex-wrap: wrap;
+    }
+
+    .player_details_user_info .image {
+        margin-right: 0;
+    }
+
+    .player_details_user_info .info {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /*.single_game_box*/
+    .single_game_box .game_image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .single_game_box .game_info {
+        width: calc(100% - 140px);
+    }
+
+    .post.post_list .post_wrapper .post_image .slide_item,
+    .post.post_list .post_wrapper .post_image {
+        height: 300px;
+    }
+
+    /*.bracket .tree_counter*/
+    .res_scroll {
+        flex-wrap: unset;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .bracket,
+    .bracket .tree_counter {
+        width: 1140px;
+    }
+
+    /*Login*/
+    .login_page .login_box {
+        max-width: 80%;
+    }
+
+    /*newsletter*/
+    .newsletter_inner .section-header .right_block {
+        display: block;
+    }
+}
+
+@media (max-width: 575px) {
+
+    /*Header*/
+    .header .header_actions ul {
+        display: none;
+    }
+
+    .header .header_inner {
+        padding: 0px 20px;
+    }
+
+    /*about*/
+    .about_img {
+        width: calc(100% - 40px);
+        height: 200px;
+    }
+
+    .about_img+.about_img {
+        left: 40px;
+    }
+
+    /*blog*/
+    .comments .children {
+        padding-left: 0;
+    }
+
+    /*footer*/
+    .footer .footer_inner>.row>* .footer_widgets {
+        padding-left: 0;
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .error_page .error_image {
+        max-width: 100%;
+    }
+
+    .error_page .banner_text .title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*Match*/
+    .match_block .match_header {
+        padding: 0;
+    }
+
+    .match_block .match_team {
+        max-width: 100px;
+    }
+
+    .match_block .match_text .match_name {
+        font-size: 16px;
+    }
+
+    .match_block .match_text .match_time {
+        font-size: 20px;
+    }
+
+    .match_block .match_text .match_preview,
+    .match_block .match_text .match_date {
+        font-size: 12px;
+    }
+
+    .match_block .match_text .match_preview {
+        width: 30px;
+        height: 30px;
+    }
+
+    .match_block .match_text .match_name,
+    .match_block .match_text .match_time,
+    .match_block .match_text .match_date {
+        margin-bottom: 10px;
+    }
+
+    .newsletter_inner,
+    .box_wrapper {
+        padding: 20px;
+    }
+
+    .player_game_video .image {
+        height: 200px;
+    }
+
+    /*single match*/
+    .single_game_box {
+        flex-wrap: wrap;
+    }
+
+    .single_game_box .game_info {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /*Login*/
+    .login_page .login_box {
+        max-width: 90%;
+    }
+
+    /*players*/
+    .top_players {
+        height: 150px;
+    }
+
+    .top_players img {
+        max-width: 100px;
+    }
+
+    .newsletter_inner {
+        padding-bottom: 10px;
+    }
+}

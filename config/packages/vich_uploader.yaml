@@ -1,0 +1,97 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        default:
+            uri_prefix: /images/theme/produit
+            upload_destination: '%kernel.project_dir%/assets/images/theme/produit'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            directory_namer:                 
+                service: Vich\UploaderBundle\Naming\SubdirDirectoryNamer
+                options: { chars_per_dir: 4, dirs: 1} # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        themeimage:
+            uri_prefix: /images/theme
+            upload_destination: '%kernel.project_dir%/assets/images/theme'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options: { property: 'imageNom' }
+            directory_namer:                 
+                service: vich_uploader.namer_directory_property
+                options: { property: 'imageDestination', transliterate: true } # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        carrousel:
+            uri_prefix: /images/theme
+            upload_destination: '%kernel.project_dir%/assets/images/theme'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options: { property: 'carrouselNom' }
+            directory_namer:                 
+                service: vich_uploader.namer_directory_property
+                options: { property: 'carrouselDestination', transliterate: true } # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        reseaux:
+            uri_prefix: /images/theme
+            upload_destination: '%kernel.project_dir%/assets/images/theme'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options: { property: 'reseauNom' }
+            directory_namer:                 
+                service: vich_uploader.namer_directory_property
+                options: { property: 'reseauDestination', transliterate: true } # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        marques:
+            uri_prefix: /images/theme/marques
+            upload_destination: '%kernel.project_dir%/assets/images/theme/marques'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options: { property: 'marqueNom', transliterate: true  }
+            directory_namer:                 
+                service: vich_uploader.namer_directory_property
+                options: { property: 'marqueDestination', transliterate: true } # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        pays:
+            uri_prefix: /images/theme/pays
+            upload_destination: '%kernel.project_dir%/assets/images/theme/pays'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options: { property: 'paysNom', transliterate: true  }
+            directory_namer:                 
+                service: vich_uploader.namer_directory_property
+                options: { property: 'paysDestination', transliterate: true } # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+            
+        cartecadeau:
+            uri_prefix: /images/theme/
+            upload_destination: '%kernel.project_dir%/assets/images/theme/'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            directory_namer:                 
+                service: vich_uploader.namer_directory_property
+                options: { property: 'cartecadeauLibelle', transliterate: true } # will create directory "a/b" for "abcdef.jpg"
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true

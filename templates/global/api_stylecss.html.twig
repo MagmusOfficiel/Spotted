@@ -1,0 +1,134 @@
+<style>
+	{% if couleur == "#000000" or couleur == "#110b23" or couleur == null %}
+		body {
+			background-color: {{couleur}}
+			!important;
+			color: white !important;
+		}
+		nav {
+			background-color: {{couleur}}
+			!important;
+			color: white !important;
+		}
+		nav button {
+
+			background-color: {{couleur}}
+			!important;
+			border-color: {{couleur}}
+			!important;
+			color: white !important;
+
+		}
+
+
+		.at-custom-sidebar {
+			position: fixed;
+			visibility: visible;
+			display: block;
+			cursor: pointer;
+			box-sizing: border-box; 
+			opacity: 1;
+			line-height: 1;
+			inset: auto auto 20px 20px;
+			outline: none 0 !important;
+			overflow: visible !important;
+			background-color: white;
+			z-index: 99;
+			-webkit-transition: all 0.15s ease;
+			-moz-transition: all 0.15s ease;
+			-o-transition: all 0.15s ease;
+			transition: all 0.15s ease;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+		}
+
+		input[type='color'] {
+			padding: 0;
+			width: 150%;
+			height: 150%;
+			margin: -35%;
+		}
+
+		.cp_wrapper {
+			overflow: hidden;
+			width: 2em;
+			height: 2em;
+			/* optional formatting below here */
+			border-radius: 50%;
+			box-shadow: 1px 1px 3px 0 grey;
+			margin: 1em;
+		}
+
+	{% else %}
+		body {
+			background-color: {{couleur}}
+			!important;
+			color: black !important;
+		}
+		nav {
+			background-color: {{couleur}}
+			!important;
+
+		}
+		nav .text-white {
+			color: black !important;
+		}
+		nav button {
+
+			background-color: {{couleur}}
+			!important;
+			border-color: {{couleur}}
+			!important;
+			color: black !important;
+		}
+		.link-light {
+			color: black !important;
+		}
+
+		.border-bottom {
+			border-bottom: 1px solid #000000 !important;
+		}
+
+		.at-custom-sidebar {
+			position: fixed;
+			visibility: visible;
+			display: block;
+            text-align: center;
+			cursor: pointer;
+			box-sizing: border-box;
+			opacity: 1;
+			line-height: 1;
+			inset: auto auto 20px 20px;
+			outline: none 0 !important;
+			overflow: visible !important;
+			background-color: white;
+			z-index: 99;
+			-webkit-transition: all 0.15s ease;
+			-moz-transition: all 0.15s ease;
+			-o-transition: all 0.15s ease;
+			transition: all 0.15s ease;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+		}
+
+		input[type='color'] {
+			padding: 0;
+			width: 150%;
+			height: 150%;
+			margin: -35%;
+		}
+
+		.cp_wrapper {
+			overflow: hidden;
+			width: 2em;
+			height: 2em;
+			/* optional formatting below here */
+			border-radius: 50%;
+			box-shadow: 1px 1px 3px 0 grey;
+			margin: 1em;
+		}
+
+	{% endif %}
+</style>

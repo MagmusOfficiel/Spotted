@@ -1,0 +1,33 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Nous avons prolongé le délai de retour à 60 jours. En savoir plus</div>
+      <div class="swiper-slide">Les étudiants bénéficient de 10 % de réduction
+En savoir plus</div>
+      <div class="swiper-slide">COVID-19 : informations concernant les magasins et livraisons Spotted. Voir ici.</div>
+    </div>
+    <!-- Add Pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- Add Arrows -->
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  </div>
+ 
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 0,
+      centeredSlides: false,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: false,
+    //   },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>

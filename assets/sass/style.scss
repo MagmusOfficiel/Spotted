@@ -1,0 +1,199 @@
+/* COULEUR PERSO DEFAULT :  $perso : #110b23; */
+
+$perso : #110b23;
+
+/* GENERAL DESIGN */
+%perso {
+  @if (lightness($perso) > 50%) {
+    color: #000!important;
+  } else {
+    color: #FFF!important;
+  }
+  background-color: $perso ;
+  border-color: $perso ;
+
+}
+
+
+
+body {
+    @extend %perso;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 110px;
+  nav {
+    @extend %perso;
+
+    .text-white {
+      @if (lightness($perso) > 50%) {
+        color: #000!important;
+    } else {
+    
+    color: #FFF!important;
+    }
+		}
+		nav button {
+			@extend %perso;
+		}
+
+		}
+    @media (max-width: 992px){
+      .navbar-nav .nav-item {
+       margin-left: 0px!important;
+      }
+      .close {
+          color: white;
+          margin-top: -20px;
+          margin-right: -5px;
+      }
+    }
+    .link-light {
+      @if (lightness($perso) > 50%) {
+        color: #000!important;
+    } else {
+    
+    color: #FFF!important;
+    }
+  }
+    
+  /* GENERAL DESIGN */
+
+  /* THEME COLOR PERSO */
+  .btn-perso { 
+    @extend %perso; 
+    color: white;
+  }
+  .table-perso {
+    --bs-table-bg: $perso ;
+    --bs-table-striped-bg: $perso ;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: $perso ;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: $perso ;
+    --bs-table-hover-color: #fff; 
+    border-color: #373b3e;
+    color: #FFF!important;
+  }
+  
+  .bg-perso {
+    @extend %perso;
+  }
+  
+  .btn-perso:hover { 
+    @extend %perso; 
+  }
+
+  }
+
+  @font-face{
+    font-family : 'Orbitron';
+    src : url('/fonts/Orbitron-Bold.ttf') format('truetype');
+}
+  
+  /* THEME COLOR PERSO */
+  
+  /* AJOUTE UNE DEUXIEME IMAGE DERRIERE UN PRODUIT SUR UN PASSAGE DE SOURIS */
+  
+  #photo2 .hover {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 0.1s ease;
+  }
+  
+  /* Apparition overlay sur passage souris */
+  #photo2:hover .hover {
+    opacity: 2;
+  }
+  
+  /* AJOUTE UNE DEUXIEME IMAGE DERRIERE UN PRODUIT SUR UN PASSAGE DE SOURIS */
+  
+  /* AJOUTE DU DESIGN AU SWIPER PERSONNALISER */
+  .swiper-container {
+    font-size: 13px;
+    width: 100%;
+    margin: 0 auto; 
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 10;
+    color: black;
+  }
+  
+  .swiper-slide {
+    border-bottom-left-radius: 0.95rem;
+    border-bottom-right-radius: 0.95rem;
+    height: auto;
+    min-height: 50px;
+    transition: all 0.8s;
+    box-shadow: inset 0px -1px 0px 0 #ffd700;
+    position: relative;
+    background: #ffd700;
+    overflow: hidden;
+    padding-top: 5px;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  /* AJOUTE DU DESIGN AU SWIPER PERSONNALISER */
+  
+  /* FOOTER DESIGN */
+  .footer-top {
+    box-shadow: 5px -13px 3px -15px white;
+    padding: 20px;
+    margin-top: 100px;
+    font-size: 12px;
+  }
+  .footer-top h4:before {
+    content: "|";
+    color: #ffd700;
+    padding-right: 10px;
+  }
+  
+  /* FOOTER DESIGN */
+  
+  /* ADMIN DESIGN  */
+  
+  .vich-image a img {
+    width: 200px !important;
+  }
+  
+  /* ADMIN DESIGN  */
+  
+  @for $i from 1 through 20 {
+    .f-#{$i} {
+        font-size: $i * 1px;
+    }
+}
+
+  
+  /* COIN RESPONSIVE */
+  @media (max-width: 576px){
+    .modal-content {
+     width: 300px;
+     font-size: 12px;
+     margin: auto; 
+    }
+    .close {
+        color: white;
+        margin-top: -20px;
+        margin-right: -5px;
+    }
+  }
+  
+
+  
+  /* FIN COIN RESPONSIVE */

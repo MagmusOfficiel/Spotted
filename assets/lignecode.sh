@@ -1,0 +1,1 @@
+dart-sass/sass sass/style.scss sass/css/test.css --style=compressed --no-source-map

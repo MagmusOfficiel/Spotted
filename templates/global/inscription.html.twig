@@ -1,0 +1,52 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable ">
+		<div class="modal-content btn-perso text-white rounded-3">
+			<button type="button" class="btn-close btn-close-white position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-body">
+				<div class="container">
+					<div class="text-center">
+						{% for themeimage in themeimages %}
+							{% if themeimage.imageDestination == 'logo' %}
+								<img src="{{asset('build/images/theme/logo/'~ themeimage.imageEntier)}}" class="img-fluid  pb-3" alt="{{themeimage.imageNom}}">
+							{% endif %}
+						{% endfor %}
+						<a class="navbar-brand" href="{{path('accueil')}}"></a>
+						<h4>
+							VOTRE IDENTIFIANT POUR REJOINDRE SPOTTED</h4>
+						<p>Spotted à votre service : accédez aux meilleurs équipements,bénéficiez de conseils d'experts, vivez d'incroyables expériences et restez toujours motivé</p>
+					</div>
+					{% if form is defined and form is not null %}
+						{{form_start(form)}}
+
+						{{form_widget(form.username,{ 'attr': {'class': 'mb-3'}})}}
+
+						{{form_widget(form.userPrenom,{ 'attr': {'class': 'mb-3'}})}}
+
+						{{form_widget(form.password,{ 'attr': {'class': 'mb-3'}})}}
+
+						{{form_widget(form.verifPassword,{ 'attr': {'class': 'mb-3'}})}}
+
+						{{form_widget(form.userMail,{ 'attr': {'class': 'mb-3'}})}}
+
+						{{form_widget(form.userNaissance,{ 'attr': {'class': 'mb-3'}})}}
+
+						{{form_widget(form.userNationalite,{ 'attr': {'class': 'mb-3'}})}}
+					
+						{{form_widget(form.userSexe,{ 'attr': {'class': 'mb-3 d-flex'}})}}
+						<div class="text-center mb-3">
+							<p class="f-12">En créant un compte, vous acceptez de vous conformer à la
+								<a href="#">Politique de confidentialité</a>
+								et aux
+								<a href="#">Conditions générales</a>
+								de Spotted.</p>
+							<input type="submit" class="btn btn-danger" value="ENVOYER">
+							<button type="button" class="btn btn-danger" data-bs-dismiss="modal">ANNULER</button>
+							<p class="mt-3 f-12"> Déjà membre ? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Se connecter</a>
+						</div>
+					</div>
+					{{form_end(form)}}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div></div></div>

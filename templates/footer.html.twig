@@ -1,0 +1,52 @@
+{% if not is_granted('ROLE_ADMIN') %}
+	<footer>
+		<div class="footer-top">
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					{% for pageinfo in pageinfo %}
+						{% if loop.index == 1 %}
+							<h4>{{pageinfo.pageTitre}}</h4>
+							{% for page in page %}
+								{% if pageinfo.id == page.pageinfo.id %}
+									<a class="nav-link link-light border-bottom p-2 mb-2" href="{{path('pageUrlSimple',{'pageUrlSimple' : page.pageUrlSimple|lower })}}">{{page.pageTitre}}</a>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					{% endfor %}
+
+					<a class="nav-link link-light border-bottom p-2 mb-2" href="{{path('contact')}}">Contact</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					{% for pageinfo in pageinfo %}
+						{% if loop.index == 2 %}
+							<h4>{{pageinfo.pageTitre}}</h4>
+							{% for page in page %}
+								{% if pageinfo.id == page.pageinfo.id %}
+									<a class="nav-link link-light border-bottom p-2 mb-2" href="{{path('pageUrlSimple',{'pageUrlSimple' : page.pageUrlSimple|lower })}}">{{page.pageTitre}}</a>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<h4>Suivez nous !</h4>
+					<p>Nos réseaux sociaux !</p>
+					<div class="row">
+						{% for reseaux in reseaux %}
+							<div class="col-2">
+								<a class="nav-link" href="{{reseaux.reseauLien}}" aria-label="{{reseaux.reseauNom}}">
+									<img src="{{asset('build/images/theme/reseaux/'~ reseaux.reseauEntier)}}" loading="lazy"  alt="{{reseaux.reseauNom}}"></a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<h4>Reste à l'affût !</h4>
+					<p>Viens t'abonner mon reuf, tu reçevras un mail avec toutes les nouvelles exclusivités ! N'hésite pas !</p>
+					{{render(path('newsletter'))}}
+				</div>
+			</div>
+			<p class="text-center mt-2">Tout droits réservés.©Spotted.2022</p>
+		</div>
+	</footer>
+{% endif %}

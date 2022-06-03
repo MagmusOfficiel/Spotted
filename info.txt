@@ -1,0 +1,135 @@
+Symfony : 
+
+- Faire la barre de recherche [SYMFONY 5 ASYNCRHONE]
+- Faire un systeme de promotion ciblée
+- Ajouter les cartes cadeaux au panier [SESSION]
+- Faire un systeme de stock par taille
+- Ajouter les declinaisons de couleur, taille...
+- Faire un historique/log ( EventListener ) -> mail
+- Ajouter SonarCube
+- Faire un importation d'un excell, csv..
+- Faire une tâche cron avec une commande
+- Faire un theme par defaut
+- Faire un popup promo
+- Faire des modules
+- Systeme de cookie
+- Faire un systeme de musique
+- Faire un systeme de personnalisation de sneakers
+- Faire une page de mini jeux "LIKE FOIRE DE SOMBRELUNE TA CAPTER"
+- Faire un google analystics perso
+- Google Map interactif
+- Un chargement
+- Faire un systeme de chat service client ( Symfony Mercure )
+- Ajouter du 3D site web
+- Passer en attribut
+- Passer de Swift_Mailer à Mailer
+
+DESIGN : 
+
+- Ajouter mot de passe oublié en modal( à voir ) 
+
+CRUD : 
+
+- Ajouter le menu marques avec un dropdown classé de A à Z
+- Ajouter des genres 
+
+BDD :
+
+- Faire un rassemblement de table de couleur,taille,pointure...
+
+Problème : 
+
+- Le filtrage problème avec les entity en double(choice_value) et le coichetype
+- /inscription | / connexion le render path sécurité
+
+Faits : 
+
+- Systeme SEO pour les pages
+- Faire un design prestashop
+- Ajouter du css perso et faire le design
+- Faire un systeme d'ajout de logo et favico
+- Faire un ajout de carrousel personnalisable
+- Faire un ajout de réseaux sociaux
+- Ajouter le footer
+- Faire un ajout de menu personnalisable
+- Modifier / Supprimer des éléments
+- Voir des informations d'un produit en fonction de son id
+- Ajouter les pays / nationnalite
+- Ajouter la sécurité regex + côter serveur + côter client
+- Modifier les utilisateurs
+- Ajouter un systeme de role + hiérachie
+- Faire un systeme de carte cadeau
+- Ajouter des marques + logo
+- Ajouter des attributs
+- Ajouter des catégories
+- Ajouter des produits
+- Faire un systeme de double photo au produit
+- Faire un systeme ON / OFF
+- Avoir les bonnes manières
+- Commenter le code 
+- Faire un systeme de mail
+- Faire un systeme de mot de passe oublié
+- Ajouter la connexion, inscription, deconnexion 
+- Faire un systeme de panier avec session
+- Faire un systeme d'upload de fichier multiple
+- Ajouter un systeme de nouveauté modifiable
+- Ajouter la couleur en rgb modifiable
+- Faire un count
+- Faire un systeme de filtrage
+- Faire un côter admin
+- Faire un systeme de newsletter
+- S'inscrire avec le mail au lieu du nom
+- Ajouter inscription/connexion en modal
+- Crypter un mot de passe
+- Faire un systeme de sous-dossier renommer correctement 
+- Séparer les vues pour que se soit plus lisibles
+- Récupérer la variable de la session de l'utilisateurs connecter
+- Ajouter un onglet pour que le client change / ajoute des informations de son compte 
+- Un utilisateur ne pas avoir accés à un autre compte d'un utilisateur
+- Faire un système de code manuelle qui ajoute une promotion
+- Faire un systeme de carte cadeaux
+- Faire un template de mail
+- Faire le responsive design
+- Faire un service (Exemple : pour les mails)
+- Passer de Swift_Mailer à Mailer ( symfony 5 périmé)
+- Créations de pages sans passer par un controller
+- Faire une liaison de catégories/sous-categories...
+- Faire afficher seulement la liste de la catégories selectionner
+- Faire un delete all de la colonne en fonction de l'ID
+- Lier des pages à un block ( footer )
+- Connaître un fichier .bat / .sh
+- Commencer et faire le custom.css en SASS/SCSS
+- Faire un système sombre/clair avec un bouton de session
+- Faire une interface pour changer toute la page d'accueil
+- Modification du mot de passe
+- Refaire le filtre
+- Panier mieux adapter
+- Faire un systeme de commande
+- Faire un récupélatif de commande
+- Ajouter un systeme de livraison
+- Ajouter le prix total du panier + livraison lors de la commande
+- Ajouter les pages avec du html dans la BDD
+- Coter admin commande + adresses
+- Faire un systeme de position d'incrémentation/décrementation.
+- Faire un blocage lors qu'on est à la derniere position du systeme de position.
+- Nombre d'image d'un produit 
+- Faire un systeme de payement
+- Ajouter la promotion en session
+- Faire une impression
+- Ajouter WebPack - Images , Css , Js 
+- Ajouter un fil d'arianne
+- Faire un bouton scroll stylé
+- Faire des statistiques
+- Ajouter un systeme de facture
+- Faire une exportation excel
+- Date en FR twig
+- Créer une fonction twig
+- Faire passer php 8
+- Ajouter le projet sur github
+- Ajouter une police
+- Faire un timer
+- Faire un bonus de connexion ( 5 minute ) où la personne gagne des points
+- Un systeme de création de sitemap personnaliser
+- Faire un filtre de statistique en fonction d'année et mois
+- vue twig full flash
+- Faire des logs exeception des erreurs

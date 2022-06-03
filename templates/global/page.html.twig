@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+	{% for page in page %}
+		<meta name="description" content="{{page.pageMetaDescription}}">
+		<meta name="keywords" content="{{page.pageMetaCle}}">
+	{% endfor %}
+{% endblock %}
+{% block title %}
+	{% for page in page %}
+		{{page.pageTitre}}
+	{% endfor %}
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			{% for page in page %}
+				{# Si le page est bloquer ou non nous l'affichons en fonction de son boolean #}
+				{% if page.pageBloque == '0' %}
+					{{page.pageContenu|raw}}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'layout_admin.html.twig' %}
+
+
+{% block title %}Liste des codes promotionelles
+{% endblock %}
+
+{% block monTitre %}Liste des codes promotionelles
+{% endblock %}
+{% block body %}
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<symbol id="check-circle-fill" fill="currentColor" viewbox="0 0 16 16">
+			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+		</symbol>
+	</svg>
+	<div class="col-10">
+		{% for message in app.flashes('success') %}
+			<div class="alert alert-success alert-dismissible fade show fixed-bottom text-center" role="alert">
+				<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+				{{message}}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}
+		<div>
+			Catalogue / Code promotionnelle
+
+			<h2>Code Promotionelle</h2>
+		</div>
+		<ul class="nav justify-content-end">
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-info text-white" aria-current="page" href="{{path('creationCodePromo')}}">
+					<i class="fas fa-plus-circle align-middle"></i>&nbsp;&nbsp;Ajouter un Code Promotionelle</a>
+			</li>
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-secondary text-white" href="#">Module recommandé</a>
+			</li>
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-secondary text-white" href="#">Aide</a>
+			</li>
+		</ul>
+		<table class="table table-perso">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Code</th>
+					<th scope="col">Quantite</th>
+					<th scope="col">Montant</th>
+					<th scope="col">Type</th>
+					<th scope="col">Date de Validité</th>
+					<th scope="col">Bloque</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for codepromo in codepromo %}
+					<tr>
+						<th>{{codepromo.id}}</th>
+						<td>{{codepromo.codeCode}}</td>
+						<td>{{codepromo.codeQuantite}}</td>
+						<td>{{codepromo.codeMontant}}</td>
+						<td>{% if codepromo.codeType == 0 %} € {% else %} % {% endif %}</td>
+						<td>{{codepromo.codeDateValide|date("m/d/Y")}}</td>
+						{% if codepromo.codeBloque == '0' %}
+							<td>
+								<a href="{{path('cpaddBloque',{'id': codepromo.id})}}">
+									<i class="fas fa-check text-success p-2"></i>
+								</a>
+							</td>
+						{% else %}
+							<td>
+								<a href="{{path('cpaddBloque',{'id': codepromo.id})}}">
+									<i class="fas fa-times text-danger p-2"></i>
+								</a>
+							</td>
+						{% endif %}
+						<td>
+							<a href="{{path('modifCodePromo',{'id' : codepromo.id})}}" class="col btn btn-warning">Modifier</a>
+							<form method="post" class="col" action="{{path('supCodePromo',{'id' : codepromo.id})}}" onsubmit="return confirm('Voulez-vous vraiment supprimer')">
+								<input type="hidden" name="_method" value="SUP">
+								<input type="hidden" name="_token" value="{{csrf_token('SUP' ~ codepromo.id)}}">
+								<input type="submit" class="col btn btn-danger" value="supprimer">
+							</form>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div></div>{% endblock %}

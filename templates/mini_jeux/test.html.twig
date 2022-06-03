@@ -1,0 +1,1111 @@
+<html lang="zxx">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Deadfire - Gaming and eSports HTML5 Template | Homepage</title>
+		<link rel="icon" href="favicon.ico">
+				{% block stylesheets %} 
+			{{ encore_entry_link_tags('style') }}  
+						{{ encore_entry_link_tags('jeux') }}
+									{{ encore_entry_link_tags('jeuxRes') }}
+			<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		{% endblock %}
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+			<script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		{% endblock %}  
+		<link href="//www.templatemonster.com/assets/fonts/bs-icons/bootstrap-icons.css" rel="stylesheet"> 
+	</head>
+	<body>
+		<div class="preloader hidden">
+			<img src="{{asset('assets/images/preloader.svg')}}" alt="preloader">
+		</div>
+
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas">
+			<div class="offcanvas-header">
+				<img src="//www.templatemonster.com/assets/images/logo.png" alt="logo" class="image-fit-contain offcanvas-title">
+				<button type="button" class="btn-close text-reset trigger_btn" data-bs-dismiss="offcanvas" aria-label="Close">
+					<i class="bi-x-lg"></i>
+				</button>
+			</div>
+			<div class="offcanvas-body">
+				<p>
+					Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+				</p>
+				<div class="sidebar">
+					<div class="sidebar_inner mb-0">
+
+						<div class="sidebar_widgets">
+							<h5 class="widgets_title">Recent Post</h5>
+							<div class="widgets_inner">
+								<ul class="recent_post">
+									<li>
+										<div class="post_thumb">
+											<img src="{{asset('/assets/images/blog/1.jpg')}}" alt="img" class="image-fit">
+										</div>
+										<div class="post_text">
+											<h4 class="post_title">
+												<a href="blog-details.html">Deliver and distribute the top product faster, web designs &amp; video possessions.</a>
+											</h4>
+											<p class="mb-0 post_date">22 Feb 2022</p>
+										</div>
+									</li>
+									<li>
+										<div class="post_thumb">
+											<img src="{{asset('/assets/images/blog/2.jpg')}}" alt="img" class="image-fit">
+										</div>
+										<div class="post_text">
+											<h4 class="post_title">
+												<a href="blog-details.html">Graceful and natural design and gaming videos that be made and available online to you.</a>
+											</h4>
+											<p class="mb-0 post_date">18 Feb 2022</p>
+										</div>
+									</li>
+									<li>
+										<div class="post_thumb">
+											<img src="//www.templatemonster.com/assets/images/blog/3.jpg" alt="img" class="image-fit">
+										</div>
+										<div class="post_text">
+											<h4 class="post_title">
+												<a href="blog-details.html">Specifically designs that designers matched perfectly to your choice on Deadfire template.</a>
+											</h4>
+											<p class="mb-0 post_date">15 Feb 2022</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="sidebar_widgets">
+							<h5 class="widgets_title">Categories</h5>
+							<div class="widgets_inner">
+								<ul class="categories">
+									<li>
+										<a href="blog-grid.html">Esport
+											<span>5</span>
+										</a>
+									</li>
+									<li>
+										<a href="blog-grid.html">Video
+											<span>8</span>
+										</a>
+									</li>
+									<li>
+										<a href="blog-grid.html">Pro
+											<span>7</span>
+										</a>
+									</li>
+									<li>
+										<a href="blog-grid.html">Gaming
+											<span>10</span>
+										</a>
+									</li>
+									<li>
+										<a href="blog-grid.html">Tournaments
+											<span>2</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="sidebar_widgets">
+							<h5 class="widgets_title">Tags</h5>
+							<div class="widgets_inner">
+								<div class="tags_cloud">
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Results</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Finals</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Defence</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Players</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Champion</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Coach</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Statics</span>
+										<cite class="liquid"></cite>
+									</a>
+									<a href="blog-grid.html" class="thm-btn">
+										<span>Professionals</span>
+										<cite class="liquid"></cite>
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<header class="header can-sticky">
+			<div class="container">
+				<div class="header_inner">
+
+					<button type="button" class="trigger_btn canvas_trigger" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+						<cite class="trigger_inner">
+							<span></span>
+							<span></span>
+							<span></span>
+						</cite>
+					</button>
+
+
+					<div class="logo d-lg-none d-block">
+						<a href="index.html" class="d-flex h-100">
+							<img src="//www.templatemonster.com/assets/images/logo.png" alt="logo" class="image-fit-contain">
+						</a>
+					</div>
+
+
+					<div class="navigation">
+						<ul class="main-menu">
+							<li class="menu-item menu-item-has-children">
+								<a href="#" class="active">Home</a>
+								<ul class="sub-menu">
+									<li class="menu-item">
+										<a href="index.html">Home v1</a>
+									</li>
+									<li class="menu-item">
+										<a href="index-v2.html">Home v2</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item">
+								<a href="about.html">About</a>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#">Match</a>
+								<ul class="sub-menu">
+									<li class="menu-item">
+										<a href="match.html">Match Page</a>
+									</li>
+									<li class="menu-item">
+										<a href="match-details.html">Match Details</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-logo">
+								<a href="index.html">
+									<img src="//www.templatemonster.com/assets/images/logo.png" alt="logo" class="image-fit-contain">
+								</a>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#">Blog</a>
+								<ul class="sub-menu">
+									<li class="menu-item menu-item-has-children">
+										<a href="#">Blog Grid</a>
+										<ul class="sub-menu">
+											<li class="menu-item">
+												<a href="blog-grid.html">Full Width</a>
+											</li>
+											<li class="menu-item">
+												<a href="blog-grid-left.html">Left Sidebar</a>
+											</li>
+											<li class="menu-item">
+												<a href="blog-grid-right.html">Right Sidebar</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item menu-item-has-children">
+										<a href="#">Blog List</a>
+										<ul class="sub-menu">
+											<li class="menu-item">
+												<a href="blog-list.html">Full Width</a>
+											</li>
+											<li class="menu-item">
+												<a href="blog-list-left.html">Left Sidebar</a>
+											</li>
+											<li class="menu-item">
+												<a href="blog-list-right.html">Right Sidebar</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="blog-details.html">Blog Details</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#">Pages</a>
+								<ul class="sub-menu">
+									<li class="menu-item menu-item-has-children">
+										<a href="#">Games</a>
+										<ul class="sub-menu">
+											<li class="menu-item">
+												<a href="games.html">All Games</a>
+											</li>
+											<li class="menu-item">
+												<a href="game-details.html">Game Details</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item menu-item-has-children">
+										<a href="#">Players</a>
+										<ul class="sub-menu">
+											<li class="menu-item">
+												<a href="player.html">Players</a>
+											</li>
+											<li class="menu-item">
+												<a href="player-details.html">Player Details</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="faqs.html">FAQ's</a>
+									</li>
+									<li class="menu-item">
+										<a href="login.html">Login</a>
+									</li>
+									<li class="menu-item">
+										<a href="signup.html">Signup</a>
+									</li>
+									<li class="menu-item">
+										<a href="404.html">Error 404</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item">
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="header_actions">
+						<ul>
+							<li>
+								<button type="button" class="trigger_btn search_trigger">
+									<i class="bi-search"></i>
+								</button>
+								<form class="search_form" action="#" method="POST">
+									<div class="input-group">
+										<input type="text" name="#" class="form-control" placeholder="Search..." autocomplete="off" required="">
+										<div class="input-group-append">
+											<button type="button" class="search_btn">
+												<i class="bi-search"></i>
+											</button>
+										</div>
+									</div>
+								</form>
+							</li>
+							<li>
+								<a href="login.html" class="trigger_btn">
+									<i class="bi-person-circle"></i>
+								</a>
+							</li>
+						</ul>
+						<button type="button" class="trigger_btn right_side d-lg-none d-flex hamburger_trigger">
+							<cite class="trigger_inner">
+								<span></span>
+								<span></span>
+								<span></span>
+							</cite>
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+
+		<div class="slider relative" id="banner-animation">
+			<div class="banner_slider slick-initialized slick-slider">
+
+				<div class="slick-list draggable">
+					<div class="slick-track" style="opacity: 1; width: 13230px; transform: translate3d(-5670px, 0px, 0px);">
+						<div class="slide_item section section-bg slick-slide slick-cloned" style="background-image: url(&quot;assets/images/banner/3.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="-1" id="" aria-hidden="true" tabindex="-1">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated" data-animation-in="animate__fadeInUp" style="opacity: 0;">The Awesome Tournaments</h1>
+											<p class="text animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="-1" style="opacity: 0;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide_item section section-bg slick-slide" style="background-image: url(&quot;//www.templatemonster.com/assets/images/banner/1.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="0" aria-hidden="true" tabindex="-1">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated" data-animation-in="animate__fadeInUp" style="opacity: 0;">Today Best Playing</h1>
+											<p class="text animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 0; animation-delay: 0.3s;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="-1" style="opacity: 0; animation-delay: 0.5s;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide_item section section-bg slick-slide" style="background-image: url(&quot;//www.templatemonster.com/assets/images/banner/2.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="1" aria-hidden="true" tabindex="-1">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated" data-animation-in="animate__fadeInUp" style="opacity: 0;">At Present Best Games</h1>
+											<p class="text animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 0; animation-delay: 0.3s;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="-1" style="opacity: 0; animation-delay: 0.5s;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide_item section section-bg slick-slide slick-current slick-active" style="background-image: url(&quot;assets/images/banner/3.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="2" aria-hidden="false" tabindex="0">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated animate__fadeInUp animated" data-animation-in="animate__fadeInUp" style="opacity: 1;">The Awesome Tournaments</h1>
+											<p class="text animate__animated animate__fadeInUp animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 1; animation-delay: 0.3s;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated animate__fadeInUp animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="0" style="opacity: 1; animation-delay: 0.5s;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide_item section section-bg slick-slide slick-cloned" style="background-image: url(&quot;//www.templatemonster.com/assets/images/banner/1.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="3" id="" aria-hidden="true" tabindex="-1">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated" data-animation-in="animate__fadeInUp" style="opacity: 0;">Today Best Playing</h1>
+											<p class="text animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="-1" style="opacity: 0;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide_item section section-bg slick-slide slick-cloned" style="background-image: url(&quot;//www.templatemonster.com/assets/images/banner/2.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="4" id="" aria-hidden="true" tabindex="-1">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated" data-animation-in="animate__fadeInUp" style="opacity: 0;">At Present Best Games</h1>
+											<p class="text animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="-1" style="opacity: 0;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide_item section section-bg slick-slide slick-cloned" style="background-image: url(&quot;//www.templatemonster.com/assets/images/banner/3.jpg&quot;); --overlay-value: 75%; width: 1890px;" data-slick-index="5" id="" aria-hidden="true" tabindex="-1">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-lg-8">
+										<div class="banner_text">
+											<h1 class="title animate__animated" data-animation-in="animate__fadeInUp" style="opacity: 0;">The Awesome Tournaments</h1>
+											<p class="text animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.3" style="opacity: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+											</p>
+											<a href="match-details.html" class="thm-btn animate__animated" data-animation-in="animate__fadeInUp" data-delay-in="0.5" tabindex="-1" style="opacity: 0;">
+												<span>Read More</span>
+												<cite class="liquid"></cite>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="transform-center">
+				<div class="container relative">
+					<div class="banner_arrows">
+						<button class="slick-prev slick-arrow" type="button" style="">Previous</button>
+						<button class="slick-next slick-arrow" type="button" style="">Next</button>
+					</div>
+				</div>
+			</div>
+			<canvas class="particles-js-canvas-el" width="1890" height="664" style="width: 100%; height: 100%;"></canvas>
+		</div>
+
+
+		<section class="section-padding">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="about_img wow animate__ animate__fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+							<img src="//www.templatemonster.com/assets/images/about/1.jpg" alt="img" class="image-fit">
+						</div>
+						<div class="about_img wow animate__animated animate__fadeInRight animate__delay-1s" style="visibility: hidden; animation-name: none;">
+							<img src="//www.templatemonster.com/assets/images/about/2.jpg" alt="img" class="image-fit">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about_text ps-lg-5 mb-xl-30">
+							<div class="section-header">
+								<h6 class="subtitle wow animate__ animate__fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">About us</h6>
+								<h3 class="title wow animate__ animate__fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">Welcome To Our Deadfire Gaming Platform.
+								</h3>
+							</div>
+							<p class="wow animate__ animate__fadeInLeft animate__delay-1s animated" style="visibility: visible; animation-name: fadeInLeft;">Deadfire It is the best gaming platform, tournaments hub sports for the leading name on every device.
+							</p>
+							<p class=" wow animate__animated animate__fadeInLeft animate__delay-2s" style="visibility: hidden; animation-name: none;">Deadfire is a fascinating online gaming understanding for the entire Esports out there. Therefore, it does not matter whether you are a casual gamer, a new gamer, an amateur player, or a professional gamer who knows all about the games.
+							</p>
+							<a href="about.html" class="thm-btn wow animate__animated animate__fadeInLeft animate__delay-2s" style="visibility: hidden; animation-name: none;">
+								<span>Read More</span>
+								<cite class="liquid"></cite>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-padding section-bg" style="background-image: url(//www.templatemonster.com/assets/images/bg/1.jpg); --overlay-value: 87%;">
+			<div class="container">
+				<div class="section-header text-center">
+					<h6 class="subtitle wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">Games</h6>
+					<h3 class="title wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">Type Of Games</h3>
+				</div>
+				<div class="row justify-content-center">
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="service_block">
+							<div class="icon">
+								<i class="bi-camera-reels"></i>
+							</div>
+							<h4 class="title">Live Streaming</h4>
+							<p class="text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-2s" style="visibility: hidden; animation-name: none;">
+						<div class="service_block">
+							<div class="icon">
+								<i class="bi-newspaper"></i>
+							</div>
+							<h4 class="title">Game News</h4>
+							<p class="text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-3s" style="visibility: hidden; animation-name: none;">
+						<div class="service_block">
+							<div class="icon">
+								<i class="bi-list-stars"></i>
+							</div>
+							<h4 class="title">Game Tournaments</h4>
+							<p class="text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-padding">
+			<div class="container">
+				<div class="section-header text-center">
+					<h6 class="subtitle wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">Gallery</h6>
+					<h3 class="title wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">Game Gallery</h3>
+				</div>
+				<div class="row justify-content-center">
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="gallery_block">
+							<img src="//www.templatemonster.com/assets/images/gallery/1.jpg" alt="img" class="image-fit">
+							<a href="//www.templatemonster.com/assets/images/gallery/1.jpg" class="gallery_action popup_image">
+								<i class="bi-plus-lg"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="gallery_block">
+							<img src="//www.templatemonster.com/assets/images/gallery/2.jpg" alt="img" class="image-fit">
+							<a href="//www.templatemonster.com/assets/images/gallery/2.jpg" class="gallery_action popup_image">
+								<i class="bi-plus-lg"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="gallery_block">
+							<img src="//www.templatemonster.com/assets/images/gallery/3.jpg" alt="img" class="image-fit">
+							<a href="//www.templatemonster.com/assets/images/gallery/3.jpg" class="gallery_action popup_image">
+								<i class="bi-plus-lg"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="gallery_block">
+							<img src="assets/images/gallery/4.jpg" alt="img" class="image-fit">
+							<a href="assets/images/gallery/4.jpg" class="gallery_action popup_image">
+								<i class="bi-plus-lg"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="gallery_block">
+							<img src="assets/images/gallery/5.jpg" alt="img" class="image-fit">
+							<a href="assets/images/gallery/5.jpg" class="gallery_action popup_image">
+								<i class="bi-plus-lg"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="gallery_block">
+							<img src="assets/images/gallery/6.jpg" alt="img" class="image-fit">
+							<a href="assets/images/gallery/6.jpg" class="gallery_action popup_image">
+								<i class="bi-plus-lg"></i>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section section-bg" style="background-image: url(assets/images/bg/2.jpg); --overlay-value: 87%;">
+			<div class="container">
+				<div class="row justify-content-center">
+
+					<div class="col-lg-8">
+						<div class="counter_wrapper wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">
+							<div class="row">
+
+								<div class="col-lg-3 col-sm-6">
+									<div class="counter_box">
+										<h6 class="mb-0 counter" data-from="0" data-to="123">0</h6>
+										<p class="mb-0 title">Matches</p>
+									</div>
+								</div>
+
+								<div class="col-lg-3 col-sm-6">
+									<div class="counter_box">
+										<h6 class="mb-0 counter" data-from="0" data-to="5120">0</h6>
+										<p class="mb-0 title">Games</p>
+									</div>
+								</div>
+
+								<div class="col-lg-3 col-sm-6">
+									<div class="counter_box">
+										<h6 class="mb-0 counter" data-from="0" data-to="32109">0</h6>
+										<p class="mb-0 title">Subscribers</p>
+									</div>
+								</div>
+
+								<div class="col-lg-3 col-sm-6">
+									<div class="counter_box">
+										<h6 class="mb-0 counter" data-from="0" data-to="513">0</h6>
+										<p class="mb-0 title">Videos</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">
+						<div class="video_box section-bg" style="background-image: url(assets/images/bg/4.jpg); --overlay-value: 38%;">
+							<a href="https://www.youtube.com/watch?v=TKnufs85hXk" class="popup_video video_btn">
+								<i class="bi-play-circle"></i>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-padding">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-lg-6 wow animate__animated animate__fadeInLeft" style="visibility: hidden; animation-name: none;">
+						<div class="app_phn_image mb-xl-30">
+							<img src="assets/images/app_phone.png" alt="img" class="image-fit-contain">
+						</div>
+					</div>
+					<div class="col-lg-6 wow animate__animated animate__fadeInRight" style="visibility: hidden; animation-name: none;">
+						<div class="dwnld_text mb-xl-30">
+							<div class="section-header">
+								<h6 class="subtitle">Download</h6>
+								<h3 class="title">Download App</h3>
+							</div>
+							<div class="app_image">
+								<a href="#" class="d-flex h-100 app">
+									<img src="assets/images/app_1.png" alt="img" class="image-fit-contain">
+								</a>
+								<a href="#" class="d-flex h-100 app">
+									<img src="assets/images/app_2.png" alt="img" class="image-fit-contain">
+								</a>
+							</div>
+							<div class="app_barcode">
+								<img src="assets/images/qrcode.png" alt="code" class="image-fit-contain">
+								<span class="barcode_text">Scan the QR Code to download the app</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-padding section-bg-fix" style="background-image: url(assets/images/bg/5.jpg); --overlay-value: 75%;">
+			<div class="container">
+				<div class="section-header text-center">
+					<h6 class="subtitle wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">Why Us</h6>
+					<h3 class="title wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">How To Play ?</h3>
+				</div>
+				<div class="row">
+
+					<div class="col-lg-3 col-sm-6 wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">
+						<div class="hw_to_play">
+							<div class="icon">
+								<i class="bi-phone"></i>
+							</div>
+							<div class="text">
+								<h6 class="title mb-0 fw-600">Download App</h6>
+								<p class="mb-0 fw-500">Lorem ipsum dolor sit amet,</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 wow animate__animated animate__fadeInUp animate__delay-1s" style="visibility: hidden; animation-name: none;">
+						<div class="hw_to_play">
+							<div class="icon">
+								<i class="bi-person-circle"></i>
+							</div>
+							<div class="text">
+								<h6 class="title mb-0 fw-600">Login / Signup</h6>
+								<p class="mb-0 fw-500">Lorem ipsum dolor sit amet,</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 wow animate__animated animate__fadeInUp animate__delay-2s" style="visibility: hidden; animation-name: none;">
+						<div class="hw_to_play">
+							<div class="icon">
+								<i class="bi-hand-index-thumb"></i>
+							</div>
+							<div class="text">
+								<h6 class="title mb-0 fw-600">Select Match</h6>
+								<p class="mb-0 fw-500">Lorem ipsum dolor sit amet,</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 wow animate__animated animate__fadeInUp animate__delay-3s" style="visibility: hidden; animation-name: none;">
+						<div class="hw_to_play">
+							<div class="icon">
+								<i class="bi-controller"></i>
+							</div>
+							<div class="text">
+								<h6 class="title mb-0 fw-600">Enjoy Match</h6>
+								<p class="mb-0 fw-500">Lorem ipsum dolor sit amet,</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-padding wow animate__animated animate__fadeInUp" style="visibility: hidden; animation-name: none;">
+			<div class="container">
+				<div class="row testimonial_slider slick-initialized slick-slider">
+					<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+
+					<div class="slick-list draggable">
+						<div class="slick-track" style="opacity: 1; width: 9240px; transform: translate3d(-3960px, 0px, 0px);">
+							<div class="px-3 slide_item slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" tabindex="-1" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/3.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">It is amazing when I joined the commune and wind up winning cash.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">David Banner</h5>
+														<p class="thm-color-one fw-700">Analylist</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-3 slide_item slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/1.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">Whenever I feel bored then playing tournaments is a great way to make you relax.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">Robin Martin</h5>
+														<p class="thm-color-one fw-700">Gamer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-3 slide_item slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/2.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">Playing tournaments is so much fun when it is about to hang out with friends.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">Tony Starc</h5>
+														<p class="thm-color-one fw-700">Gamer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-3 slide_item slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/3.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">It is amazing when I joined the commune and wind up winning cash.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">David Banner</h5>
+														<p class="thm-color-one fw-700">Analylist</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-3 slide_item slick-slide slick-cloned" data-slick-index="3" id="" aria-hidden="true" tabindex="-1" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/1.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">Whenever I feel bored then playing tournaments is a great way to make you relax.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">Robin Martin</h5>
+														<p class="thm-color-one fw-700">Gamer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-3 slide_item slick-slide slick-cloned" data-slick-index="4" id="" aria-hidden="true" tabindex="-1" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/2.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">Playing tournaments is so much fun when it is about to hang out with friends.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">Tony Starc</h5>
+														<p class="thm-color-one fw-700">Gamer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="px-3 slide_item slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true" tabindex="-1" style="width: 1320px;">
+								<div class="testimonial_item">
+									<div class="row">
+										<div class="col-lg-6 col-md-4">
+											<div class="testimonial_image">
+												<img src="assets/images/testimonials/3.jpg" alt="img" class="image-fit">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-8">
+											<div class="testimonial_caption">
+												<div class="text_wrapper">
+													<div class="section-header text-center">
+														<h6 class="subtitle">Testimonial</h6>
+														<h3 class="title">What Client Say?</h3>
+													</div>
+													<div class="testi_icon"></div>
+													<p class="comment">It is amazing when I joined the commune and wind up winning cash.
+													</p>
+													<div class="testi_author">
+														<h5 class="name mb-0 fw-600">David Banner</h5>
+														<p class="thm-color-one fw-700">Analylist</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button>
+				</div>
+			</div>
+		</section>
+
+
+		<footer class="footer section pb-0 section-bg" style="background-image: url(assets/images/bg/3.jpg); --overlay-value: 90%;">
+			<div class="container">
+				<div class="footer_inner">
+					<div class="row g-0">
+						<div class="col-lg-2 col-sm-6">
+							<div class="footer_widgets">
+								<div class="widgets_inner">
+									<div class="ft_logo">
+										<img src="assets/images/logo.png" alt="logo" class="image-fit-contain">
+									</div>
+									<ul class="ft_social">
+										<li>
+											<a href="#" class="trigger_btn">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="trigger_btn">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="trigger_btn">
+												<i class="fab fa-instagram"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="footer_widgets">
+								<div class="widgets_inner">
+									<ul class="ft_menu">
+										<li>
+											<a href="index.html">Home</a>
+										</li>
+										<li>
+											<a href="about.html">About</a>
+										</li>
+										<li>
+											<a href="games.html">Popular Game</a>
+										</li>
+										<li>
+											<a href="match.html">Match</a>
+										</li>
+										<li>
+											<a href="blog-list.html">Blog</a>
+										</li>
+										<li>
+											<a href="contact.html">Contact</a>
+										</li>
+									</ul>
+									<p class="mb-0">Dong Men Bei Lu 1019hao Shen Chou Shi Bao Jian Ban Zhuan Jia Men Zhen Bu</p>
+									<ul class="ft_info">
+										<li>
+											Call Us :
+											<a href="#">+25 5841 362 915</a>
+										</li>
+										<li>
+											Email :
+											<a href="#">example@example.com</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="footer_widgets">
+								<div class="widgets_inner">
+									<h5 class="ft_title">Subscribe To News</h5>
+									<p class="mb-2">Lorem ipsum dolor sit amet,</p>
+									<form action="#" method="POST" class="input-group newsletter_form">
+										<input type="email" name="#" class="form-control" placeholder="Email I'd" autocomplete="off" required="">
+										<div class="input-group-append">
+											<button class="newsletter_btn" type="submit">
+												<i class="bi-chevron-right"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<div class="row align-items-center">
+						<div class="col-lg-5 text-center text-lg-start">
+							<p>Copyright ©
+								<a href="#">www.example.com</a>
+								<span id="year">2022</span>. All Right Reserved</p>
+						</div>
+						<div class="col-lg-5 order-lg-3">
+							<ul class="cp_menu justify-content-center justify-content-lg-end">
+								<li>
+									<a href="#">Terms &amp; Conditions</a>
+								</li>
+								<li>
+									<a href="#">Privacy Policy</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-2 order-lg-2">
+
+							<button type="button" class="backtotop trigger_btn">
+								<i class="bi-chevron-up"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+		<div class="df-cursor" style="transform: translate(1240px, 81px);"></div>
+		<div class="df-cursor2" style="transform: translate(1220px, 61px);"></div>
+ {% block script %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js" integrity="sha512-dy8Q+KMsxJmEgLqvZA7kk/Pcaij/OhCK1LPj+oGuxfd/tcbbqrDSGOtiXNfzKbMun+ZBnQsTWUnhuXhVkISDOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-awesome-cursor/0.3.1/jquery.awesome-cursor.min.js" integrity="sha512-mR4OOU/ky22CpIhlxfBwQ2ckKWapf+g2+1sbUCkVtFaaRcVLpytf0ERgrXXUUYgFOdbehWOJJdW7QzYJ7XlLiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ {% endblock %} 
+		<script src="//www.templatemonster.com/assets/js/plugins/slick-animation.min.js"></script>    
+		<script src="//www.templatemonster.com/assets/js/custom.js"></script>
+
+	</body>
+</html>

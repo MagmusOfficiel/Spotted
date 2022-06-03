@@ -1,0 +1,70 @@
+{% extends 'layout_admin.html.twig' %}
+
+
+{% block title %}Liste des categories
+{% endblock %}
+
+{% block monTitre %}Liste des categories
+{% endblock %}
+{% block body %}
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<symbol id="check-circle-fill" fill="currentColor" viewbox="0 0 16 16">
+			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+		</symbol>
+	</svg>
+	<div class="col-10">
+		{% for message in app.flashes('success') %}
+			<div class="alert alert-success alert-dismissible fade show fixed-bottom text-center" role="alert">
+				<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+				{{message}}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}
+		<div>
+			Catalogue / Catégories
+
+			<h2>Catégories</h2>
+		</div>
+		<ul class="nav justify-content-end">
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-info text-white" aria-current="page" href="{{path('creationCategorie')}}">
+					<i class="fas fa-plus-circle align-middle"></i>&nbsp;&nbsp;Ajouter une catégorie</a>
+			</li>
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-secondary text-white" href="#">Module recommandé</a>
+			</li>
+			<li class="nav-item p-2">
+				<a class="nav-link btn btn-secondary text-white" href="#">Aide</a>
+			</li>
+		</ul>
+		<table class="table table-perso">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Nom</th>
+					<th scope="col">Parent</th>
+					<th scope="col">Afficher enfants</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for categorie in categories %}
+					<tr>
+						<th>{{categorie.id}}</th>
+						<td>{{categorie.CatNom}}</td>
+						<td>{{categorie.catTypehm.typehmNom}}</td>
+						<td><a href="{{path('sousCategories',{'id' : categorie.id })}}" class="col btn btn-info">Afficher</a></td>
+						<td>
+							<a href="{{path('modifCategorie',{'id' : categorie.id})}}" class="col btn btn-warning">Modifier</a>
+							<form method="post" class="col" action="{{path('supCategorie',{'id' : categorie.id})}}" onsubmit="return confirm('Voulez-vous vraiment supprimer')">
+								<input type="hidden" name="_method" value="SUP">
+								<input type="hidden" name="_token" value="{{csrf_token('SUP' ~ categorie.id)}}">
+								<input type="submit" class="col btn btn-danger" value="supprimer">
+							</form>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div></div>{% endblock %}

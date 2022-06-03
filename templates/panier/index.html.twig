@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre panier
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<section class="bg-perso p-3">
+			<h1>Votre panier</h1>
+		</section>
+		{% if panier|length > 0 %}
+			<table class="table table-perso">
+				<thead>
+					<tr>
+						<th>Photo</th>
+						<th>Produit</th>
+						<th>Prix</th>
+						<th>Quantité</th>
+						<th>Total</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% set quantite = null %}
+					{% set total = null %}
+
+					{% set totalavant = null %}
+					{% for produits in panier %}
+						<td><img src="{{asset('build/images/theme/produit/'~ produits.produit.produitImages[0].imageName[0:4])}}/{{produits.produit.produitImages[0].imageName}}" class="img-fluid" width="200"></td>
+					</img>
+
+					<td>{{ produits.produit.produitLibelle }}</td>
+
+
+					<td>{{produits.produit.produitPrix}}
+						€</td>
+					<td>{{ produits.quantite }}</td>
+					<td>{{ produits.quantite * produits.produit.produitPrix }}
+						€</td>
+					<td>
+						<a href="{{path("add_to_cart", {id: produits.produit.id})}}" class="btn btn-success">
+							<i class="fas fa-cart-plus"></i>
+						</a>
+						<a href="{{path("decrease_to_cart", {id: produits.produit.id})}}" class="btn btn-warning">
+							<i class="fas fa-cart-arrow-down"></i>
+						</a>
+						<a href="{{path("delete_to_cart", {id: produits.produit.id})}}" class="btn btn-danger">
+							<i class="fas fa-trash-alt"></i>
+						</a>
+					</td>
+				</tbody>
+
+				{% if panier['0'].promo is defined %}
+					{% set totalavant = totalavant + (produits.produit.produitPrix * produits.quantite) %}</strike>
+					{% set total = total + (produits.produit.produitPrix * produits.quantite) - panier['0'].promo.codeMontant %}
+				{% else %}
+					{% set total = total + (produits.produit.produitPrix * produits.quantite) %}
+				{% endif %}
+				{% set quantite = quantite + produits.quantite %}
+			{% endfor %}
+			<tfoot>
+				<tr>
+					<td colspan="3">Total</td>
+					<b>Nombre de produit :</b>
+					{{ panier|length }}<br/>
+					<td>
+						{{quantite }}
+
+					</td>
+					<td>
+						{% if panier['0'].promo is defined %}
+						{% else %}
+						{% endif %}
+						{{ (total)|number_format(2, ',', '.') }}
+						€
+
+					</td>
+
+					<td>
+						<a href="{{path("remove_my_cart")}}" class="btn btn-danger">
+							<i class="fas fa-trash-alt"></i>
+						</a>
+					</td>
+				</tr>
+
+			</tfoot>
+		</table>
+		<a href="{{path('commande')}}" class="btn btn-success btn-block mt-3">Valider mon panier</a>
+	</div>
+{% else %}
+	<tr>
+		<td colspan="6" class="text-center">Votre panier est vide</td>
+	</tr>
+{% endif %}{% endblock %}
