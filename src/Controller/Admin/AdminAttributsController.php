@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\Attributs;
 use App\Form\AttributsType;
+use Symfony\Component\Routing\Route;
 use App\Repository\AttributsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminAttributsController extends AbstractController
 {
-    /**
-     * @Route("/admin/attributs/", name="admin_attributs")
-     */
+    #[Route("/admin/attributs/", name:"admin_attributs")]
     public function index(AttributsRepository $repository): Response
     {
         $attributs = $repository->findAll();
@@ -25,10 +23,8 @@ class AdminAttributsController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/attributs/creation", name="creationAttribut")
-     * @Route("/admin/attributs/{id}", name="modifAttribut")
-     */
+    #[Route("/admin/attributs/creation", name:"creationAttribut")]
+    #[Route("/admin/attributs/{id}", name:"modifAttribut")]
     public function modification(Attributs $attributs = null, Request $request, EntityManagerInterface $om)
     {
         if (!$attributs) {
@@ -52,9 +48,7 @@ class AdminAttributsController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/attributs/{id}", name="supAttributs")
-     */
+    #[Route("/admin/sup/attributs/{id}", name:"supAttributs")]
     public function suppression(Attributs $attributs, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $attributs->getId(), $request->get("_token"))) {

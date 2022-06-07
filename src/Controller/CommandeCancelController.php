@@ -3,25 +3,17 @@
 namespace App\Controller;
 
 use App\Entity\Commande;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
 
 class CommandeCancelController extends AbstractController
 {
-    private $entityManager;
 
-    public function __construct(EntityManagerInterface $entityManager)
+    #[Route("/commande/erreur/{stripeSessionId}", name: "commande_cancel")]
+    public function index(EntityManagerInterface $entityManager, $stripeSessionId)
     {
-        $this->entityManager = $entityManager;
-    }
-
-    /**
-     * @Route("/commande/erreur/{stripeSessionId}", name="commande_cancel")
-     */
-    public function index($stripeSessionId)
-    {
-        $commande = $this->entityManager->getRepository(Commande::class)->findOneByStripeSessionId($stripeSessionId);
+        $commande = $entityManager->getRepository(Commande::class)->findOneByStripeSessionId($stripeSessionId);
 
         if (!$commande || $commande->getUser() != $this->getUser()) {
             return $this->redirectToRoute('accueil');

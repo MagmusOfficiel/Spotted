@@ -14,24 +14,22 @@ use App\Service\SendMailService;
 use App\Form\ProduitRechercheType;
 use App\Repository\MenuRepository;
 use App\Repository\PageRepository;
+use Symfony\Component\Routing\Route;
 use App\Repository\ProduitRepository;
 use App\Repository\PageInfoRepository;
 use App\Repository\ThemeImageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class GlobalController extends AbstractController
 {
 
-    /**
-     * @Route("/", name="accueil")
-     */
+    #[Route("/", name: "accueil")]
     public function index(
         SessionInterface $session,
         ThemeImageRepository $repository,
@@ -63,9 +61,7 @@ class GlobalController extends AbstractController
     }
 
 
-    /**
-     * @Route("/inscription", name="inscription")
-     */
+    #[Route("/inscription", name: "inscription")]
     public function inscription(
         Request $request,
         ThemeImageRepository $repository2,
@@ -109,10 +105,8 @@ class GlobalController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/connexion", name="connexion")
-     */
-    public function connexion(AuthenticationUtils $util, ThemeImageRepository $repository2)
+    #[Route("/connexion", name: "connexion")]
+    public function connexion(AuthenticationUtils $util, ThemeImageRepository $repository2): Response
     {
         if ($this->getUser()) {
             return $this->redirectToRoute('compte');
@@ -127,17 +121,13 @@ class GlobalController extends AbstractController
     }
 
 
-    /**
-     * @Route("/logout", name="logout")
-     */
+    #[Route("/logout", name: "logout")]
     public function logout()
     {
     }
 
 
-    /**
-     * @Route("/produit/{id}", name="produitId")
-     */
+    #[Route("/produit/{id}", name: "produitId")]
     public function fetchProduit(Produit $produit, ProduitRepository $repository): Response
     {
         $produit = $repository->findById($produit);
@@ -147,9 +137,7 @@ class GlobalController extends AbstractController
     }
 
 
-    /**
-     * @Route("/navbar", name="navbar")
-     */
+    #[Route("/navbar", name: "navbar")]
     public function fetchNavBar(
         ThemeImageRepository $repository,
         SessionInterface $session,
@@ -185,9 +173,7 @@ class GlobalController extends AbstractController
     }
 
 
-    /**
-     * @Route("/newsletter", name="newsletter")
-     */
+    #[Route("/newsletter", name: "newsletter")]
     public function fetchNewsletter(
         Request $request,
         SendMailService $mail,
@@ -224,9 +210,7 @@ class GlobalController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/menu/{menuNom}", name="menuNom")
-     */
+    #[Route("/menu/{menuNom}", name: "menuNom")]
     public function fetchMenu(
         Menu $menu,
         MenuRepository $repository,
@@ -256,9 +240,7 @@ class GlobalController extends AbstractController
 
 
 
-    /**
-     * @Route("/page/{pageUrlSimple}", name="pageUrlSimple")
-     */
+    #[Route("/page/{pageUrlSimple}", name: "pageUrlSimple")]
     public function fetchPage(
         Page $page,
         PageRepository $repository,
@@ -275,9 +257,7 @@ class GlobalController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/couleursession", name="couleurSession")
-     */
+    #[Route("/couleursession", name: "couleurSession")]
     public function couleurSession(SessionInterface $session)
     {
         $session->remove("couleur");

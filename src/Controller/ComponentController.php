@@ -21,19 +21,12 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class ComponentController extends AbstractController
 {
-
-
-    /** @var ManagerRegistry */
-    private $managerRegistry;
-
     private function getManagerRegistry(): ManagerRegistry
     {
         return $this->managerRegistry;
     } 
 
-    public function __construct(ManagerRegistry $managerRegistry) {
-
-        $this->managerRegistry = $managerRegistry;
+    public function __construct(private ManagerRegistry $managerRegistry) {
     }
 
     public function connexion(AuthenticationUtils $util)

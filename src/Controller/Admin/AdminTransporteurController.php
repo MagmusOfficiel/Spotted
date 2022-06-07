@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminTransporteurController extends AbstractController
 {
-    /**
-     * @Route("/admin/transporteur/", name="admin_transporteur")
-     */
+    #[Route("/admin/transporteur/", name:"admin_transporteur")]
     public function index(TransporteurRepository $repository): Response
     {
         $transporteurs = $repository->findAll();
@@ -26,10 +24,8 @@ class AdminTransporteurController extends AbstractController
     }
 
 
-    /**
-     * @Route("/admin/transporteur/creation", name="creationTransporteur")
-     * @Route("/admin/transporteur/{id}", name="modifTransporteur")
-     */
+    #[Route("/admin/transporteur/creation", name:"creationTransporteur")]
+    #[Route("/admin/transporteur/{id}", name:"modifTransporteur")]
     public function modification(Transporteur $transporteur = null, Request $request, EntityManagerInterface $om)
     {
         if (!$transporteur) {
@@ -52,9 +48,7 @@ class AdminTransporteurController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/transporteur/{id}", name="supTransporteur")
-     */
+    #[Route("/admin/sup/transporteur/{id}", name:"supTransporteur")]
     public function suppression(Transporteur $transporteur, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $transporteur->getId(), $request->get("_token"))) {

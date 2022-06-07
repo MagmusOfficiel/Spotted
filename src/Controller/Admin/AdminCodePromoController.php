@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminCodePromoController extends AbstractController
 {
-    /**
-     * @Route("/admin/codepromo/", name="admin_codepromo")
-     */
+    #[Route("/admin/codepromo/", name:"admin_codepromo")]
     public function index(CodePromoRepository $repository): Response
     {
         $codepromo = $repository->findAll();
@@ -25,10 +23,8 @@ class AdminCodePromoController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/codepromo/creation", name="creationCodePromo")
-     * @Route("/admin/codepromo/{id}", name="modifCodePromo")
-     */
+    #[Route("/admin/codepromo/creation", name:"creationCodePromo")]
+    #[Route("/admin/codepromo/{id}", name:"modifCodePromo")]
     public function modification(CodePromo $codepromo = null, Request $request, EntityManagerInterface $om)
     {
         if (!$codepromo) {
@@ -55,9 +51,7 @@ class AdminCodePromoController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/codepromo/{id}", name="supCodePromo")
-     */
+    #[Route("/admin/sup/codepromo/{id}", name:"supCodePromo")]
     public function suppression(CodePromo $codepromo, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $codepromo->getId(), $request->get("_token"))) {
@@ -71,9 +65,7 @@ class AdminCodePromoController extends AbstractController
     }
 
 
-            /**
-     * @Route("/admin/codepromo/addbloque/{id}", name="cpaddBloque")
-     */
+    #[Route("/admin/codepromo/addbloque/{id}", name:"cpaddBloque")]
     public function addBloque(CodePromo $codepromo, EntityManagerInterface $om)
     {
         $bloque = $codepromo->getCodeBloque();

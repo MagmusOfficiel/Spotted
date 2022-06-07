@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\CarteCadeau;
 use App\Form\CarteCadeauType; 
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\CarteCadeauRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminCarteCadeauController extends AbstractController
 {
-    /**
-     * @Route("/admin/cartecadeau/", name="admin_cartecadeau")
-     */
+    #[Route("/admin/cartecadeau/", name:"admin_cartecadeau")]
     public function index(CarteCadeauRepository $repository): Response
     {
         $cartecadeau = $repository->findAll();
@@ -24,10 +22,8 @@ class AdminCarteCadeauController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/creation/cartecadeau", name="creationCarteCadeau", methods={"GET","POST"})
-     * @Route("/admin/cartecadeau/{id}", name="modifCarteCadeau")
-     */
+    #[Route("/admin/creation/cartecadeau", name:"creationCarteCadeau", methods:["GET","POST"])]
+    #[Route("/admin/cartecadeau/{id}", name:"modifCarteCadeau")]
     public function modification(CarteCadeau $cartecadeau = null, Request $request, EntityManagerInterface $om)
     {
         if (!$cartecadeau) {
@@ -50,9 +46,7 @@ class AdminCarteCadeauController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/cartecadeau/{id}", name="supCarteCadeau")
-     */
+    #[Route("/admin/sup/cartecadeau/{id}", name:"supCarteCadeau")]
     public function suppression(CarteCadeau $cartecadeau, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $cartecadeau->getId(), $request->get("_token"))) {
@@ -65,9 +59,7 @@ class AdminCarteCadeauController extends AbstractController
         return new Response('Condition non valide', 200);
     }
 
-            /**
-     * @Route("/admin/cartecadeau/addbloque/{id}", name="caddCarteCadeau")
-     */
+    #[Route("/admin/cartecadeau/addbloque/{id}", name:"caddCarteCadeau")]
     public function addBloque(CarteCadeau $cartecadeau, EntityManagerInterface $om)
     {
         $bloque = $cartecadeau->getCarteCadeauBloque();

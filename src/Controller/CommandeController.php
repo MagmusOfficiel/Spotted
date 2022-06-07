@@ -6,30 +6,23 @@ use App\Classe\Panier;
 use App\Entity\Commande;
 use App\Entity\CodePromo;
 use App\Form\CommandeType;
-use App\Form\CodePromoType;
 use App\Entity\CommandeDetails;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CommandeController extends AbstractController
 {
 
-    private $session;
-    private $entityManager;
-
-    public function __construct(EntityManagerInterface $entityManager, SessionInterface $session)
+    public function __construct(private EntityManagerInterface $entityManager, private SessionInterface $session)
     {
-        $this->entityManager = $entityManager;
-        $this->session = $session;
     }
-    /**
-     * @Route("/commande", name="commande")
-     */
-    public function index(Panier $panier, Request $request): Response
+    
+    #[Route("/commande", name:"commande")]
+    public function index(Panier $panier): Response
     {
         if (!$this->getUser() == null) {
             if (!$this->getUser()->getAdresses()->getValues()) {
@@ -60,10 +53,8 @@ class CommandeController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/commande/recapitulatif", name="commande_recap", methods={"POST"})
-     */
-    public function add(Panier $panier, Request $request)
+    #[Route("/commande/recapitulatif", name:"commande_recap", methods:["POST"])]
+    public function add(Panier $panier, Request $request): Response
     {
 
         if ($this->session->get('promo')) {

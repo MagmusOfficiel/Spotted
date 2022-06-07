@@ -3,21 +3,18 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Categories;
-use App\Entity\SousCategories;
 use App\Form\CategorieType;
+use Symfony\Component\Routing\Route;
 use App\Repository\CategoriesRepository;
-use App\Repository\SousCategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\SousCategoriesRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminCategoriesController extends AbstractController
 {
-    /**
-     * @Route("/admin/categories/", name="admin_categories")
-     */
+    #[Route("/admin/categories/", name: "admin_categories")]
     public function index(CategoriesRepository $repository): Response
     {
         $categories = $repository->findAll();
@@ -26,10 +23,8 @@ class AdminCategoriesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/categories/creation", name="creationCategorie")
-     * @Route("/admin/categories/{id}", name="modifCategorie")
-     */
+    #[Route("/admin/categories/creation", name: "creationCategorie")]
+    #[Route("/admin/categories/{id}", name: "modifCategorie")]
     public function modification(Categories $categorie = null, Request $request, EntityManagerInterface $om)
     {
         if (!$categorie) {
@@ -52,9 +47,7 @@ class AdminCategoriesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/categories/{id}", name="supCategorie")
-     */
+    #[Route("/admin/sup/categories/{id}", name: "supCategorie")]
     public function suppression(Categories $categorie, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $categorie->getId(), $request->get("_token"))) {
@@ -68,11 +61,8 @@ class AdminCategoriesController extends AbstractController
     }
 
 
-    /**
-     * 
-     * @Route("/admin/souscategories/{id}", name="sousCategories")
-     */
-    public function fetchSousCategories(Categories $categorie, CategoriesRepository $repository,SousCategoriesRepository $repository2): Response
+    #[Route("/admin/souscategories/{id}", name: "sousCategories")]
+    public function fetchSousCategories(Categories $categorie, CategoriesRepository $repository, SousCategoriesRepository $repository2): Response
     {
         $souscategories = $repository2->findAll();
         $categorieid = $categorie->getId();
@@ -84,6 +74,4 @@ class AdminCategoriesController extends AbstractController
             'souscategories' => $souscategories,
         ]);
     }
-
-
 }

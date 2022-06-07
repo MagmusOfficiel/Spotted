@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\Carrousel;
 use App\Form\CarrouselType;
+use Symfony\Component\Routing\Route;
 use App\Repository\CarrouselRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminCarrouselController extends AbstractController
 {
-    /**
-     * @Route("/admin/carrousel/", name="admin_carrousel")
-     */
+    #[Route("/admin/carrousel/", name:"admin_carrousel")]
     public function index(CarrouselRepository $repository): Response
     {
         $carrousels = $repository->findAll();
@@ -24,10 +22,8 @@ class AdminCarrouselController extends AbstractController
         ]);
     }
 
-        /**
-     * @Route("/admin/carrousel/creation", name="creationCarrousel")
-     * @Route("/admin/carrousel/{id}", name="modifCarrousel")
-     */
+    #[Route("/admin/carrousel/creation", name:"creationCarrousel")]
+    #[Route("/admin/carrousel/{id}", name:"modifCarrousel")]
     public function modification(Carrousel $carrousel = null, Request $request, EntityManagerInterface $om)
     {
         if (!$carrousel) {
@@ -51,9 +47,7 @@ class AdminCarrouselController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/carrousel/{id}", name="supCarrousel")
-     */
+    #[Route("/admin/sup/carrousel/{id}", name:"supCarrousel")]
     public function suppression(Carrousel $carrousel, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $carrousel->getId(), $request->get("_token"))) {
@@ -66,9 +60,7 @@ class AdminCarrouselController extends AbstractController
         return new Response('Condition non valide', 200);
     }
 
-    /**
-     * @Route("/admin/carrousel/addposition/{carrouselPosition}", name="addPositionP")
-     */
+    #[Route("/admin/carrousel/addposition/{carrouselPosition}", name:"addPositionP")]
     public function addPositionP(
         Carrousel $carrousel, 
         EntityManagerInterface $om, 
@@ -83,9 +75,7 @@ class AdminCarrouselController extends AbstractController
         return $this->redirectToRoute("admin_carrousel");
     }
 
-        /**
-     * @Route("/admin/carrousel/downposition/{carrouselPosition}", name="downPositionP")
-     */
+    #[Route("/admin/carrousel/downposition/{carrouselPosition}", name:"downPositionP")]
     public function downPositionP(
         Carrousel $carrousel, 
         EntityManagerInterface $om, 

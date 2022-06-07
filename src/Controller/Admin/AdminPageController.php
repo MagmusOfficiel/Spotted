@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminPageController extends AbstractController
 {
-    /**
-     * @Route("/admin/page/", name="admin_page")
-     */
+    #[Route("/admin/page/", name:"admin_page")]
     public function index(PageRepository $repository): Response
     {
         $page = $repository->findAll();
@@ -26,10 +24,8 @@ class AdminPageController extends AbstractController
     }
 
 
-    /**
-     * @Route("/admin/page/creation", name="creationPage")
-     * @Route("/admin/page/{id}", name="modifPage")
-     */
+    #[Route("/admin/page/creation", name:"creationPage")]
+    #[Route("/admin/page/{id}", name:"modifPage")]
     public function modification(Page $page = null, Request $request, EntityManagerInterface $om)
     {
         if (!$page) {
@@ -52,9 +48,7 @@ class AdminPageController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/page/{id}", name="supPage")
-     */
+    #[Route("/admin/sup/page/{id}", name:"supPage")]
     public function suppression(Page $page, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $page->getId(), $request->get("_token"))) {
@@ -67,9 +61,7 @@ class AdminPageController extends AbstractController
         return new Response('Condition non valide', 200);
     }
 
-    /**
-     * @Route("/admin/page/addbloque/{id}", name="paddBloque")
-     */
+    #[Route("/admin/page/addbloque/{id}", name:"paddBloque")]
     public function addBloque(Page $page, EntityManagerInterface $om)
     {
         $bloque = $page->getPageBloque();

@@ -3,18 +3,16 @@
 namespace App\Controller;
 
 use App\Form\ChangePasswordType;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class ComptePasswordController extends AbstractController
 {
-    /**
-     * @Route("/compte/motdepasse", name="compte_password")
-     */
+    #[Route("/compte/motdepasse", name:"compte_password")]
     public function index(Request $request, UserPasswordHasherInterface $encoder,EntityManagerInterface $om): Response
     {
         $user = $this->getUser();

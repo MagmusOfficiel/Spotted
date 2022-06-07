@@ -2,37 +2,31 @@
 
 namespace App\Controller;
 
-use App\Classe\Cart;
 use App\Entity\Adresse;
 use App\Form\AdresseType;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class CompteAdresseController extends AbstractController
 
 {
-    private $entityManager;
-
-    public function __construct(EntityManagerInterface $entityManager)
+    public function __construct(private EntityManagerInterface $entityManager)
     {
-        $this->entityManager = $entityManager;
     }
 
-    /**
-     * @Route("/compte/adresses", name="compte_adresse")
-     */
+    #[Route("/compte/adresses", name:"compte_adresse")]
     public function index(): Response
     {
 
         return $this->render('compte/adresse.html.twig');
     }
 
-    /**
-     * @Route("/compte/ajouter-une-adresse", name="compte_adresse_add")
-     */
+
+    #[Route("/compte/ajouter-une-adresse", name:"compte_adresse_add")]
     public function add(Request $request): Response
     {
         $adresse = new Adresse();
@@ -52,10 +46,9 @@ class CompteAdresseController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/compte/modifier-une-adresse/{id}", name="compte_adresse_edit")
-     */
-    public function edit(Request $request, $id)
+
+    #[Route("/compte/modifier-une-adresse/{id}", name:"compte_adresse_edit")]
+    public function edit(Request $request, $id): Response
     {
         $adresse = $this->entityManager->getRepository(Adresse::class)->findOneById($id);
 
@@ -77,10 +70,9 @@ class CompteAdresseController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/compte/supprimer-une-adresse/{id}", name="compte_adresse_delete")
-     */
-    public function delete($id)
+
+    #[Route("/compte/supprimer-une-adresse/{id}", name:"compte_adresse_delete")]
+    public function delete($id): RedirectResponse
     {
         $adresse = $this->entityManager->getRepository(adresse::class)->findOneById($id);
 

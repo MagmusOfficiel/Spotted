@@ -3,23 +3,19 @@
 namespace App\Controller;
 
 use App\Entity\Commande;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
 
 class CompteCommandeController extends AbstractController
 {
-    private $entityManager;
-
-    public function __construct(EntityManagerInterface $entityManager)
+    public function __construct(private EntityManagerInterface $entityManager)
     {
-        $this->entityManager = $entityManager;
     }
 
-    /**
-     * @Route("/compte/mes-commandes", name="compte_commande")
-     */
-    public function index()
+    #[Route("/compte/mes-commandes", name:"compte_commande")]
+    public function index(): Response
     {
         $commande = $this->entityManager->getRepository(Commande::class)->findSuccessOrders($this->getUser());
 
@@ -28,9 +24,7 @@ class CompteCommandeController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/compte/mes-commandes/{reference}", name="compte_commande_show")
-     */
+    #[Route("/compte/mes-commandes/{reference}", name:"compte_commande_show")]
     public function show($reference)
     {
         $commande = $this->entityManager->getRepository(Commande::class)->findOneByReference($reference);

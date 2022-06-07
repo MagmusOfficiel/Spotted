@@ -14,9 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminSousCategoriesController extends AbstractController
 {
-    /**
-     * @Route("/admin/souscategorie/", name="admin_souscategorie")
-     */
+    #[Route("/admin/souscategorie/", name:"admin_souscategorie")]
     public function index(SousCategoriesRepository $repository): Response
     {
         $souscategories = $repository->findAll();
@@ -25,10 +23,8 @@ class AdminSousCategoriesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/souscategorie/creation", name="creationSousCategorie")
-     * @Route("/admin/souscategorie/{id}", name="modifSousCategorie")
-     */
+    #[Route("/admin/souscategorie/creation", name:"creationSousCategorie")]
+    #[Route("/admin/souscategorie/{id}", name:"modifSousCategorie")]
     public function modification(SousCategories $souscategories = null, Request $request, EntityManagerInterface $om)
     {
         if (!$souscategories) {
@@ -50,9 +46,7 @@ class AdminSousCategoriesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/souscategorie/{id}", name="supSousCategorie")
-     */
+    #[Route("/admin/sup/souscategorie/{id}", name:"supSousCategorie")]
     public function suppression(SousCategories $souscategories, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $souscategories->getId(), $request->get("_token"))) {
@@ -65,10 +59,7 @@ class AdminSousCategoriesController extends AbstractController
         return new Response('Condition non valide', 200);
     }
 
-        /**
-     * 
-     * @Route("/admin/soussouscategories/{id}", name="sousSousCategories")
-     */
+    #[Route("/admin/soussouscategories/{id}", name:"sousSousCategories")]
     public function fetchSousSousCategories(SousCategories $souscategorie, SousCategoriesRepository $repository,SousSousCategoriesRepository $repository2): Response
     {
         $soussouscategories = $repository2->findAll();

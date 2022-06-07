@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\Adresse;
 use App\Form\AdresseType;
+use Symfony\Component\Routing\Route;
 use App\Repository\AdresseRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminAdresseController extends AbstractController
 {
-    /**
-     * @Route("/admin/adresse/", name="admin_adresse")
-     */
+    #[Route("/admin/adresse/", name:"admin_adresse")]
     public function index(AdresseRepository $repository): Response
     {
         $adresse = $repository->findAll();
@@ -25,10 +23,9 @@ class AdminAdresseController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/adresse/creation", name="creationAdresse")
-     * @Route("/admin/adresse/{id}", name="modifAdresse")
-     */
+
+    #[Route("/admin/adresse/creation", name:"creationAdresse")]
+    #[Route("/admin/adresse/{id}", name:"modifAdresse")]
     public function modification(
         Adresse $adresse = null,
         Request $request,
@@ -55,9 +52,7 @@ class AdminAdresseController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/adresse/{id}", name="supAdresse")
-     */
+    #[Route("/admin/sup/adresse/{id}", name:"supAdresse")]
     public function suppression(Adresse $adresse, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $adresse->getId(), $request->get("_token"))) {

@@ -3,21 +3,17 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Marque;
-use App\Entity\Produit;
 use App\Form\MarqueType;
 use App\Repository\MarqueRepository;
-use App\Repository\ProduitRepository;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminMarquesController extends AbstractController
 {
-    /**
-     * @Route("/admin/marques/", name="admin_marques")
-     */
+    #[Route("/admin/marques/", name:"admin_marques")]
     public function index(MarqueRepository $repository): Response
     {
         $marques = $repository->findAll();
@@ -27,11 +23,8 @@ class AdminMarquesController extends AbstractController
         ]);
     }
 
-
-    /**
-     * @Route("/admin/marques/creation", name="creationMarque")
-     * @Route("/admin/marques/{id}", name="modifMarque")
-     */
+    #[Route("/admin/marques/creation", name:"creationMarque")]
+    #[Route("/admin/marques/{id}", name:"modifMarque")]
     public function modification(Marque $marque = null, Request $request, EntityManagerInterface $om)
     {
         if (!$marque) {
@@ -55,9 +48,7 @@ class AdminMarquesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/marques/{id}", name="supMarque")
-     */
+    #[Route("/admin/sup/marques/{id}", name:"supMarque")]
     public function suppression(Marque $marque, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $marque->getId(), $request->get("_token"))) {

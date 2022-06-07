@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminThemeImageController extends AbstractController
 {
-    /**
-     * @Route("/admin/themeimage/", name="admin_themeimage")
-     */
+    #[Route("/admin/themeimage/", name:"admin_themeimage")]
     public function index(ThemeImageRepository $repository): Response
     {
         $themeimages = $repository->findAll();
@@ -23,11 +21,8 @@ class AdminThemeImageController extends AbstractController
             'themeimages' => $themeimages,
         ]);
     }
-
-        /**
-     * @Route("/admin/themeimage/creation", name="creationImage")
-     * @Route("/admin/themeimage/{id}", name="modifImage")
-     */
+    #[Route("/admin/themeimage/creation", name:"creationImage")]
+    #[Route("/admin/themeimage/{id}", name:"modifImage")]
     public function modification(ThemeImage $themeimage = null, Request $request, EntityManagerInterface $om)
     {
         if (!$themeimage) {

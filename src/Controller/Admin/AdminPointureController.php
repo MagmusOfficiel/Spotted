@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\Pointure;
 use App\Form\PointureType;
+use Symfony\Component\Routing\Route;
 use App\Repository\PointureRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminPointureController extends AbstractController
 {
-    /**
-     * @Route("/admin/pointures/", name="admin_pointures")
-     */
+    #[Route("/admin/pointures/", name: "admin_pointures")]
     public function index(PointureRepository $repository): Response
     {
         $pointures = $repository->findAll();
@@ -25,10 +23,8 @@ class AdminPointureController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/pointures/creation", name="creationPointure")
-     * @Route("/admin/pointures/{id}", name="modifPointure")
-     */
+    #[Route("/admin/pointures/creation", name: "creationPointure")]
+    #[Route("/admin/pointures/{id}", name: "modifPointure")]
     public function modification(Pointure $pointure = null, Request $request, EntityManagerInterface $om)
     {
         if (!$pointure) {
@@ -51,9 +47,7 @@ class AdminPointureController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/pointures/{id}", name="supPointure")
-     */
+    #[Route("/admin/sup/pointures/{id}", name: "supPointure")]
     public function suppression(Pointure $pointure, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $pointure->getId(), $request->get("_token"))) {

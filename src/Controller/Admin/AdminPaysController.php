@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminPaysController extends AbstractController
 {
-    /**
-     * @Route("/admin/pays/", name="admin_pays")
-     */
+    #[Route("/admin/pays/", name:"admin_pays")]
     public function index(PaysRepository $repository): Response
     {
         $pays = $repository->findAll();
@@ -26,10 +24,8 @@ class AdminPaysController extends AbstractController
     }
 
 
-    /**
-     * @Route("/admin/pays/creation", name="creationPays")
-     * @Route("/admin/pays/{id}", name="modifPays")
-     */
+    #[Route("/admin/pays/creation", name:"creationPays")]
+    #[Route("/admin/pays/{id}", name:"modifPays")]
     public function modification(Pays $pays = null, Request $request, EntityManagerInterface $om)
     {
         if (!$pays) {
@@ -53,9 +49,7 @@ class AdminPaysController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/pays/{id}", name="supPays")
-     */
+    #[Route("/admin/sup/pays/{id}", name:"supPays")]
     public function suppression(Pays $pays, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $pays->getId(), $request->get("_token"))) {

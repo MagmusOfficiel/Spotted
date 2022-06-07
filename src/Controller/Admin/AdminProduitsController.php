@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminProduitsController extends AbstractController
 {
-    /**
-     * @Route("/admin/produits/", name="admin_produits")
-     */
+    #[Route("/admin/produits/", name:"admin_produits")]
     public function index(ProduitRepository $repository): Response
     {
         $produits = $repository->findall();
@@ -24,10 +22,8 @@ class AdminProduitsController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/creation/produit", name="creationProduit", methods={"GET","POST"})
-     * @Route("/admin/produit/{id}", name="modifProduit")
-     */
+    #[Route("/admin/creation/produit", name:"creationProduit", methods:["GET","POST"])]
+    #[Route("/admin/produit/{id}", name:"modifProduit")]
     public function modification(Produit $produit = null, Request $request, EntityManagerInterface $om)
     {
         if (!$produit) {
@@ -53,9 +49,7 @@ class AdminProduitsController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/produit/{id}", name="supProduit")
-     */
+    #[Route("/admin/sup/produit/{id}", name:"supProduit")]
     public function suppression(Produit $produit, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $produit->getId(), $request->get("_token"))) {
@@ -68,9 +62,7 @@ class AdminProduitsController extends AbstractController
         return new Response('Condition non valide', 200);
     }
 
-            /**
-     * @Route("/admin/produit/addbloque/{id}", name="caddBloque")
-     */
+    #[Route("/admin/produit/addbloque/{id}", name:"caddBloque")]
     public function addBloque(Produit $produit, EntityManagerInterface $om)
     {
         $bloque = $produit->getProduitBloque();

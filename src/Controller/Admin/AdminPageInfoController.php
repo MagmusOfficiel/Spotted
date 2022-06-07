@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\PageInfo;
 use App\Form\PageInfoType;
+use Symfony\Component\Routing\Route;
 use App\Repository\PageInfoRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminPageInfoController extends AbstractController
 {
-    /**
-     * @Route("/admin/pageinfo/", name="admin_pageinfo")
-     */
+    #[Route("/admin/pageinfo/", name:"admin_pageinfo")]
     public function index(PageInfoRepository $repository): Response
     {
         $pageinfo = $repository->findAll();
@@ -26,10 +24,8 @@ class AdminPageInfoController extends AbstractController
     }
 
 
-    /**
-     * @Route("/admin/pageinfo/creation", name="creationPageInfo")
-     * @Route("/admin/pageinfo/{id}", name="modifPageInfo")
-     */
+    #[Route("/admin/pageinfo/creation", name:"creationPageInfo")]
+    #[Route("/admin/pageinfo/{id}", name:"modifPageInfo")]
     public function modification(PageInfo $pageinfo = null, Request $request, EntityManagerInterface $om)
     {
         if (!$pageinfo) {
@@ -52,9 +48,7 @@ class AdminPageInfoController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/pageinfo/{id}", name="supPageInfo")
-     */
+    #[Route("/admin/sup/pageinfo/{id}", name:"supPageInfo")]
     public function suppression(PageInfo $pageinfo, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $pageinfo->getId(), $request->get("_token"))) {

@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\Reseaux;
 use App\Form\ReseauxType;
-use App\Repository\ReseauxRepository; 
+use Symfony\Component\Routing\Route;
+use App\Repository\ReseauxRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminReseauxController extends AbstractController
 {
-  /**
-     * @Route("/admin/reseaux/", name="admin_reseaux")
-     */
+    #[Route("/admin/reseaux/", name: "admin_reseaux")]
     public function index(ReseauxRepository $repository): Response
     {
         $reseaux = $repository->findAll();
@@ -24,10 +22,8 @@ class AdminReseauxController extends AbstractController
         ]);
     }
 
-        /**
-     * @Route("/admin/reseaux/creation", name="creationReseaux")
-     * @Route("/admin/reseaux/{id}", name="modifReseaux")
-     */
+    #[Route("/admin/reseaux/creation", name: "creationReseaux")]
+    #[Route("/admin/reseaux/{id}", name: "modifReseaux")]
     public function modification(Reseaux $reseaux = null, Request $request, EntityManagerInterface $om)
     {
         if (!$reseaux) {
@@ -51,9 +47,7 @@ class AdminReseauxController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/reseaux/{id}", name="supReseaux")
-     */
+    #[Route("/admin/sup/reseaux/{id}", name: "supReseaux")]
     public function suppression(Reseaux $reseaux, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $reseaux->getId(), $request->get("_token"))) {

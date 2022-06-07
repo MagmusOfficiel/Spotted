@@ -8,9 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminCarteCadeauEnvoieController extends AbstractController
 {
-    /**
-     * @Route("/admin/admin/carte/cadeau/envoie", name="admin_admin_carte_cadeau_envoie")
-     */
+    #[Route("/admin/admin/carte/cadeau/envoie", name:"admin_admin_carte_cadeau_envoie")]
     public function index(): Response
     {
         return $this->render('admin/admin_carte_cadeau_envoie/index.html.twig', [

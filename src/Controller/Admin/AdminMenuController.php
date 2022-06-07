@@ -5,17 +5,15 @@ namespace App\Controller\Admin;
 use App\Entity\Menu;
 use App\Form\MenuType;
 use App\Repository\MenuRepository;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminMenuController extends AbstractController
 {
-    /**
-     * @Route("/admin/menu/", name="admin_menu")
-     */
+    #[Route("/admin/menu/", name:"admin_menu")]
     public function index(MenuRepository $repository): Response
     {
         $menu = $repository->findAll();
@@ -25,10 +23,8 @@ class AdminMenuController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/menu/creation", name="creationMenu")
-     * @Route("/admin/menu/{id}", name="modifMenu")
-     */
+    #[Route("/admin/menu/creation", name:"creationMenu")]
+    #[Route("/admin/menu/{id}", name:"modifMenu")]
     public function modification(Menu $menu = null, Request $request, EntityManagerInterface $om)
     {
         if (!$menu) {
@@ -52,9 +48,7 @@ class AdminMenuController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/menu/{id}", name="supMenu")
-     */
+    #[Route("/admin/sup/menu/{id}", name:"supMenu")]
     public function suppression(Menu $menu, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $menu->getId(), $request->get("_token"))) {
@@ -65,9 +59,7 @@ class AdminMenuController extends AbstractController
         }
     }
 
-    /**
-     * @Route("/admin/menu/addposition/{menuPosition}", name="addPosition")
-     */
+    #[Route("/admin/menu/addposition/{menuPosition}", name:"addPosition")]
     public function addPosition(Menu $menu, EntityManagerInterface $om, MenuRepository $menuRepository)
     {
         $menupre = $menuRepository->findOneBy(['menuPosition' => $menu->getMenuPosition() + 1]);
@@ -79,9 +71,7 @@ class AdminMenuController extends AbstractController
         return $this->redirectToRoute("admin_menu");
     }
 
-        /**
-     * @Route("/admin/menu/downposition/{menuPosition}", name="downPosition")
-     */
+    #[Route("/admin/menu/downposition/{menuPosition}", name:"downPosition")]
     public function downPosition(Menu $menu, EntityManagerInterface $om, MenuRepository $menuRepository)
     {
         $menunext = $menuRepository->findOneBy(['menuPosition' => $menu->getMenuPosition() - 1]);   

@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
  
 use App\Entity\SousSousCategories;
 use App\Form\SousSousCategorieType;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response; 
-use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\SousSousCategoriesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminSousSousCategoriesController extends AbstractController
 {
-/**
-     * @Route("/admin/soussouscategorie/", name="admin_sousouscategorie")
-     */
+    #[Route("/admin/soussouscategorie/", name:"admin_sousouscategorie")]
     public function index(SousSousCategoriesRepository $repository): Response
     {
         $soussouscategories = $repository->findAll();
@@ -24,10 +22,8 @@ class AdminSousSousCategoriesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/soussouscategorie/creation", name="creationSousSousCategorie")
-     * @Route("/admin/soussouscategorie/{id}", name="modifSousSousCategorie")
-     */
+    #[Route("/admin/soussouscategorie/creation", name:"creationSousSousCategorie")]
+    #[Route("/admin/soussouscategorie/{id}", name:"modifSousSousCategorie")]
     public function modification(SousSousCategories $soussouscategories = null, Request $request, EntityManagerInterface $om)
     {
         if (!$soussouscategories) {
@@ -50,9 +46,7 @@ class AdminSousSousCategoriesController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/soussouscategorie/{id}", name="supSousSousCategorie")
-     */
+    #[Route("/admin/sup/soussouscategorie/{id}", name:"supSousSousCategorie")]
     public function suppression(SousSousCategories $soussouscategories, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $soussouscategories->getId(), $request->get("_token"))) {
@@ -65,12 +59,9 @@ class AdminSousSousCategoriesController extends AbstractController
         return new Response('Condition non valide', 200);
     }
 
-        /**
-     * @Route("/admin/supall/soussouscategorie/{id}", name="supAllSousSousCategorie")
-     */
+    #[Route("/admin/supall/soussouscategorie/{id}", name:"supAllSousSousCategorie")]
     public function deleteAllEmployees(SousSousCategoriesRepository $repository,Request $request) {
- 
-        dd($request);
+        
         $souscategorieid = $request->get('id');
         $souscategorie = $repository->findBy([
             'id' => $souscategorieid // On passe l'id du produit

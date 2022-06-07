@@ -4,18 +4,16 @@ namespace App\Controller\Admin;
 
 use App\Entity\Couleur;
 use App\Form\CouleurType;
+use Symfony\Component\Routing\Route;
 use App\Repository\CouleurRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminCouleurController extends AbstractController
 {
-    /**
-     * @Route("/admin/couleurs/", name="admin_couleurs")
-     */
+    #[Route("/admin/couleurs/", name:"admin_couleurs")]
     public function index(CouleurRepository $repository): Response
     {
         $couleurs = $repository->findAll();
@@ -25,10 +23,8 @@ class AdminCouleurController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/couleurs/creation", name="creationCouleur")
-     * @Route("/admin/couleurs/{id}", name="modifCouleur")
-     */
+    #[Route("/admin/couleurs/creation", name:"creationCouleur")]
+    #[Route("/admin/couleurs/{id}", name:"modifCouleur")]
     public function modification(Couleur $couleur = null, Request $request, EntityManagerInterface $om)
     {
         if (!$couleur) {
@@ -52,9 +48,7 @@ class AdminCouleurController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/sup/couleurs/{id}", name="supCouleur")
-     */
+    #[Route("/admin/sup/couleurs/{id}", name:"supCouleur")]
     public function suppression(Couleur $couleur, Request $request, EntityManagerInterface $om)
     {
         if ($this->isCsrfTokenValid("SUP" . $couleur->getId(), $request->get("_token"))) {

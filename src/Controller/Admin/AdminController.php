@@ -2,25 +2,23 @@
 
 namespace App\Controller\Admin;
 
+use App\Service\DateYear;
 use App\Classe\FiltreYear;
 use App\Form\FiltreYearType;
-use App\Repository\CommandeRepository; 
-use App\Repository\ProduitRepository;
-use App\Service\DateYear;
 use Symfony\UX\Chartjs\Model\Chart;
+use Symfony\Component\Routing\Route;
+use App\Repository\ProduitRepository;
+use App\Repository\CommandeRepository; 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\UX\Chartjs\Builder\ChartBuilderInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class AdminController extends AbstractController
 {
 
-    /**
-     * @Route("/admin", name="admin")
-     */
+    #[Route("/admin", name:"admin")]
     public function index(
         ChartBuilderInterface $chartBuilder,
         CommandeRepository $commandeRepository,
@@ -78,7 +76,7 @@ class AdminController extends AbstractController
         foreach ($produit as $produits) { 
            $test[] = $produits->getMarques()->getMarqueNom();
         }
-        dd($test[1]);
+
         $chartTwo = $chartBuilder->createChart(Chart::TYPE_PIE);
 
         $chartTwo->setData([
@@ -109,9 +107,7 @@ class AdminController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/admin/get/navbar", name="get_navbar") 
-     */
+    #[Route("/admin/get/navbar", name:"get_navbar")]
     public function getNavBar(TokenStorageInterface $tokenStorage)
     {
 

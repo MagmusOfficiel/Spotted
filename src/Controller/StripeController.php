@@ -6,18 +6,16 @@ use Stripe\Stripe;
 use App\Classe\Panier;
 use App\Entity\Produit;
 use App\Entity\Commande;
-use App\Entity\CommandeDetails;
 use Stripe\Checkout\Session;
+use App\Entity\CommandeDetails;
+use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface; 
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class StripeController extends AbstractController
 {
-    /**
-     * @Route("/commande/create-session/{reference}", name="stripe_create_session")
-     */
+    #[Route("/commande/create-session/{reference}", name:"stripe_create_session")]
     public function index(EntityManagerInterface $entityManager, Panier $panier, $reference)
     {
         $products_for_stripe = [];
