@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use DateTimeImmutable;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM; 
 use App\Repository\ReseauxRepository;
 use Symfony\Component\HttpFoundation\File\File;

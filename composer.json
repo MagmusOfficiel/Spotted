@@ -10,6 +10,7 @@
         "doctrine/doctrine-bundle": "^2.4",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.9",
+        "gedmo/doctrine-extensions": "^3.7",
         "lexik/form-filter-bundle": "^7.0",
         "sensio/framework-extra-bundle": "^6.2",
         "stripe/stripe-php": "^7.108",

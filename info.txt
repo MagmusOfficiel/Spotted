@@ -8,7 +8,6 @@ Symfony :
 - Faire un historique/log ( EventListener ) -> mail
 - Ajouter SonarCube
 - Faire un importation d'un excell, csv..
-- Faire une tâche cron avec une commande
 - Faire un theme par defaut
 - Faire un popup promo
 - Faire des modules
@@ -133,3 +132,4 @@ Faits :
 - Faire des logs exeception des erreurs
 - Passer en attribut
 - Passer de Swift_Mailer à Mailer
+- Faire une tâche cron avec une commande

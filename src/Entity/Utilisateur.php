@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Entity\Pays;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UtilisateurRepository;
 use Doctrine\Common\Collections\Collection;
@@ -69,6 +70,11 @@ class Utilisateur implements UserInterface
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getUserIdentifier()
+    {
+        
     }
 
     public function getUsername(): ?string

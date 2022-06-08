@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Admin\Manager\EmailingManager;
 use App\Entity\Utilisateur;
 use App\Form\ChangePasswordFormType;
 use Symfony\Component\Routing\Route;
@@ -35,7 +36,7 @@ class ResetPasswordController extends AbstractController
      * Display & process form to request a password reset.
      */
     #[Route("", name: "app_forgot_password_request")]
-    public function request(Request $request, MailerInterface $mailer): Response
+    public function request(Request $request, EmailingManager $mailer): Response
     {
         $form = $this->createForm(ResetPasswordRequestFormType::class);
         $form->handleRequest($request);
@@ -127,7 +128,7 @@ class ResetPasswordController extends AbstractController
         ]);
     }
 
-    private function processSendingPasswordResetEmail(string $emailFormData, MailerInterface $mailer): RedirectResponse
+    private function processSendingPasswordResetEmail(string $emailFormData, EmailingManager $mailer): RedirectResponse
     {
         $user = $this->getManagerRegistry()->getRepository(Utilisateur::class)->findOneBy([
             'userMail' => $emailFormData,
@@ -155,25 +156,10 @@ class ResetPasswordController extends AbstractController
             return $this->redirectToRoute('app_forgot_password_request');
         }
 
-        $message = (new Email())
-        ->subject('Votre demande de réinitialisation de mot de passe')
-        // On attribue l'expéditeur
-        ->from('eddyweber80@gmail.com')
-        // On attribue le destintaire
-        ->to($emailFormData)
-        // on crée le message avec la vue Twig
-        ->html(
-            $this->renderView(
-                'reset_password/email.html.twig',
-                [
-                    'resetToken' => $resetToken,
-                ]
-            ),
-            'text/html'
-        );
 
-    // On envoie le message
-    $mailer->send($message);
+
+        // On envoie le message
+        $mailer->sendResetPassword($emailFormData, $resetToken);
 
 
         // Store the token object in session for retrieval in check-email route.

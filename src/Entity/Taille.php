@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\TailleRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TailleRepository;
 
 #[ORM\Table(name: 'Taille')]
 #[ORM\Entity(repositoryClass: TailleRepository::class)]

@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\SousSousCategoriesRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\SousSousCategoriesRepository;
 
 #[ORM\Table(name: 'SousSousCategories')]
 #[ORM\Entity(repositoryClass: SousSousCategoriesRepository::class)]

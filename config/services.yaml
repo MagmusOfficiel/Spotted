@@ -7,6 +7,9 @@ parameters:
     app.path.product_images: /images/
     locales: [fr]
     locale: fr
+    mailer_from: contact@eddy-weber.fr
+    mailer_from_name: Eddy Weber
+    rootDir: '%kernel.project_dir%'
 
 services:
     # default configuration for services in *this* file
