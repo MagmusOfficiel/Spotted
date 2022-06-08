@@ -23,7 +23,6 @@ services:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
-            - '../src/Entity/'
             - '../src/Kernel.php'
             - '../src/Tests/'
 
@@ -31,9 +30,12 @@ services:
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
         resource: '../src/Controller/'
-        tags: ['controller.service_arguments'] 
+        tags: ['controller.service_arguments']
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\Admin\EventSubscriber\ExceptionSubscriber:
+    App\EventSubscriber\ExceptionSubscriber:
         tags:
             - { name: kernel.event_subscriber, event: kernel.exception }
+
+    App\Admin\Manager\EmailingManager: 
+        lazy: true

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Admin\Entity;
+namespace App\Entity;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use App\Admin\Entity\Traits\TimestampableTrait;
+use App\Entity\Traits\TimestampableTrait;
 
 #[ORM\Table(name: 'envoi')]
 #[ORM\Index(name:"idx_token", columns:["token"])]

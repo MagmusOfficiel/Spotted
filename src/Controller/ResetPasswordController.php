@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Admin\Manager\EmailingManager;
+use App\Manager\EmailingManager;
 use App\Entity\Utilisateur;
 use App\Form\ChangePasswordFormType;
 use Symfony\Component\Routing\Route;

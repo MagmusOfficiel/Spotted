@@ -194,3 +194,18 @@ localhost:25 (Connection refused)
 [31mMessage[0m : Connection could not be established with host "127.0.0.1:1025": stream_socket_client(): Unable to connect to
 127.0.0.1:1025 (Connection refused)
 -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:08:06
+[31mInformation[0m : erreur à la ligne 50 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/routing/Generator/CompiledUrlGenerator.php
+[31mMessage[0m : Unable to generate a URL for the named route "connexion" as such route does not exist.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:08:26
+[31mInformation[0m : erreur à la ligne 50 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/routing/Generator/CompiledUrlGenerator.php
+[31mMessage[0m : Unable to generate a URL for the named route "connexion" as such route does not exist.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:08:32
+[31mInformation[0m : erreur à la ligne 50 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/routing/Generator/CompiledUrlGenerator.php
+[31mMessage[0m : Unable to generate a URL for the named route "connexion" as such route does not exist.
+-------------------------------------------------------------------------------------------------------------------

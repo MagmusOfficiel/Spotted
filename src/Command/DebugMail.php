@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Admin\Command;
+namespace App\Command;
 
 use App\Entity\Utilisateur;
-use App\Admin\Manager\EmailingManager;
+use App\Manager\EmailingManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DebugMailConfirmOrderCommand extends Command
+class DebugMail extends Command
 {
     /***********************
      * Specials methods

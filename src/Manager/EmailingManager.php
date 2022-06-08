@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Admin\Manager;
+namespace App\Manager;
 
 use Twig\Environment;
 use App\Admin\Entity\Envoi;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Admin\Entity\Traits;
+namespace App\Entity\Traits;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
