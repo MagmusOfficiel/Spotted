@@ -38,7 +38,7 @@ class Produit
 
     #[ORM\ManyToOne(targetEntity: Categories::class, inversedBy: "produits")]
     #[ORM\JoinColumn(nullable: false)]
-    private Categories $categorie;
+    private Categories $categories;
 
     #[ORM\ManyToOne(targetEntity: Typehm::class, inversedBy: "produits")]
     private Typehm $typehm;
@@ -50,7 +50,7 @@ class Produit
     private Couleur $couleur;
 
     #[ORM\OneToMany(targetEntity: ProduitImage::class, mappedBy: "produit", cascade: ["persist"])]
-    private ProduitImage $produitImages;
+    private Collection $produitImages;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $produitCreation;
@@ -130,9 +130,6 @@ class Produit
         return $this;
     }
 
-    /**
-     * @return Collection|ProduitImage[]
-     */
     public function getProduitImages(): Collection
     {
         return $this->produitImages;
@@ -175,14 +172,14 @@ class Produit
         return $this;
     }
 
-    public function getCategorie(): ?Categories
+    public function getCategories(): ?Categories
     {
-        return $this->categorie;
+        return $this->categories;
     }
 
-    public function setCategorie(?Categories $categorie): self
+    public function setCategories(?Categories $categories): self
     {
-        $this->categorie = $categorie;
+        $this->categories = $categories;
 
         return $this;
     }

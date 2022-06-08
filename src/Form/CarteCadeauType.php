@@ -33,7 +33,7 @@ class CarteCadeauType extends AbstractType
         ->add('imageFile', FileType::class, [
             'required' => true
         ])
-        ->add('categorie', EntityType::class, [
+        ->add('categories', EntityType::class, [
             'class' => Categories::class,
             'choice_value' => function (?Categories $entity) {
                 return $entity ? $entity->getId() : '';

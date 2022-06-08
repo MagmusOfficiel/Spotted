@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Attributs;
 use App\Form\AttributsType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\AttributsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;

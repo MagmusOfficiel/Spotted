@@ -26,7 +26,7 @@ class Marque
     private string $marqueNom;
 
     #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"marques")]
-    private Produit $produits;
+    private Collection $produits;
 
     #[ORM\Column(type: Types::STRING, length: 255, nullable:true)]
     private string $marqueLogo;

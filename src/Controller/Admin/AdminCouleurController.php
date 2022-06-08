@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Couleur;
 use App\Form\CouleurType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\CouleurRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;

@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Adresse;
 use App\Form\AdresseType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

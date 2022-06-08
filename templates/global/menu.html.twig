@@ -3,14 +3,14 @@
 {% block meta %}
 	{% for produit in produit %}
 		<meta name="description" content="{{produit.produitDescription}}">
-		<meta name="keywords" content="{{produit.marques.marqueNom}},{{produit.categorie.CatNom}},{{produit.produitLibelle}},{{produit.typehm.TypeHmNom}},{{produit.produitPrix}}€">
+		<meta name="keywords" content="{{produit.marques.marqueNom}},{{produit.categories.CatNom}},{{produit.produitLibelle}},{{produit.typehm.TypeHmNom}},{{produit.produitPrix}}€">
 	{% endfor %}
 {% endblock %}
 {% block title %}
 	{% for produit in produit %}
 		{{produit.marques.marqueNom}}
 		-
-		{{produit.categorie.CatNom}}
+		{{produit.categories.CatNom}}
 		-
 		{{produit.produitLibelle}}
 		-

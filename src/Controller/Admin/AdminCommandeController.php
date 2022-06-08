@@ -47,14 +47,14 @@ class AdminCommandeController extends AbstractController
     #[Route("/admin/commande/addpaye/{id}", name: "paddPaye")]
     public function addPaye(Commande $commande, EntityManagerInterface $om)
     {
-        $paye = $commande->getPaye();
+        $paye = $commande->getIsPaye();
 
         if ($paye == false) {
             $paye = true;
         } else {
             $paye = false;
         }
-        $commande->setPaye($paye);
+        $commande->setIsPaye($paye);
         $om->persist($commande);
         $om->flush();
         $this->addFlash('success', "L'action a été effectué");
@@ -102,7 +102,7 @@ class AdminCommandeController extends AbstractController
             $excel .= '<td>' . $user->getLivraison() . '</td>';
             $excel .= '<td>' . $user->getCreatedAt()->format('d/m/Y') . '</td>';
             $excel .= '<td>' . $user->getTransporteurNom() . '</td>';
-            $excel .= '<td>' . $user->getPaye() . '</td>';
+            $excel .= '<td>' . $user->getIsPaye() . '</td>';
             $excel .= '</tr>';
         }
 

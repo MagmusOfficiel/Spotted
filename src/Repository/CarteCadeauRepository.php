@@ -60,7 +60,7 @@ class CarteCadeauRepository extends ServiceEntityRepository
  
         if ( \count($options['cats']) > 0 ) {
             $qb->andWhere(
-                $qb->expr()->in('v.categorie', ':cats')
+                $qb->expr()->in('v.categories', ':cats')
             )
             ->setParameter('cats', $options['cats']); 
         } 

@@ -1,35 +1,49 @@
 {% extends 'base.html.twig' %}
-		
-{% block meta %}  
-{% for produit in produit %}
-	<meta name="description" content="{{produit.produitDescription}}">
-	<meta name="keywords" content="{{produit.marques.marqueNom}},{{produit.categorie.CatNom}},{{produit.produitLibelle}},{{produit.typehm.TypeHmNom}},{{produit.produitPrix}}€">
-{% endfor %}
+
+{% block meta %}
+	{% for produit in produit %}
+		<meta name="description" content="{{produit.produitDescription}}">
+		<meta name="keywords" content="{{produit.marques.marqueNom}},{{produit.categories.CatNom}},{{produit.produitLibelle}},{{produit.typehm.TypeHmNom}},{{produit.produitPrix}}€">
+	{% endfor %}
 {% endblock %}
 {% block title %}
-{% for produit in produit %}
-	{{produit.marques.marqueNom}} - {{produit.categorie.CatNom}} - {{produit.produitLibelle}} - {{produit.typehm.TypeHmNom}} - {{produit.produitPrix}}€
-{% endfor %}
+	{% for produit in produit %}
+		{{produit.marques.marqueNom}}
+		-
+		{{produit.categories.CatNom}}
+		-
+		{{produit.produitLibelle}}
+		-
+		{{produit.typehm.TypeHmNom}}
+		-
+		{{produit.produitPrix}}€
+	{% endfor %}
 {% endblock %}
 
 {% block body %}
 {% for produit in produit %}
-<div class="container">
-	<div class="row">
-		<div class="col-lg-6">
-			<div class="row"> 
-			{% for i in 0..(produit.produitImages | length - 1) %}
-				<div class="col-lg-6 col-md-4 col-4 p-2">
-					<div class="card">
-						<img src="{{asset('build/images/theme/produit/'~ produit.produitImages[ i ].imageName[0:4])}}/{{produit.produitImages[ i ].imageName}}" class="img-fluid"></img>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					{% for i in 0..(produit.produitImages | length - 1) %}
+						<div class="col-lg-6 col-md-4 col-4 p-2">
+							<div class="card">
+								<img src="{{asset('build/images/theme/produit/'~ produit.produitImages[ i ].imageName[0:4])}}/{{produit.produitImages[ i ].imageName}}" class="img-fluid"></img>
+						</div>
 					</div>
-				</div> 
-			{% endfor %}
+				{% endfor %}
 			</div>
-		</div>	
+		</div>
 		<div class="col-lg-6 col-md-4 col-4 text-white">
 			<div>
-				<h5>{{produit.marques.marqueNom}} - {{produit.produitLibelle}} - {{produit.typehm.TypeHmNom}} - {{produit.produitPrix}}€
+				<h5>{{produit.marques.marqueNom}}
+					-
+					{{produit.produitLibelle}}
+					-
+					{{produit.typehm.TypeHmNom}}
+					-
+					{{produit.produitPrix}}€
 				</h5>
 			</div>
 			<div>
@@ -49,29 +63,28 @@
 				</button>
 			</div>
 			<div class="text-white">
-			                    <a href="{{path('addfast_to_cart', {'id' : produit.id})}}" class="btn btn-success">
-                        <i class="bi bi-cart-plus"></i> Ajouter
-                    </a>
+				<a href="{{path('addfast_to_cart', {'id' : produit.id})}}" class="btn btn-success">
+					<i class="bi bi-cart-plus"></i>
+					Ajouter
+				</a>
 
 				<p>
-						Description :
-						{{produit.produitDescription}}
+					Description :
+					{{produit.produitDescription}}
 				</p>
 				<p>
-						Couleur :
-						{{produit.couleur.couleurNom}}
+					Couleur :
+					{{produit.couleur.couleurNom}}
 				</p>
 				<p>
-						Référence :
-						{{produit.produitRef}}
+					Référence :
+					{{produit.produitRef}}
 				</p>
 				<p>
-						Catégorie :
-						{{produit.categorie.CatNom}}
+					Catégorie :
+					{{produit.categories.CatNom}}
 				</p>
 			</div>
 		</div>
 	</div>
-</div>
-{% endfor %}
-{% endblock %}
+</div>{% endfor %}{% endblock %}

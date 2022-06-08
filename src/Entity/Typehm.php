@@ -21,10 +21,10 @@ class Typehm
     private string $typehmNom;
 
     #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"typehm")]
-    private Produit $produits;
+    private Collection $produits;
 
     #[ORM\OneToMany(targetEntity:Categories::class, mappedBy:"catTypehm")]
-    private Categories $categories;
+    private Collection $categories;
 
     public function __construct()
     {

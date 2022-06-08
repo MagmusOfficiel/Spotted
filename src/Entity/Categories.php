@@ -8,7 +8,7 @@ use App\Repository\CategoriesRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
-#[ORM\Table(name: 'categories')]
+#[ORM\Table(name: 'Categories')]
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
 class Categories
 {
@@ -20,11 +20,11 @@ class Categories
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $catNom;
 
-    #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"categorie")]
-    private Produit $produits;
+    #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"categories")]
+    private Collection $produits;
 
     #[ORM\OneToMany(targetEntity:SousCategories::class, mappedBy:"sousCatCat",orphanRemoval:true)]
-    private SousCategories $sousCategories;
+    private Collection $sousCategories;
 
     #[ORM\ManyToOne(targetEntity:Eshop::class, inversedBy:"categories")]
     private Eshop $catEshop;

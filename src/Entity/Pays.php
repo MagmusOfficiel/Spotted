@@ -37,7 +37,7 @@ class Pays
     private string $paysDestination;
 
     #[ORM\OneToMany(targetEntity: Utilisateur::class, mappedBy: "userNationalite")]
-    private Utilisateur $utilisateurs;
+    private Collection $utilisateurs;
 
     public function __construct()
     {

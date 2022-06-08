@@ -6,7 +6,7 @@ use App\Service\DateYear;
 use App\Classe\FiltreYear;
 use App\Form\FiltreYearType;
 use Symfony\UX\Chartjs\Model\Chart;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\ProduitRepository;
 use App\Repository\CommandeRepository; 
 use Symfony\Component\HttpFoundation\Request;

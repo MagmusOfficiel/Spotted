@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
  
-#[ORM\Table(name: 'cartecadeau')]
+#[ORM\Table(name: 'CarteCadeau')]
 #[ORM\Entity(repositoryClass: CarteCadeauRepository::class)]
 #[Vich\Uploadable]
 class CarteCadeau
@@ -32,7 +32,7 @@ class CarteCadeau
     private string  $cartecadeauBloque;
 
     #[ORM\ManyToOne(targetEntity:Categories::class, inversedBy:"cartecadeau")]
-    private Categories $categorie;
+    private Categories $categories;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $cartecadeauCreation;
@@ -108,12 +108,12 @@ class CarteCadeau
 
     public function getCategorie(): ?Categories
     {
-        return $this->categorie;
+        return $this->categories;
     }
 
-    public function setCategorie(?Categories $categorie): self
+    public function setCategorie(?Categories $categories): self
     {
-        $this->categorie = $categorie;
+        $this->categories = $categories;
 
         return $this;
     }

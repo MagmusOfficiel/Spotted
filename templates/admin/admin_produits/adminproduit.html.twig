@@ -60,7 +60,7 @@
  						<td><img src="{{asset('build/images/theme/produit/'~ produit.produitImages[1].imageName[0:4])}}/{{produit.produitImages[1].imageName}}" class="img-fluid" width="200"></td>
 						<td>{{produit.produitLibelle}}</td>
 						<td>{{produit.produitRef}}</td>
-						<td>{{produit.categorie.CatNom}}</td>
+						<td>{{produit.categories.CatNom}}</td>
 						<td>{{produit.produitPrix}}€</td>
 						<td>{{produit.produitStock}}</td>
 						{% if produit.produitBloque == '0' %}

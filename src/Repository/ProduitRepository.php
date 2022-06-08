@@ -53,7 +53,7 @@ class ProduitRepository extends ServiceEntityRepository
         $query = $this
             ->createQueryBuilder('p')
             ->select('c', 'p')
-            ->join('p.categorie', 'c');
+            ->join('p.categories', 'c');
 
         if (!empty($recherche->categories)) {
             $query = $query

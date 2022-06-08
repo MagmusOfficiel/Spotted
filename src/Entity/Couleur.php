@@ -21,7 +21,7 @@ class Couleur
     private string $couleurNom;
 
     #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"couleur")]
-    private Produit $produits;
+    private Collection $produits;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $couleurValeur;

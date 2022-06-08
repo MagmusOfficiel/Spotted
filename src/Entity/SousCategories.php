@@ -24,7 +24,7 @@ class SousCategories
     private Categories $sousCatCat;
 
     #[ORM\OneToMany(targetEntity:SousSousCategories::class, mappedBy:"sousCat",orphanRemoval:true)]
-    private SousSousCategories $sousSousCategories;
+    private Collection $sousSousCategories;
 
     public function __construct()
     {

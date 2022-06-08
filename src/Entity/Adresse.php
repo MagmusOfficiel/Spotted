@@ -29,7 +29,7 @@ class Adresse
     private string $lastname;
 
     #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
-    private string $company;
+    private ?string $company;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $adress;

@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Manager\EmailingManager;
 use App\Entity\Utilisateur;
 use App\Form\ChangePasswordFormType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Form\ResetPasswordRequestFormType;
 use Symfony\Component\HttpFoundation\Request;

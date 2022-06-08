@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
+#[ORM\Table(name: 'Utilisateur')]
 #[ORM\Entity(repositoryClass:UtilisateurRepository::class)]
 #[UniqueEntity(fields : ["userMail"],message:"L'adresse e-mail déjà existant")]
 class Utilisateur implements UserInterface
@@ -33,7 +34,7 @@ class Utilisateur implements UserInterface
     private string $verifPassword;
 
     #[ORM\Column(type:TYPES::ARRAY, length:255)]
-    private array $roles;
+    private string $roles;
 
     #[ORM\Column(type:Types::STRING, length:255)]
     #[Assert\Regex(pattern:"/^[a-zA-Z\-éèàçùëüïôäâêûîô#&]+$/")]
@@ -50,16 +51,16 @@ class Utilisateur implements UserInterface
     private string $userSexe;
 
     #[ORM\ManyToOne(targetEntity:Pays::class, inversedBy:"utilisateurs")]
-    private Pays $userNationalite;
+    private ?Pays $userNationalite;
 
     #[ORM\OneToMany(targetEntity:Adresse::class, mappedBy:"user")]
-    private Adresse $adresses;
+    private Collection $adresses;
 
     #[ORM\OneToMany(targetEntity:Commande::class, mappedBy:"user")]
-    private Commande $commande;
+    private Collection $commande;
 
     #[ORM\OneToOne(targetEntity:Points::class, mappedBy:"UserPoints", cascade:["persist", "remove"])]
-    private Points $points;
+    private ?Points $points;
 
     public function __construct()
     {
@@ -72,9 +73,10 @@ class Utilisateur implements UserInterface
         return $this->id;
     }
 
-    public function getUserIdentifier()
+
+    public function getUserIdentifier(): string
     {
-        
+        return (string) $this->username;
     }
 
     public function getUsername(): ?string

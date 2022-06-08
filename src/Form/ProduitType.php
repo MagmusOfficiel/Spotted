@@ -53,7 +53,7 @@ class ProduitType extends AbstractType
                     'Oui' => true
                 ],
             ])
-            ->add('categorie', EntityType::class, [
+            ->add('categories', EntityType::class, [
                 'class' => Categories::class,
                 'choice_value' => function (?Categories $entity) {
                     return $entity ? $entity->getId() : '';

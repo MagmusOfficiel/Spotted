@@ -8,7 +8,7 @@ use App\Entity\Produit;
 use App\Entity\Commande;
 use Stripe\Checkout\Session;
 use App\Entity\CommandeDetails;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface; 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Reseaux;
 use App\Form\ReseauxType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\ReseauxRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;

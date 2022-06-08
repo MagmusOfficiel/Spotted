@@ -21,7 +21,7 @@ class PageInfo
     private string $pageTitre;
 
     #[ORM\OneToMany(targetEntity:Page::class, mappedBy:"pageInfo")]
-    private Page $pageLiaison;
+    private Collection $pageLiaison;
 
     public function __construct()
     {

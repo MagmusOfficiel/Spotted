@@ -5,7 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Marque;
 use App\Form\MarqueType;
 use App\Repository\MarqueRepository;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

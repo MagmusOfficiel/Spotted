@@ -5,7 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Menu;
 use App\Form\MenuType;
 use App\Repository\MenuRepository;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

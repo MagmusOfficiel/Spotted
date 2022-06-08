@@ -14,7 +14,7 @@ use App\Service\SendMailService;
 use App\Form\ProduitRechercheType;
 use App\Repository\MenuRepository;
 use App\Repository\PageRepository;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\ProduitRepository;
 use App\Repository\PageInfoRepository;
 use App\Repository\ThemeImageRepository;

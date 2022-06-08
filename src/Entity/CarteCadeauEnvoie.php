@@ -6,7 +6,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CarteCadeauEnvoieRepository;
 
-#[ORM\Table(name: 'cartecadeauenvoie')]
+#[ORM\Table(name: 'CarteCadeauEnvoie')]
 #[ORM\Entity(repositoryClass: CarteCadeauEnvoieRepository::class)]
 class CarteCadeauEnvoie
 {
@@ -36,7 +36,7 @@ class CarteCadeauEnvoie
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $carteMessage;
 
-    #[ORM\ManyToOne(targetEntity: CarteCadeau::class, inversedBy: "carteCadeauEnvoie", cascade: "persist")]
+    #[ORM\ManyToOne(targetEntity: CarteCadeau::class, inversedBy: "carteCadeauEnvoie", cascade: ["persist"])]
     private CarteCadeau $carteTheme;
 
     public function getId(): ?int

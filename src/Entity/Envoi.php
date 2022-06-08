@@ -6,7 +6,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Traits\TimestampableTrait;
 
-#[ORM\Table(name: 'envoi')]
+#[ORM\Table(name: 'Envoi')]
 #[ORM\Index(name:"idx_token", columns:["token"])]
 #[ORM\Index(name:"idx_created_at", columns:["created_at"])]
 #[ORM\Index(name:"idx_recipient", columns:["recipient"])]

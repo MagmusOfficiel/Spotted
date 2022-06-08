@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Carrousel;
 use App\Form\CarrouselType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\CarrouselRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;

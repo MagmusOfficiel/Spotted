@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-#[ORM\Table(name: 'actualite')]
+#[ORM\Table(name: 'Carrousel')]
 #[ORM\Entity(repositoryClass: CarrouselRepository::class)]
 #[Vich\Uploadable]
 class Carrousel

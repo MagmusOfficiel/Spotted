@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\CarteCadeau;
 use App\Form\CarteCadeauType; 
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\CarteCadeauRepository;
 use Symfony\Component\HttpFoundation\Request;

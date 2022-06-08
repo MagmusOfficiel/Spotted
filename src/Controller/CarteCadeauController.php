@@ -4,11 +4,11 @@ namespace App\Controller;
 
 use App\Entity\CarteCadeauEnvoie;
 use App\Form\CarteCadeauEnvoieType;
-use Symfony\Component\Routing\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\CarteCadeauRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CarteCadeauController extends AbstractController

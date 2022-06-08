@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\PageInfo;
 use App\Form\PageInfoType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\PageInfoRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;

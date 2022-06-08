@@ -70,7 +70,7 @@
 						<th>{{commandedetails.maCommande.livraison|raw}}</th>
 						<th>
 							<a href="{{path('paddPaye',{'id': commandedetails.id})}}">
-								{{ commandedetails.maCommande.Paye ? '<i class="fas fa-check text-success p-2"></i>' : '<i class="fas fa-times text-danger p-2"></i>' }}
+								{{ commandedetails.maCommande.isPaye ? '<i class="fas fa-check text-success p-2"></i>' : '<i class="fas fa-times text-danger p-2"></i>' }}
 							</a>
 						</th>
 						<td>

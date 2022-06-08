@@ -35,7 +35,7 @@ class Commande
     private string $livraison;
 
     #[ORM\OneToMany(targetEntity:CommandeDetails::class, mappedBy:"maCommande")]
-    private CommandeDetails $commandeDetails;
+    private Collection $commandeDetails;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $reference;
@@ -53,7 +53,7 @@ class Commande
 
     public function __toString()
     {
-        return $this->getTotal() . $this->getTransporteurNom() . $this->getTransporteurPrix() . $this->getLivraison() . $this->getPaye();
+        return $this->getTotal() . $this->getTransporteurNom() . $this->getTransporteurPrix() . $this->getLivraison() . $this->getIsPaye();
     }
 
     public function getTotal()

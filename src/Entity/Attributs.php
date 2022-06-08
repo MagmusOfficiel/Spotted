@@ -6,7 +6,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\AttributsRepository;
 
-#[ORM\Table(name: 'actualite')]
+#[ORM\Table(name: 'Attributs')]
 #[ORM\Entity(repositoryClass: AttributsRepository::class)]
 class Attributs
 {

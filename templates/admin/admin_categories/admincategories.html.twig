@@ -48,17 +48,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for categorie in categories %}
+				{% for categories in categories %}
 					<tr>
-						<th>{{categorie.id}}</th>
-						<td>{{categorie.CatNom}}</td>
-						<td>{{categorie.catTypehm.typehmNom}}</td>
-						<td><a href="{{path('sousCategories',{'id' : categorie.id })}}" class="col btn btn-info">Afficher</a></td>
+						<th>{{categories.id}}</th>
+						<td>{{categories.CatNom}}</td>
+						<td>{{categories.catTypehm.typehmNom}}</td>
+						<td><a href="{{path('sousCategories',{'id' : categories.id })}}" class="col btn btn-info">Afficher</a></td>
 						<td>
-							<a href="{{path('modifCategorie',{'id' : categorie.id})}}" class="col btn btn-warning">Modifier</a>
-							<form method="post" class="col" action="{{path('supCategorie',{'id' : categorie.id})}}" onsubmit="return confirm('Voulez-vous vraiment supprimer')">
+							<a href="{{path('modifCategorie',{'id' : categories.id})}}" class="col btn btn-warning">Modifier</a>
+							<form method="post" class="col" action="{{path('supCategorie',{'id' : categories.id})}}" onsubmit="return confirm('Voulez-vous vraiment supprimer')">
 								<input type="hidden" name="_method" value="SUP">
-								<input type="hidden" name="_token" value="{{csrf_token('SUP' ~ categorie.id)}}">
+								<input type="hidden" name="_token" value="{{csrf_token('SUP' ~ categories.id)}}">
 								<input type="submit" class="col btn btn-danger" value="supprimer">
 							</form>
 						</td>

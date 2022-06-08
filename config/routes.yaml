@@ -20,11 +20,7 @@ login:
     requirements:
         _locale: fr|en
 
-logout:
-    path:  /logout
-    defaults: { _controller: App\Controller\GlobalController::logout, _locale: '%locale%' }
-    requirements:
-        _locale: fr|en
+
 
 home:
     path: /

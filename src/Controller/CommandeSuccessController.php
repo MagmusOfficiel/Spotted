@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Classe\Panier; 
 use App\Entity\Commande;
 use Symfony\Component\Mime\Email;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -21,7 +21,7 @@ class CommandeSuccessController extends AbstractController
             return $this->redirectToRoute('accueil');
         }
 
-        if ($commande->getPaye() == 0) {
+        if ($commande->getIsPaye() == 0) {
             // Vider la session "cart"
             $panier->remove();
 

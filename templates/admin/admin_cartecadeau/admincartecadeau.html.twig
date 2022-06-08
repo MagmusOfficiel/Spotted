@@ -56,7 +56,7 @@
 						<td><img src="{{asset('build/images/theme/carte-cadeau/'~ cartecadeau.cartecadeauImage)}}" class="img-fluid" width="200"></td>
 						<td>{{cartecadeau.cartecadeauLibelle}}</td>
 						<td>{{cartecadeau.cartecadeauRef}}</td>
-						<td>{{cartecadeau.categorie.CatNom}}</td>  
+						<td>{{cartecadeau.categories.CatNom}}</td>  
 						{% if cartecadeau.cartecadeauBloque == '0' %}
 						<td><a href="{{path('caddBloque',{'id': cartecadeau.id})}}"><i class="fas fa-check text-success p-2"></i></a></td>
 						{% else %}

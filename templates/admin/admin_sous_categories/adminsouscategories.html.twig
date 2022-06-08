@@ -52,8 +52,8 @@
 			</thead>
 			<tbody>
 				{% for souscategories in souscategories %}
-                	{% for categorie in categorie %}
-						{% if categorie.id == souscategories.sousCatCat.id %}
+                	{% for categories in categories %}
+						{% if categories.id == souscategories.sousCatCat.id %}
 					<tr>
 						<th>{{souscategories.id}}</th>
 						<td>{{souscategories.sousCatNom}}</td>

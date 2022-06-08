@@ -209,3 +209,735 @@ localhost:25 (Connection refused)
 [31mInformation[0m : erreur à la ligne 50 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/routing/Generator/CompiledUrlGenerator.php
 [31mMessage[0m : Unable to generate a URL for the named route "connexion" as such route does not exist.
 -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:36:07
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:39:37
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:39:37
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:39:38
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:39:38
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:40:21
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:40:21
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 745163 of 745167 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:40:33
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:40:48
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Produit::$produitImages of type
+App\Entity\ProduitImage
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:40:48
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 246678 of 246893 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:42:45
+[31mInformation[0m : erreur à la ligne 66 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Utilisateur.php
+[31mMessage[0m : Cannot assign Doctrine\Common\Collections\ArrayCollection to property App\Entity\Utilisateur::$adresses of type
+App\Entity\Adresse
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:43:13
+[31mInformation[0m : erreur à la ligne 67 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Utilisateur.php
+[31mMessage[0m : Cannot assign Doctrine\Common\Collections\ArrayCollection to property App\Entity\Utilisateur::$commande of type
+App\Entity\Commande
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:43:13
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 239024 of 239027 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:43:20
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Pays::$utilisateurs of type
+App\Entity\Utilisateur
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:43:47
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Marque::$produits of type App\Entity\Produit
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:44:21
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Typehm::$produits of type App\Entity\Produit
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:44:55
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Couleur::$produits of type
+App\Entity\Produit
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:44:56
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Couleur::$produits of type
+App\Entity\Produit
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:44:56
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Couleur::$produits of type
+App\Entity\Produit
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:45:05
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\PageInfo::$pageLiaison of type
+App\Entity\Page
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:46:25
+[31mInformation[0m : erreur à la ligne 6 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : An exception has been thrown during the rendering of a template ("An exception occurred while executing a query:
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Spotted.categories' doesn't exist").
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:47:24
+[31mInformation[0m : erreur à la ligne 6 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : Neither the property "categories" nor one of the methods "categories()",
+"getcategories()"/"iscategories()"/"hascategories()" or "__call()" exist and have public access in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:47:33
+[31mInformation[0m : erreur à la ligne 6 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : An exception has been thrown during the rendering of a template ("An exception occurred while executing a query:
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Spotted.categories' doesn't exist").
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:47:48
+[31mInformation[0m : erreur à la ligne 6 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : Neither the property "categories" nor one of the methods "categories()",
+"getcategories()"/"iscategories()"/"hascategories()" or "__call()" exist and have public access in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:48:16
+[31mInformation[0m : erreur à la ligne 6 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : An exception has been thrown during the rendering of a template ("An exception occurred while executing a query:
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Spotted.categories' doesn't exist").
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:48:45
+[31mInformation[0m : erreur à la ligne 69 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/dbal/src/Driver/API/MySQL/ExceptionConverter.php
+[31mMessage[0m : An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column
+'t0.categories_id' in 'field list'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:50:28
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Categories::$produits of type
+App\Entity\Produit
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:50:48
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Categories::$sousCategories of type
+App\Entity\SousCategories
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:50:59
+[31mInformation[0m : erreur à la ligne 11 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:51:04
+[31mInformation[0m : erreur à la ligne 11 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:51:04
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 207990 of 208329 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:51:36
+[31mInformation[0m : erreur à la ligne 70 du fichier /home/eddy/Bureau/Spotted-master/templates/global/produitid.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:57:03
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign string to property App\Entity\Utilisateur::$roles of type array
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:58:17
+[31mInformation[0m : erreur à la ligne 82 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/security-core/Authentication/Token/AbstractToken.php
+[31mMessage[0m : Symfony\Component\Security\Core\Authentication\Token\AbstractToken::getUserIdentifier(): Return value must be of
+type string, null returned
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:59:13
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\Commande::$commandeDetails of type
+App\Entity\CommandeDetails
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 14:59:40
+[31mInformation[0m : erreur à la ligne 73 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_commande/admincommande.html.twig
+[31mMessage[0m : Neither the property "Paye" nor one of the methods "Paye()", "getPaye()"/"isPaye()"/"hasPaye()" or "__call()" exist
+and have public access in class "Proxies\__CG__\App\Entity\Commande".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:00:04
+[31mInformation[0m : erreur à la ligne 50 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/Admin/AdminCommandeController.php
+[31mMessage[0m : Attempted to call an undefined method named "getPaye" of class "App\Entity\Commande".
+Did you mean to call
+"getIsPaye"?
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:00:54
+[31mInformation[0m : erreur à la ligne 63 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/adminproduit.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:02:28
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:03:15
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:03:35
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:03:36
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:03:37
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:04:36
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:04:36
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:04:37
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:05:27
+[31mInformation[0m : erreur à la ligne 145 du fichier /home/eddy/Bureau/Spotted-master/vendor/vich/uploader-bundle/src/Mapping/PropertyMappingFactory.php
+[31mMessage[0m : The class "App\Entity\ProduitImage" is not uploadable. If you use annotations to configure VichUploaderBundle, you
+probably just forgot to add `@Vich\Uploadable` on top of your entity. If you don't use annotations, check that the
+configuration files are in the right place. In both cases, clearing the cache can also solve the issue.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:05:27
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 192052 of 192054 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:11:05
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:11:05
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 194855 of 194857 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:11:44
+[31mInformation[0m : erreur à la ligne 69 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/dbal/src/Driver/API/MySQL/ExceptionConverter.php
+[31mMessage[0m : An exception occurred while executing a query: SQLSTATE[42S22]: Column not found: 1054 Unknown column
+'t0.categories_id' in 'field list'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:11:53
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:12:22
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:12:23
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:12:23
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:13:40
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:13:40
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 619083 of 619083 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:13:42
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:13:42
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:13:42
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:13:43
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categorie" in class "App\Entity\Produit".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:14:13
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/modification.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "Symfony\Component\Form\FormView".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:14:13
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/modification.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "Symfony\Component\Form\FormView".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:14:13
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/modification.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "Symfony\Component\Form\FormView".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:14:15
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/modification.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "Symfony\Component\Form\FormView".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:14:15
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/modification.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "Symfony\Component\Form\FormView".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:14:15
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_produits/modification.html.twig
+[31mMessage[0m : Neither the property "categorie" nor one of the methods "categorie()",
+"getcategorie()"/"iscategorie()"/"hascategorie()" or "__call()" exist and have public access in class "Symfony\Component\Form\FormView".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:04
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af11-61811e2d6e740552895346-61dc3e607a6ce716079533.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:04
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af112-61811e2d6ebe7814350662-61dc3e607a9b5414199851.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:04
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af113-61811e2d6ed7d955807250-61dc3e607aaab879765024.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:04
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af111-61811e2d6ea18658448895-61dc3e607a89d688716474.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:04
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af115-61811e2d6f0c0155988196-61dc3e607acb5357137289.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:04
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af114-61811e2d6eefd628285687-61dc3e607ab9f388151150.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:05
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af113-61811e2d6ed7d955807250-61dc3e607aaab879765024.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:05
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af11-61811e2d6e740552895346-61dc3e607a6ce716079533.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:05
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af112-61811e2d6ebe7814350662-61dc3e607a9b5414199851.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:05
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af115-61811e2d6f0c0155988196-61dc3e607acb5357137289.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:05
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af114-61811e2d6eefd628285687-61dc3e607ab9f388151150.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:05
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af111-61811e2d6ea18658448895-61dc3e607a89d688716474.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:11
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af11-61811e2d6e740552895346-61dc3e607a6ce716079533.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:11
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af111-61811e2d6ea18658448895-61dc3e607a89d688716474.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:11
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af112-61811e2d6ebe7814350662-61dc3e607a9b5414199851.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:11
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af113-61811e2d6ed7d955807250-61dc3e607aaab879765024.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:11
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af114-61811e2d6eefd628285687-61dc3e607ab9f388151150.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:11
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af115-61811e2d6f0c0155988196-61dc3e607acb5357137289.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 15:15:13
+[31mInformation[0m : erreur à la ligne 188 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Utilisateur.php
+[31mMessage[0m : Typed property App\Entity\Utilisateur::$userNationalite must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:03:49
+[31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
+[31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:03:56
+[31mInformation[0m : erreur à la ligne 188 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Utilisateur.php
+[31mMessage[0m : Typed property App\Entity\Utilisateur::$userNationalite must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:04:05
+[31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
+[31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:04:58
+[31mInformation[0m : erreur à la ligne 259 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Utilisateur.php
+[31mMessage[0m : Typed property App\Entity\Utilisateur::$points must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:05:20
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:05:21
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:08:00
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:08:00
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:08:24
+[31mInformation[0m : erreur à la ligne 13 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Exception/MissingIdentifierField.php
+[31mMessage[0m : The identifier id is missing for a query of App\Entity\Points
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:08:33
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:08:33
+[31mInformation[0m : erreur à la ligne 126 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php
+[31mMessage[0m : Notice: unserialize(): Error at offset 762380 of 762397 bytes
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:09:02
+[31mInformation[0m : erreur à la ligne 19 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : App\Controller\MiniJeuxController::index(): Return value must be of type Symfony\Component\HttpFoundation\Response,
+none returned
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:09:03
+[31mInformation[0m : erreur à la ligne 19 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : App\Controller\MiniJeuxController::index(): Return value must be of type Symfony\Component\HttpFoundation\Response,
+none returned
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:15:06
+[31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
+[31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:15:07
+[31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
+[31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:06
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af11-61811e2d6e740552895346-61dc3e607a6ce716079533.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:06
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af111-61811e2d6ea18658448895-61dc3e607a89d688716474.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:06
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af113-61811e2d6ed7d955807250-61dc3e607aaab879765024.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:06
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af112-61811e2d6ebe7814350662-61dc3e607a9b5414199851.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:06
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af114-61811e2d6eefd628285687-61dc3e607ab9f388151150.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:06
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/images/theme/produit/af11/af115-61811e2d6f0c0155988196-61dc3e607acb5357137289.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:29
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/pays/pays/France" (from
+"http://127.0.0.1:8000/admin/pays/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:16:34
+[31mInformation[0m : erreur à la ligne 105 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/Admin/AdminCommandeController.php
+[31mMessage[0m : Attempted to call an undefined method named "getPaye" of class "App\Entity\Commande".
+Did you mean to call
+"getIsPaye"?
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:17:35
+[31mInformation[0m : erreur à la ligne 58 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/dbal/src/Driver/API/MySQL/ExceptionConverter.php
+[31mMessage[0m : An exception occurred while executing a query: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete
+or update a parent row: a foreign key constraint fails (`Spotted`.`CommandeDetails`, CONSTRAINT
+`FK_CE3910DE9AADCCAA` FOREIGN KEY (`maCommande_id`) REFERENCES `Commande` (`id`))
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:17:57
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/pays/pays/France" (from
+"http://127.0.0.1:8000/admin/pays/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:18:23
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/pays/maroc/maroc.jpg" (from
+"http://127.0.0.1:8000/admin/pays/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:18:23
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/pays/pays/France" (from
+"http://127.0.0.1:8000/admin/pays/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:18:25
+[31mInformation[0m : erreur à la ligne 279 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Expected argument of type "string", "null" given at property path "paysDrapeau".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:19:43
+[31mInformation[0m : erreur à la ligne 109 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Adresse.php
+[31mMessage[0m : Typed property App\Entity\Adresse::$company must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:20:14
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\SousCategories::$sousSousCategories of type
+App\Entity\SousSousCategories
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:20:36
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:20:43
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:22:43
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:22:44
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:22:45
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:22:45
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:23:05
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:23:07
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:23:20
+[31mInformation[0m : erreur à la ligne 32 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/orm/lib/Doctrine/ORM/Query/QueryException.php
+[31mMessage[0m : [Syntax Error] line 0, col 65: Error: Expected known function, got 'YEAR'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:25:36
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:25:43
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/08 à 16:25:46
+[31mInformation[0m : erreur à la ligne 20 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/MiniJeuxController.php
+[31mMessage[0m : Call to a member function getId() on null
+-------------------------------------------------------------------------------------------------------------------

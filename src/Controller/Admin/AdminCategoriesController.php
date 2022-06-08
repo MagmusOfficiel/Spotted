@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Categories;
 use App\Form\CategorieType;
-use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\SousCategoriesRepository;
@@ -25,33 +25,33 @@ class AdminCategoriesController extends AbstractController
 
     #[Route("/admin/categories/creation", name: "creationCategorie")]
     #[Route("/admin/categories/{id}", name: "modifCategorie")]
-    public function modification(Categories $categorie = null, Request $request, EntityManagerInterface $om)
+    public function modification(Categories $categories = null, Request $request, EntityManagerInterface $om)
     {
-        if (!$categorie) {
-            $categorie = new Categories();
+        if (!$categories) {
+            $categories = new Categories();
         }
 
-        $form = $this->createForm(CategorieType::class, $categorie);
+        $form = $this->createForm(CategorieType::class, $categories);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $om->persist($categorie);
+            $om->persist($categories);
             $om->flush();
             $this->addFlash('success', "L'action a été effectué");
             return $this->redirectToRoute("admin_categories");
         }
 
         return $this->render('admin/admin_categories/modification.html.twig', [
-            "categorie" => $categorie,
+            "categories" => $categories,
             "form" => $form->createView()
         ]);
     }
 
     #[Route("/admin/sup/categories/{id}", name: "supCategorie")]
-    public function suppression(Categories $categorie, Request $request, EntityManagerInterface $om)
+    public function suppression(Categories $categories, Request $request, EntityManagerInterface $om)
     {
-        if ($this->isCsrfTokenValid("SUP" . $categorie->getId(), $request->get("_token"))) {
-            $om->remove($categorie);
+        if ($this->isCsrfTokenValid("SUP" . $categories->getId(), $request->get("_token"))) {
+            $om->remove($categories);
             $om->flush();
             $this->addFlash('success', "L'action a été effectué");
             return $this->redirectToRoute("admin_categories");
@@ -62,15 +62,15 @@ class AdminCategoriesController extends AbstractController
 
 
     #[Route("/admin/souscategories/{id}", name: "sousCategories")]
-    public function fetchSousCategories(Categories $categorie, CategoriesRepository $repository, SousCategoriesRepository $repository2): Response
+    public function fetchSousCategories(Categories $categories, CategoriesRepository $repository, SousCategoriesRepository $repository2): Response
     {
         $souscategories = $repository2->findAll();
-        $categorieid = $categorie->getId();
-        $categorie = $repository->findBy([
+        $categorieid = $categories->getId();
+        $categories = $repository->findBy([
             'id' => $categorieid // On passe l'id du produit
         ]);
         return $this->render('admin/admin_sous_categories/adminsouscategories.html.twig', [
-            'categorie' => $categorie,
+            'categories' => $categories,
             'souscategories' => $souscategories,
         ]);
     }
