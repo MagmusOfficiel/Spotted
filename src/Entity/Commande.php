@@ -2,71 +2,49 @@
 
 namespace App\Entity;
 
+use Doctrine\DBAL\Types\Types;
 use App\Entity\CommandeDetails;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CommandeRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
-/**
- * @ORM\Entity(repositoryClass=CommandeRepository::class)
- * @ORM\Table(name="`Commande`")
- */
+#[ORM\Table(name: 'Commande')]
+#[ORM\Entity(repositoryClass: CommandeRepository::class)]
 class Commande
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="commande")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $utilisateur;
+    #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: "commande")]
+    #[ORM\JoinColumn(nullable: false)]
+    private Utilisateur $utilisateur;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $createdAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private \DateTime $createdAt;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $transporteurNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $transporteurNom;
 
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $transporteurPrix;
+    #[ORM\Column(type: Types::FLOAT)]
+    private float $transporteurPrix;
 
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $livraison;
+    #[ORM\Column(type: Types::TEXT)]
+    private string $livraison;
 
-    /**
-     * @ORM\OneToMany(targetEntity=CommandeDetails::class, mappedBy="maCommande")
-     */
-    private $commandeDetails;
+    #[ORM\OneToMany(targetEntity:CommandeDetails::class, mappedBy:"maCommande")]
+    private CommandeDetails $commandeDetails;
 
-        /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $reference;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $reference;
 
-        /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $stripeSessionId;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private string $stripeSessionId;
 
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $Paye;
+    #[ORM\Column(type: Types::BOOLEAN)]
+    private bool $isPaye;
 
     public function __construct()
     {
@@ -75,25 +53,25 @@ class Commande
 
     public function __toString()
     {
-        return $this->getTotal().$this->getTransporteurNom().$this->getTransporteurPrix().$this->getLivraison().$this->getPaye();
+        return $this->getTotal() . $this->getTransporteurNom() . $this->getTransporteurPrix() . $this->getLivraison() . $this->getPaye();
     }
 
-    public function getTotal() 
+    public function getTotal()
     {
-         $total = null;
-         foreach( $this->getCommandeDetails()->getValues() as $produits) {
-             $total = $total + ($produits->getPrix() * $produits->getQuantite());
-         }
-         return $total;
+        $total = null;
+        foreach ($this->getCommandeDetails()->getValues() as $produits) {
+            $total = $total + ($produits->getPrix() * $produits->getQuantite());
+        }
+        return $total;
     }
 
-    public function getQuantite() 
+    public function getQuantite()
     {
-         $quantite = null;
-         foreach( $this->getCommandeDetails()->getValues() as $produits) {
-             $quantite = $produits->getQuantite();
-         }
-         return $quantite;
+        $quantite = null;
+        foreach ($this->getCommandeDetails()->getValues() as $produits) {
+            $quantite = $produits->getQuantite();
+        }
+        return $quantite;
     }
 
     public function getId(): ?int
@@ -215,14 +193,14 @@ class Commande
         return $this;
     }
 
-    public function getPaye(): ?bool
+    public function getIsPaye(): ?bool
     {
-        return $this->Paye;
+        return $this->isPaye;
     }
 
-    public function setPaye(bool $Paye): self
+    public function setIsPaye(bool $isPaye): self
     {
-        $this->Paye = $Paye;
+        $this->isPaye = $isPaye;
 
         return $this;
     }

@@ -2,40 +2,30 @@
 
 namespace App\Entity;
 
-use App\Repository\PointsRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PointsRepository;
 
-/**
- * @ORM\Entity(repositoryClass=PointsRepository::class)
- */
+#[ORM\Table(name: 'Points')]
+#[ORM\Entity(repositoryClass: PointsRepository::class)]
 class Points
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $NbrPoints;
+    #[ORM\Column(type: Types::INTEGER, nullable: true)]
+    private int $NbrPoints;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Utilisateur::class, inversedBy="points", cascade={"persist", "remove"})
-     */
-    private $UserPoints;
+    #[ORM\OneToOne(targetEntity: Utilisateur::class, inversedBy: "points", cascade: ["persist", "remove"])]
+    private Utilisateur $UserPoints;
 
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $createdAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private \DateTime $createdAt;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $dateExpiration;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private \DateTime $dateExpiration;
 
     public function getId(): ?int
     {

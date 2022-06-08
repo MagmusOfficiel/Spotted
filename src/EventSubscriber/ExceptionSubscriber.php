@@ -84,7 +84,7 @@ class ExceptionSubscriber implements EventSubscriberInterface
     { 
     }
 
-    public function logException(ExceptionEvent $event)
+    public function logException(ExceptionEvent $event): void
     {  
         // Ouverture du ficher
         if (!file_exists(self::FILE_NAME)) {

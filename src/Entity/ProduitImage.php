@@ -3,59 +3,35 @@
 namespace App\Entity;
 
 use DateTimeImmutable; 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\ProduitImageRepository")
- * @Vich\Uploadable
- */
+#[ORM\Table(name: 'ProduitImage')]
+#[ORM\Entity(repositoryClass: ProduitImageRepository::class)]
+#[Vich\Uploadable]
 class ProduitImage
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Produit", inversedBy="produitImages",cascade={"persist"})
-     */
-    private $produit;
+    #[ORM\ManyToOne(targetEntity:Produit::class, inversedBy:"produitImages",cascade:["persist"])]
+    private Produit $produit;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * 
-     * @var string
-     */
-    private $imageName;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable:true)]
+    private string $imageName;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * 
-     * @var string
-     */
-    private $imageSize;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable:true)]
+    private string $imageSize;
+    
+    #[Vich\UploadableField(mapping:"default", fileNameProperty:"imageName", size:"imageSize")]
+    private File $imageFile;
 
-    /**
-     * NOTE: This is not a mapped field of entity metadata, just a simple property.
-     *
-     * @Vich\UploadableField(mapping="default", fileNameProperty="imageName", size="imageSize")
-     *
-     * @var File
-     */
-    private $imageFile;
-
-    /**
-     * @ORM\Column(type="datetime",nullable=true)
-     *
-     * @var \DateTime
-     */
-    private $updatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable:true)] 
+    private \DateTime $updatedAt;
 
     public function getId(): ?int
     {

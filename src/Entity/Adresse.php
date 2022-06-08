@@ -2,71 +2,49 @@
 
 namespace App\Entity;
 
-use App\Repository\AdresseRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\AdresseRepository;
 
-/**
- * @ORM\Entity(repositoryClass=AdresseRepository::class)
- */
+#[ORM\Table(name: 'Adresse')]
+#[ORM\Entity(repositoryClass:AdresseRepository::class)]
 class Adresse
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="adresses")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $user;
+    #[ORM\ManyToOne(targetEntity:Utilisateur::class, inversedBy:"adresses")]
+    #[ORM\JoinColumn(nullable:false)]
+    private ?Utilisateur $user =null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $name;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $firstname;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $firstname;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $lastname;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $lastname;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $company;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private string $company;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $adress;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $adress;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $postal;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $postal;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $city;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $city;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $country;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $country;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $phone;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $phone;
 
     public function __toString()
     {

@@ -11,108 +11,54 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
-/**
- * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
- * @UniqueEntity(
- * fields = {"userMail"},
- * message="L'adresse e-mail déjà existant")
- */
+#[ORM\Entity(repositoryClass:UtilisateurRepository::class)]
+#[UniqueEntity(fields : ["userMail"],message:"L'adresse e-mail déjà existant")]
 class Utilisateur implements UserInterface
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var int
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Regex("/^[a-zA-Z\-éèàçùëüïôäâêûîô#&]+$/")
-     * 
-     * @var string
-     */
-    private $username;
+    #[ORM\Column(type:"string", length:255)]
+    #[Assert\Regex("/^[a-zA-Z\-éèàçùëüïôäâêûîô#&]+$/")]
+    private string $username;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $password;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $password;
 
+    #[Assert\Regex(pattern: "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",message: "Il faut un mot de passe de 8 caractères au minimum, au moins une lettre et un chiffre")]
+    #[Assert\EqualTo(propertyPath:"password", message:"Les mot de passes ne correspondent pas")]
+    private string $verifPassword;
 
-    /** 
-     * @Assert\Regex(
-     *      pattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",
-     *      message = "Il faut un mot de passe de 8 caractères au minimum, au moins une lettre et un chiffre"
-     * )
-     * @Assert\EqualTo(propertyPath="password", message="Les mot de passes ne correspondent pas")
-     * 
-     * @var string
-     */
-    private $verifPassword;
+    #[ORM\Column(type:TYPES::ARRAY, length:255)]
+    private array $roles;
 
-    /**
-     * @var array 
-     * 
-     * @ORM\Column(type="array", length=255)
-     */
-    private $roles;
+    #[ORM\Column(type:Types::STRING, length:255)]
+    #[Assert\Regex(pattern:"/^[a-zA-Z\-éèàçùëüïôäâêûîô#&]+$/")]
+    private string $userPrenom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Regex("/^[a-zA-Z\-éèàçùëüïôäâêûîô#&]+$/")
-     * 
-     * @var string
-     */
-    private $userPrenom;
+    #[ORM\Column(type:Types::STRING, length:255)]
+    #[Assert\Regex(pattern:"/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/", message:"L'adresse mail a été mal écris ou n'éxiste pas.")]
+    private string $userMail;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Regex("/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/") , message="L'adresse mail a été mal écris ou n'éxiste pas.)
-     * 
-     * @var string
-     */
-    private $userMail;
+    #[ORM\Column(type: TYPES::DATE_MUTABLE)]
+    private \DateTimeInterface $userNaissance;
 
-    /**
-     * @ORM\Column(type="date")
-     * 
-     * @var \DateTimeInterface
-     */
-    private $userNaissance;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $userSexe;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $userSexe;
+    #[ORM\ManyToOne(targetEntity:Pays::class, inversedBy:"utilisateurs")]
+    private Pays $userNationalite;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Pays::class, inversedBy="utilisateurs")
-     */
-    private $userNationalite;
+    #[ORM\OneToMany(targetEntity:Adresse::class, mappedBy:"user")]
+    private Adresse $adresses;
 
+    #[ORM\OneToMany(targetEntity:Commande::class, mappedBy:"user")]
+    private Commande $commande;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Adresse::class, mappedBy="user")
-     */
-    private $adresses;
-
-
-    /**
-     * @ORM\OneToMany(targetEntity=Commande::class, mappedBy="user")
-     */
-    private $commande;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Points::class, mappedBy="UserPoints", cascade={"persist", "remove"})
-     */
-    private $points;
+    #[ORM\OneToOne(targetEntity:Points::class, mappedBy:"UserPoints", cascade:["persist", "remove"])]
+    private Points $points;
 
     public function __construct()
     {

@@ -7,37 +7,23 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=TypehmRepository::class)
- */
+#[ORM\Table(name: 'Typehm')]
+#[ORM\Entity(repositoryClass: TypehmRepository::class)]
 class Typehm
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var int
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $typehmNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $typehmNom;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="typehm")
-     * 
-     */
-    private $produits;
+    #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"typehm")]
+    private Produit $produits;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Categories::class, mappedBy="catTypehm")
-     */
-    private $categories;
+    #[ORM\OneToMany(targetEntity:Categories::class, mappedBy:"catTypehm")]
+    private Categories $categories;
 
     public function __construct()
     {

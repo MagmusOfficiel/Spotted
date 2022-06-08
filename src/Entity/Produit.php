@@ -2,111 +2,59 @@
 
 namespace App\Entity;
 
-
 use App\Entity\ProduitImage;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ProduitRepository;
 use Doctrine\Common\Collections\Collection;
-use Symfony\Component\HttpFoundation\File\File;
-use Doctrine\Common\Collections\ArrayCollection;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\Validator\Constraints\DateTime;
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Gedmo\Sluggable\Util\Urlizer;
 
-/**
- * @ORM\Entity(repositoryClass=ProduitRepository::class)
- * @ORM\Table(name="Produit")
- */
+#[ORM\Table(name: 'Produit')]
+#[ORM\Entity(repositoryClass: ProduitRepository::class)]
 class Produit
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * 
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $produitRef;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $produitRef;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $produitLibelle;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $produitLibelle;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $produitDescription;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $produitDescription;
 
-    /**
-     * @ORM\Column(type="decimal", precision=7, scale=2)
-     * 
-     * @var string
-     */
-    private $produitPrix;
+    #[ORM\Column(type: Types::DECIMAL, precision: 7, scale: 2)]
+    private string $produitPrix;
 
-    /**
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $produitStock;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $produitStock;
 
-    /**
-     * @ORM\Column(type="boolean")
-     * 
-     * @var boolean
-     */
-    private $produitBloque;
+    #[ORM\Column(type: Types::BOOLEAN)]
+    private bool $produitBloque;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="produits")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $categorie;
+    #[ORM\ManyToOne(targetEntity: Categories::class, inversedBy: "produits")]
+    #[ORM\JoinColumn(nullable: false)]
+    private Categories $categorie;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Typehm::class, inversedBy="produits")
-     */
-    private $typehm;
+    #[ORM\ManyToOne(targetEntity: Typehm::class, inversedBy: "produits")]
+    private Typehm $typehm;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Marque::class, inversedBy="produits")
-     */
-    private $marques;
+    #[ORM\ManyToOne(targetEntity: Marque::class, inversedBy: "produits")]
+    private Marque $marques;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Couleur::class, inversedBy="produits")
-     */
-    private $couleur;
+    #[ORM\ManyToOne(targetEntity: Couleur::class, inversedBy: "produits")]
+    private Couleur $couleur;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\ProduitImage", mappedBy="produit", cascade={"persist"})
-     */
-    private $produitImages;
+    #[ORM\OneToMany(targetEntity: ProduitImage::class, mappedBy: "produit", cascade: ["persist"])]
+    private ProduitImage $produitImages;
 
-    /**
-     * @ORM\Column(type="date")
-     */
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $produitCreation;
 
-    /**
-     * @ORM\Column(type="date")
-     */
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $produitNouveaute;
 
 
@@ -195,7 +143,7 @@ class Produit
             $this->produitImages[] = $produitImage;
             $produitImage->setProduit($this);
         }
-            
+
 
         return $this;
     }
@@ -276,7 +224,7 @@ class Produit
 
     public function getProduitCreation(): ?\DateTimeInterface
     {
- 
+
         return $this->produitCreation;
     }
 

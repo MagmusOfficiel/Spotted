@@ -8,52 +8,33 @@ use App\Repository\ReseauxRepository;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\ReseauxRepository")
- * @Vich\Uploadable
- */
+#[ORM\Table(name: 'Reseaux')]
+#[ORM\Entity(repositoryClass: ReseauxRepository::class)]
+#[Vich\Uploadable]
 class Reseaux
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $reseauNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $reseauNom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $reseauEntier;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $reseauEntier;
 
-    /**
-     * @ORM\Column(type="datetime",nullable=true)
-     */
-    private $reseauUpdatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable:true)]
+    private \DateTime $reseauUpdatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $reseauDestination;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $reseauDestination;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $reseauLien;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $reseauLien;
 
-        /**
-     * NOTE: This is not a mapped field of entity metadata, just a simple property.
-     *
-     * @Vich\UploadableField(mapping="reseaux", fileNameProperty="reseauEntier")
-     *
-     * @var File
-     */
-    private $imageFile;
+    #[Vich\UploadableField(mapping:"reseaux", fileNameProperty:"reseauEntier")]
+    private File $imageFile;
 
     public function getId(): ?int
     {

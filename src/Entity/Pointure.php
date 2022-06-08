@@ -2,30 +2,21 @@
 
 namespace App\Entity;
  
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\PointureRepository;
 
-/**
- * @ORM\Entity(repositoryClass=PointureRepository::class)
- */
+#[ORM\Table(name: 'Pointure')]
+#[ORM\Entity(repositoryClass: PointureRepository::class)]
 class Pointure
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="integer", length=255)
-     * 
-     * @var integer
-     */
-    private $valeur;
-
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $valeur;
 
     public function getId(): ?int
     {

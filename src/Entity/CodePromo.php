@@ -2,56 +2,40 @@
 
 namespace App\Entity;
 
-use App\Repository\CodePromoRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CodePromoRepository;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-/**
- * @ORM\Entity(repositoryClass=CodePromoRepository::class)
- * @Vich\Uploadable
- */
+#[ORM\Table(name: 'CodePromo')]
+#[ORM\Entity(repositoryClass: CodePromoRepository::class)]
+#[Vich\Uploadable]
 class CodePromo
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $codeCode;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $codeCode;
 
-    /**
-     * @ORM\Column(type="integer", length=255)
-     */
-    private $codeQuantite;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $codeQuantite;
 
-    /**
-     * @ORM\Column(type="decimal", precision=10, scale=2)
-     */
-    private $codeMontant;
+    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
+    private float $codeMontant;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $codeBloque;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $codeBloque;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $codeType;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $codeType;
 
-    /**
-     * @ORM\Column(type="date")
-     */
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $codeDateCreation;
 
-    /**
-     * @ORM\Column(type="date")
-     */
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $codeDateValide;
 
     public function getId(): ?int

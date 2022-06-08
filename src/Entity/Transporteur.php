@@ -5,32 +5,23 @@ namespace App\Entity;
 use App\Repository\TransporteurRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=TransporteurRepository::class)
- */
+#[ORM\Table(name: 'Transporteur')]
+#[ORM\Entity(repositoryClass: TransporteurRepository::class)]
 class Transporteur
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $transporteurNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $transporteurNom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $transporteurDescription;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $transporteurDescription;
 
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $transporteurPrix;
+    #[ORM\Column(type: Types::FLOAT)]
+    private float $transporteurPrix;
 
     public function __toString()
     {

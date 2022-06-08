@@ -2,46 +2,34 @@
 
 namespace App\Entity;
 
-use App\Repository\CommandeDetailsRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CommandeDetailsRepository;
 
-/**
- * @ORM\Entity(repositoryClass=CommandeDetailsRepository::class)
- */
+#[ORM\Table(name: 'CommandeDetails')]
+#[ORM\Entity(repositoryClass: CommandeDetailsRepository::class)]
 class CommandeDetails
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="commandeDetails")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $maCommande;
+    #[ORM\ManyToOne(targetEntity:Commande::class, inversedBy:"commandeDetails")]
+    #[ORM\JoinColumn(nullable:false)]
+    private Commande $maCommande;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $produits;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $produits;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $quantite;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $quantite;
 
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $prix;
+    #[ORM\Column(type: Types::FLOAT)]
+    private float $prix;
 
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $total;
+    #[ORM\Column(type: Types::FLOAT)]
+    private float $total;
 
     public function getId(): ?int
     {

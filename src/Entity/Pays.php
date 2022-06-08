@@ -2,58 +2,42 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\PaysRepository;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Vich\UploaderBundle\Mapping\Annotation as Vich; 
 
-/**
- * @ORM\Entity(repositoryClass=PaysRepository::class)
- * @Vich\Uploadable
- */
+#[ORM\Table(name: 'Pays')]
+#[ORM\Entity(repositoryClass: PaysRepository::class)]
+#[Vich\Uploadable]
 class Pays
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $paysNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $paysNom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $paysDrapeau;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string  $paysDrapeau;
 
-        /**
-     * @Vich\UploadableField(mapping="pays", fileNameProperty="paysDrapeau")
-     */
-    private $imageFile;
+    #[Vich\UploadableField(mapping: "pays", fileNameProperty: "paysDrapeau")]
+    private File $imageFile;
 
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     * 
-     * @var \Datetime
-     */
-    private $updatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private \DateTime $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $paysDestination;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $paysDestination;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Utilisateur::class, mappedBy="userNationalite")
-     */
-    private $utilisateurs;
+    #[ORM\OneToMany(targetEntity: Utilisateur::class, mappedBy: "userNationalite")]
+    private Utilisateur $utilisateurs;
 
     public function __construct()
     {
@@ -99,8 +83,8 @@ class Pays
     {
         $this->imageFile = $imageFile;
 
-        if($this->imageFile instanceof UploadedFile){
-            $this->updatedAt= new \DateTime('now');
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
         }
     }
 

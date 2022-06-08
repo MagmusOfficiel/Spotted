@@ -12,26 +12,14 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class FileUploader
 {
-    private $targetDirectory;
-    private $fileSystem;
-
-    public function __construct($targetDirectory, Filesystem $fileSystem)
+    public function __construct(private mixed $targetDirectory, private Filesystem $fileSystem)
     {
-        $this->targetDirectory = $targetDirectory;
-        $this->fileSystem = $fileSystem;
     }
 
     /**
      * Ajoute un fichier dans l'application et retour le nom du fichier
-     *
-     * @param UploadedFile $file
-     * Le fichier à ajouter
-     * @param string $path
-     * Chemin où le fichier doit s'enregistrer
-     * 
-     * @return void
      */
-    public function upload(UploadedFile $file, string $path)
+    public function upload(UploadedFile $file, string $path): string
     {
         $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
         $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
@@ -44,15 +32,8 @@ class FileUploader
 
     /**
      * Ajoute un fichier dans l'application
-     *
-     * @param UploadedFile $file
-     * Le fichier à ajouter
-     * @param string $path
-     * Chemin où le fichier doit s'enregistrer
-     * 
-     * @return void
      */
-    public function add(UploadedFile $file, string $path)
+    public function add(UploadedFile $file, string $path): string
     {
         return $this->upload($file, $path);
     }

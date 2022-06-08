@@ -2,32 +2,26 @@
 
 namespace App\Entity;
 
-use App\Repository\PageInfoRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PageInfoRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
-/**
- * @ORM\Entity(repositoryClass=PageInfoRepository::class)
- */
+#[ORM\Table(name: 'PageInfo')]
+#[ORM\Entity(repositoryClass: PageInfoRepository::class)]
 class PageInfo
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $pageTitre;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $pageTitre;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Page::class, mappedBy="pageInfo")
-     */
-    private $pageLiaison;
+    #[ORM\OneToMany(targetEntity:Page::class, mappedBy:"pageInfo")]
+    private Page $pageLiaison;
 
     public function __construct()
     {

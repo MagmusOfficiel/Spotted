@@ -2,30 +2,21 @@
 
 namespace App\Entity;
 
-use App\Repository\AttributsRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\AttributsRepository;
 
-/**
- * @ORM\Entity(repositoryClass=AttributsRepository::class)
- */
+#[ORM\Table(name: 'actualite')]
+#[ORM\Entity(repositoryClass: AttributsRepository::class)]
 class Attributs
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $AttributNom;
-
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $attributNom;
 
     public function getId(): ?int
     {
@@ -34,12 +25,12 @@ class Attributs
 
     public function getAttributNom(): ?string
     {
-        return $this->AttributNom;
+        return $this->attributNom;
     }
 
-    public function setAttributNom(string $AttributNom): self
+    public function setAttributNom(string $attributNom): self
     {
-        $this->AttributNom = $AttributNom;
+        $this->attributNom = $attributNom;
 
         return $this;
     }

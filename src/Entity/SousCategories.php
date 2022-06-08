@@ -7,32 +7,23 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=SousCategoriesRepository::class)
- */
+#[ORM\Entity(repositoryClass:SousCategoriesRepository::class)]
+#[ORM\Table(name: 'SousCategories')]
 class SousCategories
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sousCatNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $sousCatNom;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="sousCategories")
-     */
-    private $sousCatCat;
+    #[ORM\ManyToOne(targetEntity:Categories::class, inversedBy:"sousCategories")]
+    private Categories $sousCatCat;
 
-    /**
-     * @ORM\OneToMany(targetEntity=SousSousCategories::class, mappedBy="sousCat",orphanRemoval=true)
-     */
-    private $sousSousCategories;
+    #[ORM\OneToMany(targetEntity:SousSousCategories::class, mappedBy:"sousCat",orphanRemoval:true)]
+    private SousSousCategories $sousSousCategories;
 
     public function __construct()
     {

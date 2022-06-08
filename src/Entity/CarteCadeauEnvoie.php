@@ -2,60 +2,42 @@
 
 namespace App\Entity;
 
-use App\Repository\CarteCadeauEnvoieRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CarteCadeauEnvoieRepository;
 
-/**
- * @ORM\Entity(repositoryClass=CarteCadeauEnvoieRepository::class)
- */
+#[ORM\Table(name: 'cartecadeauenvoie')]
+#[ORM\Entity(repositoryClass: CarteCadeauEnvoieRepository::class)]
 class CarteCadeauEnvoie
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="decimal", precision=5, scale=0)
-     */
-    private $carteMontant;
+    #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 0)]
+    private float $carteMontant;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $cartePrenom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $cartePrenom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $carteNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carteNom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $carteEmail;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carteEmail;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $carteEmailVerif;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carteEmailVerif;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $carteDate;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private \Datetime $carteDate;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $carteMessage;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carteMessage;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=CarteCadeau::class, inversedBy="carteCadeauEnvoie", cascade={"persist"})
-     */
-    private $carteTheme;
+    #[ORM\ManyToOne(targetEntity: CarteCadeau::class, inversedBy: "carteCadeauEnvoie", cascade: "persist")]
+    private CarteCadeau $carteTheme;
 
     public function getId(): ?int
     {

@@ -5,27 +5,20 @@ namespace App\Entity;
 use App\Repository\SousSousCategoriesRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=SousSousCategoriesRepository::class)
- */
+#[ORM\Table(name: 'SousSousCategories')]
+#[ORM\Entity(repositoryClass: SousSousCategoriesRepository::class)]
 class SousSousCategories
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $sousSousCatNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $sousSousCatNom;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=SousCategories::class, inversedBy="sousSousCategories")
-     */
-    private $sousCat;
+    #[ORM\ManyToOne(targetEntity:SousCategories::class, inversedBy:"sousSousCategories")]
+    private SousCategories $sousCat;
 
     public function getId(): ?int
     {

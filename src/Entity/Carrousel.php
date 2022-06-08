@@ -3,90 +3,49 @@
 namespace App\Entity;
 
 use DateTime;
-use DateTimeImmutable; 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CarrouselRepository;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-/**
- * @ORM\Entity(repositoryClass=CarrouselRepository::class)
- * @Vich\Uploadable
- */
+#[ORM\Table(name: 'actualite')]
+#[ORM\Entity(repositoryClass: CarrouselRepository::class)]
+#[Vich\Uploadable]
 class Carrousel
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $carrouselTitre;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carrouselTitre;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $carrouselDescription;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carrouselDescription;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $carrouselDestination;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carrouselDestination;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $carrouselEntier;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carrouselEntier;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $carrouselNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carrouselNom;
 
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     *
-     * @var \DateTime
-     */
-    private $carrouselUpdatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private \DateTime $carrouselUpdatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $carrouselSize;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $carrouselSize;
 
-        /**
-     * NOTE: This is not a mapped field of entity metadata, just a simple property.
-     *
-     * @Vich\UploadableField(mapping="carrousel", fileNameProperty="carrouselEntier", size="carrouselSize")
-     *
-     * @var File
-     */
-    private $imageFile;
+     #[Vich\UploadableField(mapping:"carrousel", fileNameProperty:"carrouselEntier", size:"carrouselSize")]
+    private File $imageFile;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $carrouselPosition;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $carrouselPosition;
 
 
     public function getId(): ?int

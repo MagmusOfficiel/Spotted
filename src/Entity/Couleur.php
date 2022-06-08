@@ -2,42 +2,29 @@
 
 namespace App\Entity;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CouleurRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
-/**
- * @ORM\Entity(repositoryClass=CouleurRepository::class)
- */
+#[ORM\Table(name: 'Couleur')]
+#[ORM\Entity(repositoryClass: CouleurRepository::class)]
 class Couleur
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $couleurNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $couleurNom;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="couleur")
-     */
-    private $produits;
+    #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"couleur")]
+    private Produit $produits;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $couleurValeur;
-
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $couleurValeur;
 
     public function __construct()
     {

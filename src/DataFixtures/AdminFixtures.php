@@ -4,24 +4,17 @@ namespace App\DataFixtures;
 
 use App\Entity\Utilisateur;
 use Doctrine\Persistence\ObjectManager;
-use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AdminFixtures extends Fixture
 {
-
-
-    private $encoder;
-
-
-    public function __construct(UserPasswordHasherInterface $encoder)
+    public function __construct(private UserPasswordHasherInterface $encoder)
     {
-        $this->encoder = $encoder;
     }
+
     public function load(ObjectManager $manager)
     {
-       
         $user = new Utilisateur();
         $user->setUsername("eddy");
         $password = $this->encoder->hashPassword($user, 'eddy80');

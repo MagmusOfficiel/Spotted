@@ -2,32 +2,24 @@
 
 namespace App\Entity;
  
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\NewsletterRepository;
 
-/**
- * @ORM\Entity(repositoryClass=NewsletterRepository::class)
- */
+#[ORM\Table(name: 'Newsletter')]
+#[ORM\Entity(repositoryClass: NewsletterRepository::class)]
 class Newsletter
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $newsletterMail;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $newsletterMail;
 
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     * 
-     * @var \Datetime
-     */
-    private $newsletterUpdatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable:true)]
+    private \DateTime $newsletterUpdatedAt;
 
     public function getId(): ?int
     {

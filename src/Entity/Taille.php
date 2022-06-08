@@ -5,31 +5,20 @@ namespace App\Entity;
 use App\Repository\TailleRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=TailleRepository::class)
- */
+#[ORM\Table(name: 'Taille')]
+#[ORM\Entity(repositoryClass: TailleRepository::class)]
 class Taille
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var int
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $valeur;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $valeur;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Attributs::class, mappedBy="taille", cascade={"persist", "remove"})
-     */
-    private $attributs;
+    #[ORM\OneToOne(targetEntity:Attributs::class, mappedBy:"taille", cascade:["persist", "remove"])]
+    private Attributs $attributs;
 
     public function getId(): ?int
     {

@@ -2,52 +2,35 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoriesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CategoriesRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
-/**
- * @ORM\Entity(repositoryClass=CategoriesRepository::class)
- */
+#[ORM\Table(name: 'categories')]
+#[ORM\Entity(repositoryClass: CategoriesRepository::class)]
 class Categories
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $catNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $catNom;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="categorie")
-     */
-    private $produits;
+    #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"categorie")]
+    private Produit $produits;
 
+    #[ORM\OneToMany(targetEntity:SousCategories::class, mappedBy:"sousCatCat",orphanRemoval:true)]
+    private SousCategories $sousCategories;
 
-    /**
-     * @ORM\OneToMany(targetEntity=SousCategories::class, mappedBy="sousCatCat",orphanRemoval=true)
-     */
-    private $sousCategories;
+    #[ORM\ManyToOne(targetEntity:Eshop::class, inversedBy:"categories")]
+    private Eshop $catEshop;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Eshop::class, inversedBy="categories")
-     */
-    private $catEshop;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Typehm::class, inversedBy="categories")
-     */
-    private $catTypehm;
+    #[ORM\ManyToOne(targetEntity:Typehm::class, inversedBy:"categories")]
+    private Typehm $catTypehm;
 
     public function __construct()
     {
@@ -56,9 +39,7 @@ class Categories
     }
 
     public function __toString()
-    {
-        // Or change the property that you want to show in the select.
-         
+    {    
         return $this->catNom; 
     } 
 

@@ -1,3 +1,25 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+admincontrollers:
+    resource: "../src/Admin/Controller/"
+    type:     annotation
+    prefix:   /{_locale}
+    defaults:  { _locale: '%locale%' }
+    requirements:
+        _locale: fr|en
+
+login:
+    path:  /connexion
+    defaults: { _controller: App\Controller\GlobalController::connexion, _locale: '%locale%' }
+    requirements:
+        _locale: fr|en
+
+logout:
+    path:  /logout
+    defaults: { _controller: App\Controller\GlobalController::logout, _locale: '%locale%' }
+    requirements:
+        _locale: fr|en
+
+home:
+    path: /
+    defaults: { _controller: App\Controller\GlobalController::accueil, _locale: '%locale%' }
+    requirements:
+        _locale: fr|en

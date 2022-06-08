@@ -2,107 +2,60 @@
 
 namespace App\Entity;
 
-
-use App\Entity\CarteCadeauImage;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CarteCadeauRepository;
-use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
-use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\Validator\Constraints\DateTime;
-use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Gedmo\Sluggable\Util\Urlizer;
-
-/**
- * @ORM\Entity(repositoryClass=CarteCadeauRepository::class)
- * @Vich\Uploadable
- */
+ 
+#[ORM\Table(name: 'cartecadeau')]
+#[ORM\Entity(repositoryClass: CarteCadeauRepository::class)]
+#[Vich\Uploadable]
 class CarteCadeau
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * 
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $cartecadeauRef;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $cartecadeauRef;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $cartecadeauLibelle;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string  $cartecadeauLibelle;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $cartecadeauDescription;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string  $cartecadeauDescription;
 
-    /**
-     * @ORM\Column(type="boolean")
-     * 
-     * @var boolean
-     */
-    private $cartecadeauBloque;
+    #[ORM\Column(type: Types::BOOLEAN)]
+    private string  $cartecadeauBloque;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="cartecadeau")
-     */
-    private $categorie;
+    #[ORM\ManyToOne(targetEntity:Categories::class, inversedBy:"cartecadeau")]
+    private Categories $categorie;
 
-    /**
-     * @ORM\Column(type="date")
-     */
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $cartecadeauCreation;
 
-    /**
-     * @ORM\Column(type="date")
-     */
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private $cartecadeauNouveaute;
 
-        /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $cartecadeauImage;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $cartecadeauImage;
 
-    /**
-     * @Vich\UploadableField(mapping="cartecadeau", fileNameProperty="cartecadeauImage")
-     */
+    #[Vich\UploadableField(mapping:"cartecadeau", fileNameProperty:"cartecadeauImage")]
     private $imageFile;
 
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     * 
-     * @var \Datetime
-     */
-    private $updatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private ?\Datetime $updatedAt;
 
-    /**
-     * @ORM\OneToMany(targetEntity=CarteCadeauEnvoie::class, mappedBy="carteTheme", cascade={"persist"})
-     */
-    private $carteCadeauEnvoie;
+    #[ORM\OneToMany(targetEntity:CarteCadeauEnvoie::class, mappedBy:"carteTheme", cascade:["persist"])]
+    private CarteCadeauEnvoie $carteCadeauEnvoie;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-
 
     public function getCarteCadeauRef(): ?string
     {

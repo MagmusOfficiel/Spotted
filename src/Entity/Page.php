@@ -2,60 +2,42 @@
 
 namespace App\Entity;
 
-use App\Repository\PageRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PageRepository;
 
-/**
- * @ORM\Entity(repositoryClass=PageRepository::class)
- */
+#[ORM\Table(name: 'Page')]
+#[ORM\Entity(repositoryClass: PageRepository::class)]
 class Page
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $pageTitre;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $pageTitre;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $pageBaliseTitre;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $pageBaliseTitre;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $pageMetaDescription;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private string $pageMetaDescription;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $pageMetaCle;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private string $pageMetaCle;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $pageUrlSimple;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $pageUrlSimple;
 
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $pageContenu;
+    #[ORM\Column(type: Types::TEXT)]
+    private string $pageContenu;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $pageBloque;
+    #[ORM\Column(type: Types::INTEGER)]
+    private int $pageBloque;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=PageInfo::class, inversedBy="pageLiaison")
-     */
-    private $pageInfo;
+    #[ORM\ManyToOne(targetEntity: PageInfo::class, inversedBy: "pageLiaison")]
+    private PageInfo $pageInfo;
 
 
     public function getId(): ?int

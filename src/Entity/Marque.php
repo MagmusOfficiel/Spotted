@@ -3,6 +3,7 @@
 namespace App\Entity;
 
  
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;  
 use App\Repository\MarqueRepository;
 use Doctrine\Common\Collections\Collection;
@@ -11,56 +12,33 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich; 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-/**
- * @ORM\Entity(repositoryClass=MarqueRepository::class)
- * @Vich\Uploadable
- */
+#[ORM\Table(name: 'Marque')]
+#[ORM\Entity(repositoryClass: MarqueRepository::class)]
+#[Vich\Uploadable]
 class Marque
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     * 
-     * @var integer
-     */
-    private $id;
+    #[ORM\Column(name: 'id', type: Types::INTEGER)]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "AUTO")]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * 
-     * @var string
-     */
-    private $marqueNom;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $marqueNom;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="marques")
-     */
-    private $produits;
+    #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"marques")]
+    private Produit $produits;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * 
-     * @var string
-     */
-    private $marqueLogo;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable:true)]
+    private string $marqueLogo;
 
-    /**
-     * @Vich\UploadableField(mapping="marques", fileNameProperty="marqueLogo")
-     */
-    private $imageFile;
+    #[Vich\UploadableField(mapping:"marques", fileNameProperty:"marqueLogo")]
+    private File $imageFile;
 
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     * 
-     * @var \Datetime
-     */
-    private $updatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable:true)]
+    private \DateTime $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $marqueDestination;
+    #[ORM\Column(type: Types::STRING, length: 255)]
+    private string $marqueDestination;
 
     public function __construct()
     {

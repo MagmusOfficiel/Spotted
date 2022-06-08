@@ -21,7 +21,6 @@ Symfony :
 - Un chargement
 - Faire un systeme de chat service client ( Symfony Mercure )
 - Ajouter du 3D site web
-- Passer en attribut
 - Passer de Swift_Mailer à Mailer
 
 DESIGN : 
@@ -133,3 +132,4 @@ Faits :
 - Faire un filtre de statistique en fonction d'année et mois
 - vue twig full flash
 - Faire des logs exeception des erreurs
+- Passer en attribut
