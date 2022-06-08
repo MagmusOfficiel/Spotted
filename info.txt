@@ -5,7 +5,6 @@ Symfony :
 - Ajouter les cartes cadeaux au panier [SESSION]
 - Faire un systeme de stock par taille
 - Ajouter les declinaisons de couleur, taille...
-- Faire un historique/log ( EventListener ) -> mail
 - Ajouter SonarCube
 - Faire un importation d'un excell, csv..
 - Faire un theme par defaut
@@ -133,3 +132,4 @@ Faits :
 - Passer en attribut
 - Passer de Swift_Mailer à Mailer
 - Faire une tâche cron avec une commande
+- Faire un historique/log ( EventListener ) -> mail
