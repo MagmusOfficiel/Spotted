@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Swift_Mailer;
 use App\Entity\Page;
 use App\Entity\Produit;
 use App\Entity\Reseaux;
@@ -14,6 +13,7 @@ use App\Form\NewsletterType;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -112,7 +112,7 @@ class ComponentController extends AbstractController
         
  
         $request = Request::class;
-        $mailer = new Swift_Mailer(); 
+        $mailer = new MailerInterface(); 
         $om = new EntityManagerInterface();
         $newsLetter = new Newsletter();
         $form = $this->createForm(NewsletterType::class, $newsLetter, [
@@ -123,21 +123,24 @@ class ComponentController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $om->persist($newsLetter);
             $om->flush();
-            $message = (new \Swift_Message('Nouveau Reuf'))
-                // On attribue l'expéditeur
-                ->setFrom($newsLetter->getNewsletterMail())
-                // On attribue le destintaire
-                ->setTo('eddyweber80@gmail.com')
-                // on crée le message avec la vue Twig
-                ->setBody(
-                    $this->renderView('emails/newsletter.html.twig', [
-                        'newsLetter' => $newsLetter
-                    ]),
-                    'text/html'
-                );
 
-            // On envoie le message
-            $mailer->send($message);
+            $message = (new Email())
+            ->subject('Nouveau Reuf')
+            // On attribue l'expéditeur
+            ->from('eddyweber80@gmail.com')
+            // On attribue le destintaire
+            ->to($newsLetter->getNewsletterMail())
+            // on crée le message avec la vue Twig
+            ->html(
+                $this->renderView('emails/newsletter.html.twig', [
+                    'newsLetter' => $newsLetter
+                ]),
+                'text/html'
+            );
+    
+        // On envoie le message
+        $mailer->send($message);
+    
 
             $this->addFlash('message', 'Le message a bien été envoyé');
             return $this->redirectToRoute('accueil');

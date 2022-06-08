@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Form\ResetPasswordRequestFormType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -34,7 +35,7 @@ class ResetPasswordController extends AbstractController
      * Display & process form to request a password reset.
      */
     #[Route("", name: "app_forgot_password_request")]
-    public function request(Request $request, \Swift_Mailer $mailer): Response
+    public function request(Request $request, MailerInterface $mailer): Response
     {
         $form = $this->createForm(ResetPasswordRequestFormType::class);
         $form->handleRequest($request);
@@ -126,7 +127,7 @@ class ResetPasswordController extends AbstractController
         ]);
     }
 
-    private function processSendingPasswordResetEmail(string $emailFormData, \Swift_Mailer $mailer): RedirectResponse
+    private function processSendingPasswordResetEmail(string $emailFormData, MailerInterface $mailer): RedirectResponse
     {
         $user = $this->getManagerRegistry()->getRepository(Utilisateur::class)->findOneBy([
             'userMail' => $emailFormData,
@@ -154,20 +155,26 @@ class ResetPasswordController extends AbstractController
             return $this->redirectToRoute('app_forgot_password_request');
         }
 
-        $email = (new \Swift_Message())
-            ->setFrom('eddyweber80@gmail.com', 'Mail Bot Reset')
-            ->setTo('eddyweber80@gmail.com')
-            ->setSubject('Your password reset request')
-            ->setBody(
-                $this->renderView(
-                    'reset_password/email.html.twig',
-                    [
-                        'resetToken' => $resetToken,
-                    ]
-                ),
-            );
+        $message = (new Email())
+        ->subject('Votre demande de réinitialisation de mot de passe')
+        // On attribue l'expéditeur
+        ->from('eddyweber80@gmail.com')
+        // On attribue le destintaire
+        ->to($emailFormData)
+        // on crée le message avec la vue Twig
+        ->html(
+            $this->renderView(
+                'reset_password/email.html.twig',
+                [
+                    'resetToken' => $resetToken,
+                ]
+            ),
+            'text/html'
+        );
 
-        $mailer->send($email);
+    // On envoie le message
+    $mailer->send($message);
+
 
         // Store the token object in session for retrieval in check-email route.
         $this->setTokenObjectInSession($resetToken);

@@ -1,5 +1,5 @@
 admincontrollers:
-    resource: "../src/Admin/Controller/"
+    resource: "../src/Controller/Admin/"
     type:     annotation
     prefix:   /{_locale}
     defaults:  { _locale: '%locale%' }
