@@ -29,7 +29,7 @@ class Marque
     private Collection $produits;
 
     #[ORM\Column(type: Types::STRING, length: 255, nullable:true)]
-    private string $marqueLogo;
+    private ?string $marqueLogo;
 
     #[Vich\UploadableField(mapping:"marques", fileNameProperty:"marqueLogo")]
     private ?File $imageFile = null;

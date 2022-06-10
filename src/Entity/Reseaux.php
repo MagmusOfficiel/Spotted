@@ -23,10 +23,10 @@ class Reseaux
     private string $reseauNom;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
-    private string $reseauEntier;
+    private ?string $reseauEntier = '';
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable:true)]
-    private \DateTime $reseauUpdatedAt;
+    private $reseauUpdatedAt;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $reseauDestination;

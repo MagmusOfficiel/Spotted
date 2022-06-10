@@ -29,7 +29,7 @@ class Typehm
     public function __construct()
     {
         $this->produits = new ArrayCollection();
-        $this->categories = new ArrayCollection();
+        $this->categories = new ArrayCollection(); 
     }
 
     public function getId(): ?int

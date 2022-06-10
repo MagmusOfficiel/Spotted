@@ -30,17 +30,17 @@ class Categories
     private Eshop $catEshop;
 
     #[ORM\ManyToOne(targetEntity:Typehm::class, inversedBy:"categories")]
-    private Typehm $catTypehm;
+    private ?Typehm $catTypehm;
 
     public function __construct()
     {
         $this->produits = new ArrayCollection();
-        $this->sousCategories = new ArrayCollection();
+        $this->sousCategories = new ArrayCollection(); 
     }
 
     public function __toString()
     {    
-        return $this->catNom; 
+        return $this->catNom;
     } 
 
     public function getId(): ?int
@@ -89,8 +89,6 @@ class Categories
 
         return $this;
     }
-
-
 
     /**
      * @return Collection|SousCategories[]

@@ -3,10 +3,14 @@
 namespace App\DataFixtures;
 
 use App\Entity\Menu;
+use App\Entity\Page;
+use App\Entity\Pays;
 use App\Entity\Eshop;
 use App\Entity\Marque;
 use App\Entity\Typehm;
 use App\Entity\Couleur;
+use App\Entity\Reseaux;
+use App\Entity\PageInfo;
 use App\Entity\Attributs;
 use App\Entity\Carrousel;
 use App\Entity\Categories;
@@ -161,6 +165,28 @@ class AppFixtures extends Fixture
             1 => ['Femmes', 2],
             2 => ['Enfants', 3],
         ];
+
+        $reseaux = [
+            0 => ['facebook','facebook.png','reseaux','www.facebook.com'],
+            1 => ['twitter','twitter.png','reseaux','www.twitter.com'],
+            2 => ['instagram','instagram.png','reseaux','www.instagram.com'],
+            3 => ['snapchat','snapchat.png','reseaux','www.snapchat.com'],
+        ];
+
+        $pageInfo = ['Services Clients', 'Informations Légales'];
+
+        $pages = [
+            0 => ['Achat en ligne', 'Achat en ligne','Achat en ligne','Achat en ligne','achat-en-ligne', 'aaaaaaaaa',0],
+            1 => ['Paramètres Cookies', 'Paramètres Cookies','Paramètres Cookies','Paramètres Cookies','paramètres-cookies', 'bbbbbbbbb',0],
+            2 => ['Politique de confidentitalité', 'Politique de confidentitalité','Politique de confidentitalité','Politique de confidentitalité','politique-de-confidentitalité', 'ccccccccc',0],
+        ];
+
+        $pays = [
+            0 => ['France', 'france.png', 'france'],
+            1 => ['Algérie', 'algerie.png', 'algerie'],
+            2 => ['Amérique', 'amerique.png', 'amerique'],
+            3 => ['Maroc', 'maroc.png', 'maroc'],
+        ];
         /* -------------------------------------------------------------------------- */
         /*                      boucle qui enregistre les données                     */
         /* -------------------------------------------------------------------------- */
@@ -238,6 +264,42 @@ class AppFixtures extends Fixture
         $attributs = new Attributs();
         $attributs->setAttributNom("couleurs");
         $manager->persist($attributs);
+
+        foreach($reseaux as $reseauxValue){
+            $reseaux = new Reseaux();
+            $reseaux->setReseauNom($reseauxValue[0])
+                ->setReseauEntier($reseauxValue[1])
+                ->setReseauDestination($reseauxValue[2])
+                ->setReseauLien($reseauxValue[3]);
+            $manager->persist($reseaux);
+        }
+
+        foreach($pageInfo as $pageInfoValue){
+            $pageInfo = new PageInfo();
+            $pageInfo->setPageTitre($pageInfoValue);
+            $manager->persist($pageInfo);
+        }
+
+        foreach($pages as $pageValue){
+            $pages = new Page();
+            $pages->setPageTitre($pageValue[0])
+                ->setPageBaliseTitre($pageValue[1])
+                ->setPageMetaDescription($pageValue[2])
+                ->setPageMetaCle($pageValue[3])
+                ->setPageUrlSimple($pageValue[4])
+                ->setPageContenu($pageValue[5])
+                ->setPageBloque($pageValue[6])
+                ->setPageInfo($pageInfoValue);
+            $manager->persist($pages);
+        }
+
+        foreach($pays as $paysValue){
+            $pays = new Pays();
+            $pays->setPaysNom($paysValue[0])
+                ->setPaysDrapeau($paysValue[1])
+                ->setPaysDestination($paysValue[2]);
+            $manager->persist($pays);
+        }
 
         $manager->flush();
     }

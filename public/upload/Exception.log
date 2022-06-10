@@ -1503,3 +1503,349 @@ http://127.0.0.1:8000/images/theme/produit/af11/af112-61811e2d6ebe7814350662-62a
 [31mInformation[0m : erreur à la ligne 139 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Categories.php
 [31mMessage[0m : Typed property App\Entity\Categories::$catTypehm must not be accessed before initialization
 -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:32:10
+[31mInformation[0m : erreur à la ligne 139 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Categories.php
+[31mMessage[0m : Typed property App\Entity\Categories::$catTypehm must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:32:33
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:05
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:21
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:27
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:27
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:28
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:28
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:33
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:34
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:40
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:33:42
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:25
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:26
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:26
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:26
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:27
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:27
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:49
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:50
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:55
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:56
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:56
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:34:56
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:35:33
+[31mInformation[0m : erreur à la ligne 55 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_categories/admincategories.html.twig
+[31mMessage[0m : Impossible to access an attribute ("typehmNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:38:00
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/build/images/theme/produit/af11/af11-61811e2d6e740552895346-62a33b27eb382271751076.jpg" (from "http://127.0.0.1:8000/admin/produits/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:38:00
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/build/images/theme/produit/af11/af111-61811e2d6ea18658448895-62a33b27eb5b4120229424.jpg" (from "http://127.0.0.1:8000/admin/produits/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:39:10
+[31mInformation[0m : erreur à la ligne 500 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : The property "App\Entity\Reseaux::$reseauEntier" is not readable because it is typed "string". You should
+initialize it or declare a default value instead.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:39:59
+[31mInformation[0m : erreur à la ligne 500 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : The property "App\Entity\Reseaux::$reseauEntier" is not readable because it is typed "string". You should
+initialize it or declare a default value instead.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:39:59
+[31mInformation[0m : erreur à la ligne 500 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : The property "App\Entity\Reseaux::$reseauEntier" is not readable because it is typed "string". You should
+initialize it or declare a default value instead.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:40:00
+[31mInformation[0m : erreur à la ligne 500 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : The property "App\Entity\Reseaux::$reseauEntier" is not readable because it is typed "string". You should
+initialize it or declare a default value instead.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:40:19
+[31mInformation[0m : erreur à la ligne 279 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Expected argument of type "DateTime", "DateTimeImmutable" given at property path "imageFile".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:38
+[31mInformation[0m : erreur à la ligne 96 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Marque.php
+[31mMessage[0m : Typed property App\Entity\Marque::$marqueLogo must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Adidas/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Nike/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Vans/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Puma/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Reebok/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Coq%20Sportif/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:05:59
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Jordan/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:24
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Nike/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:24
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Puma/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:24
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Coq%20Sportif/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:24
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Jordan/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:24
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Reebok/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:24
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Vans/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:31
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Puma/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:31
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Reebok/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:31
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Vans/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:31
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Jordan/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:31
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Coq%20Sportif/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:38
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Reebok/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:38
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Vans/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:38
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Coq%20Sportif/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:06:38
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/marques/Jordan/" (from
+"http://127.0.0.1:8000/admin/marques/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:07:11
+[31mInformation[0m : erreur à la ligne 511 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Can't get a way to read the property "categories" in class "App\Entity\CarteCadeau".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:08:10
+[31mInformation[0m : erreur à la ligne 64 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php
+[31mMessage[0m : Cannot assign Doctrine\ORM\PersistentCollection to property App\Entity\CarteCadeau::$carteCadeauEnvoie of type
+App\Entity\CarteCadeauEnvoie
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:08:49
+[31mInformation[0m : erreur à la ligne 107 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/CarteCadeau.php
+[31mMessage[0m : App\Entity\CarteCadeau::getCarteCadeauBloque(): Return value must be of type ?int, string returned
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:09:08
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/build/images/theme/carte-cadeau/carte-cadeau-618a784240c8d382683945-62a3423a8ebf6268671251.jpg" (from "http://127.0.0.1:8000/admin/cartecadeau/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:09:16
+[31mInformation[0m : erreur à la ligne 279 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/property-access/PropertyAccessor.php
+[31mMessage[0m : Expected argument of type "string", "null" given at property path "cartecadeauImage".
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:09:36
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET
+http://127.0.0.1:8000/build/images/theme/carte-cadeau/carte-cadeau-618a784240c8d382683945-62a3423a8ebf6268671251.jpg" (from "http://127.0.0.1:8000/admin/cartecadeau/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:09:56
+[31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
+[31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:10:29
+[31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
+[31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
+-------------------------------------------------------------------------------------------------------------------

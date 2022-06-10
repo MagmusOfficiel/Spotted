@@ -5,7 +5,9 @@ namespace App\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CarteCadeauRepository;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
  
@@ -29,7 +31,7 @@ class CarteCadeau
     private string  $cartecadeauDescription;
 
     #[ORM\Column(type: Types::BOOLEAN)]
-    private string  $cartecadeauBloque;
+    private int $cartecadeauBloque;
 
     #[ORM\ManyToOne(targetEntity:Categories::class, inversedBy:"cartecadeau")]
     private Categories $categories;
@@ -50,7 +52,12 @@ class CarteCadeau
     private ?\Datetime $updatedAt;
 
     #[ORM\OneToMany(targetEntity:CarteCadeauEnvoie::class, mappedBy:"carteTheme", cascade:["persist"])]
-    private CarteCadeauEnvoie $carteCadeauEnvoie;
+    private Collection $carteCadeauEnvoie;
+
+    public function __construct()
+    {
+        $this->carteCadeauEnvoie = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -106,12 +113,12 @@ class CarteCadeau
         return $this;
     }
 
-    public function getCategorie(): ?Categories
+    public function getCategories(): ?Categories
     {
         return $this->categories;
     }
 
-    public function setCategorie(?Categories $categories): self
+    public function setCategories(?Categories $categories): self
     {
         $this->categories = $categories;
 
