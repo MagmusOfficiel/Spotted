@@ -21,7 +21,7 @@ class Eshop
     private string $eshopNom;
 
     #[ORM\OneToMany(targetEntity:Categories::class, mappedBy:"catEshop")]
-    private Categories $categories;
+    private Collection $categories;
 
     public function __construct()
     {

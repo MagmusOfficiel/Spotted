@@ -2,8 +2,8 @@
 
 namespace App\Manager;
 
+use App\Entity\Envoi;
 use Twig\Environment;
-use App\Admin\Entity\Envoi;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mime\Address;
 use Doctrine\ORM\EntityManagerInterface;

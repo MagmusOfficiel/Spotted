@@ -1439,3 +1439,67 @@ http://127.0.0.1:8000/images/theme/produit/af11/af11-61811e2d6e740552895346-62a2
 [31mMessage[0m : No route found for "GET
 http://127.0.0.1:8000/images/theme/produit/af11/af112-61811e2d6ebe7814350662-62a2f7608e027719782920.jpg" (from "http://127.0.0.1:8000/admin/produit/1")
 -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:06:01
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/peuimport.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:06:01
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/carrouselspot.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:06:01
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/dzadaz.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:09:37
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/carrouselspot.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:09:37
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/peuimport.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:09:37
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/dzadaz.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:09:57
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/carrouselspot.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:09:57
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/peuimport.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 12:09:57
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/build/images/theme/carrousel/dzadaz.png" (from
+"http://127.0.0.1:8000/")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:31:09
+[31mInformation[0m : erreur à la ligne 139 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Categories.php
+[31mMessage[0m : Typed property App\Entity\Categories::$catTypehm must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 14:31:12
+[31mInformation[0m : erreur à la ligne 139 du fichier /home/eddy/Bureau/Spotted-master/src/Entity/Categories.php
+[31mMessage[0m : Typed property App\Entity\Categories::$catTypehm must not be accessed before initialization
+-------------------------------------------------------------------------------------------------------------------
