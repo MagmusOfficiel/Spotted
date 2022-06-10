@@ -7,11 +7,11 @@
     <a href="{{ path('compte_commande') }}">Retour</a>
     <hr><strong></strong>
     <strong>Statut de la commande : </strong>
-    {% if commande.paye == 1 %}
+    {% if commande.isPaye == 1 %}
         Paiement accepté
-    {% elseif commande.paye == 2 %}
+    {% elseif commande.isPaye == 2 %}
         Préparation en cours
-    {% elseif commande.paye == 3 %}
+    {% elseif commande.isPaye == 3 %}
         Livraison en cours
     {% endif %}
     <br/>

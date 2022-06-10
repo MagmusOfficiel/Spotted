@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MiniJeuxController extends AbstractController
 {
-    #[Route('/{reactRouting}', name: 'index', defaults:["reactRouting" => null])]
+    #[Route('/mini_jeux/{reactRouting}', name: 'index', defaults:["reactRouting" => null])]
     public function index(
         PointsRepository $repository2,): Response
     {

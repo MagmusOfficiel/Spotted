@@ -26,7 +26,7 @@ class CommandeSuccessController extends AbstractController
             $panier->remove();
 
             // Modifier le statut isPaid de notre commande en mettant 1
-            $commande->setPaye(1);
+            $commande->setisPaye(1);
             $entityManager->flush();
 
             // Envoyer un email à notre client pour lui confirmer sa commande

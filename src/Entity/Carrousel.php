@@ -42,7 +42,7 @@ class Carrousel
     private string $carrouselSize;
 
      #[Vich\UploadableField(mapping:"carrousel", fileNameProperty:"carrouselEntier", size:"carrouselSize")]
-    private File $imageFile;
+    private ?File $imageFile = null;
 
     #[ORM\Column(type: Types::INTEGER)]
     private int $carrouselPosition;

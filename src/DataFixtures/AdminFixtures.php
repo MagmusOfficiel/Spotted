@@ -17,14 +17,13 @@ class AdminFixtures extends Fixture
     {
         $user = new Utilisateur();
         $user->setUsername("eddy");
-        $password = $this->encoder->hashPassword($user, 'eddy80');
+        $password = $this->encoder->hashPassword($user, 'ouinouin80');
         $user->setPassword($password);
-        $user->setRoles(["ROLE_ADMIN"]);
+        $user->setRoles("ROLE_ADMIN");
         $user->setUserPrenom("eddy");
-        $user->setUserMail("eddy@sfr.fr"); 
+        $user->setUserMail("eddyweber@sfr.fr"); 
         $date = new \DateTime();
         $user->setUserNaissance($date);
-        $user->setUserPays("France");
         $user->setUserSexe("Homme");
         $manager->persist($user);
 

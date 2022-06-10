@@ -22,7 +22,7 @@ class Menu
     private int $menuPosition;
 
     #[ORM\OneToOne(targetEntity: Typehm::class, cascade: ["persist", "remove"])]
-    private Typehm $menuHook;
+    private ?Typehm $menuHook;
 
     public function getId(): ?int
     {

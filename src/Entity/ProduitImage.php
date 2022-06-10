@@ -31,7 +31,7 @@ class ProduitImage
     private File $imageFile;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable:true)] 
-    private \DateTime $updatedAt;
+    private  $updatedAt;
 
     public function getId(): ?int
     {

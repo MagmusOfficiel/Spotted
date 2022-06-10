@@ -92,7 +92,7 @@ class CommandeController extends AbstractController
                 ->setTransporteurNom($transporteur->getTransporteurNom())
                 ->setTransporteurPrix($transporteur->getTransporteurPrix())
                 ->setLivraison($livraison_content)
-                ->setPaye(0);
+                ->setisPaye(0);
 
             $this->entityManager->persist($commande);
             // Enregistrer mes produits OrderDetails()

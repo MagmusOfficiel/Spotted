@@ -18,7 +18,7 @@ class Typehm
     private ?int $id = null;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
-    private string $typehmNom;
+    private ?string $typehmNom;
 
     #[ORM\OneToMany(targetEntity:Produit::class, mappedBy:"typehm")]
     private Collection $produits;

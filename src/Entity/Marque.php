@@ -32,7 +32,7 @@ class Marque
     private string $marqueLogo;
 
     #[Vich\UploadableField(mapping:"marques", fileNameProperty:"marqueLogo")]
-    private File $imageFile;
+    private ?File $imageFile = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable:true)]
     private \DateTime $updatedAt;

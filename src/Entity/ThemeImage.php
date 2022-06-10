@@ -26,10 +26,10 @@ class ThemeImage
     private string $imageEntier;
 
     #[Vich\UploadableField(mapping:"themeimage", fileNameProperty:"imageEntier")]
-    private File $imageFile;
+    private ?File $imageFile = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable:true)]
-    private \DateTime $updatedAt;
+    private  $updatedAt;
 
     #[ORM\Column(type: Types::STRING, length: 255)]
     private string $imageDestination;

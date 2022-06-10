@@ -27,7 +27,7 @@ class CommandeRepository extends ServiceEntityRepository
     public function findSuccessOrders($user)
     {
         return $this->createQueryBuilder('o')
-            ->andWhere('o.Paye > 0')
+            ->andWhere('o.isPaye > 0')
             ->andWhere('o.utilisateur = :utilisateur')
             ->setParameter('utilisateur', $user)
             ->orderBy('o.id', 'DESC')
