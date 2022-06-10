@@ -1849,3 +1849,100 @@ http://127.0.0.1:8000/build/images/theme/carte-cadeau/carte-cadeau-618a784240c8d
 [31mInformation[0m : erreur à la ligne 62 du fichier /home/eddy/Bureau/Spotted-master/templates/admin/admin_utilisateurs/adminutilisateur.html.twig
 [31mMessage[0m : Impossible to access an attribute ("paysNom") on a null variable.
 -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 15:16:30
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/favicon.ico" (from "http://127.0.0.1:8000/connexion")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:06:47
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Invalid non-negative integer
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:07:14
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/favicon.ico" (from
+"http://127.0.0.1:8000/commande/create-session/10062022-62a3500eb8f22")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:19:16
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Invalid integer: 119Promotion : 9900
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:19:18
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Invalid integer: 119Promotion : 9900
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:21:37
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Invalid object
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:23:31
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : No such coupon: '20'
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:23:42
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Received unknown parameter: discounts[0][currency]
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:25:04
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : You may only specify one of these parameters: allow_promotion_codes, discounts.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:25:06
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : You may only specify one of these parameters: allow_promotion_codes, discounts.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:25:15
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Received unknown parameter: discounts[0][currency]
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:27:48
+[31mInformation[0m : erreur à la ligne 39 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/StripeController.php
+[31mMessage[0m : Warning: Undefined property: App\Entity\CommandeDetails::$getPrix
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:28:27
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Invalid non-negative integer
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:28:45
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : Invalid non-negative integer
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:30:42
+[31mInformation[0m : erreur à la ligne 38 du fichier /home/eddy/Bureau/Spotted-master/vendor/stripe/stripe-php/lib/Exception/ApiErrorException.php
+[31mMessage[0m : The Checkout Session's total amount due must be no more than €999,999.99.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:36:50
+[31mInformation[0m : erreur à la ligne 23 du fichier /home/eddy/Bureau/Spotted-master/src/Controller/ContactController.php
+[31mMessage[0m : Warning: Undefined array key "subject"
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:40:19
+[31mInformation[0m : erreur à la ligne 116 du fichier /home/eddy/Bureau/Spotted-master/vendor/doctrine/dbal/src/Driver/API/MySQL/ExceptionConverter.php
+[31mMessage[0m : An exception occurred while executing a query: SQLSTATE[23000]: Integrity constraint violation: 1048 Column
+'created_at' cannot be null
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:46:57
+[31mInformation[0m : erreur à la ligne 9 du fichier /home/eddy/Bureau/Spotted-master/templates/mini_jeux/index.html.twig
+[31mMessage[0m : Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 8).
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+[32mLe 2022/06/10 à 16:47:09
+[31mInformation[0m : erreur à la ligne 135 du fichier /home/eddy/Bureau/Spotted-master/vendor/symfony/http-kernel/EventListener/RouterListener.php
+[31mMessage[0m : No route found for "GET http://127.0.0.1:8000/favicon.ico" (from "http://127.0.0.1:8000/mini_jeux")
+-------------------------------------------------------------------------------------------------------------------

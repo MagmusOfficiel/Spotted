@@ -71,14 +71,16 @@ class EmailingManager
     }
 
     public function logEmail($sent, $token, $recipient, $subject, $titre, $texte)
-    {
+    { 
         $envoi = new Envoi();
         $envoi->setToken($token);
         $envoi->setRecipient($recipient);
         $envoi->setSubject($subject);
         $envoi->setTitre(str_replace('<br>', ' ', $titre));
         $envoi->setTexte($texte);
+        $envoi->setCreatedAt(new \DateTime('now'));
         $this->manager->persist($envoi);
+        $this->manager->flush();
     }
 
     /**
@@ -134,8 +136,8 @@ class EmailingManager
             $sent = true;
         } catch (TransportExceptionInterface $e) {
             echo 'Exception reçue: ', $e->getMessage(), "\n";
-        }
-        if ($log) {
+        } 
+        if ($log) { 
             $this->logEmail($sent, $token, $recipient, $subject, $titre, $texte);
         }
         return $sent;
@@ -170,11 +172,12 @@ class EmailingManager
     /**
      * Il envoie un e-mail de contact
      */
-    public function sendMailContact($email, $subject, $message): bool
+    public function sendMailContact($email, $nom, $message): bool
     {
         $sent = false;
         $token = md5(rand());
         $checkMail = $this->checkEmailAddresse($email);
+        $subject = 'Message Contact' . $nom;
         if ($checkMail === 1) {
             $sent = $this->sendMail($email, $subject, null, $message, $token);
         }

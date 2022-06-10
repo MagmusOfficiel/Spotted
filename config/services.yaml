@@ -10,6 +10,7 @@ parameters:
     mailer_from: contact@eddy-weber.fr
     mailer_from_name: Eddy Weber
     rootDir: '%kernel.project_dir%'
+    host: 'https://127.0.0.1:8000'
 
 services:
     # default configuration for services in *this* file
